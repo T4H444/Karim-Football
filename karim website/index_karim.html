@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KARIM Football Subscriptions — Streaming Premium</title>
+<link rel="icon" href="seconda.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=DM+Sans:wght@300;400;500;600&family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Brand colors extracted from KARIM logo: deep navy blue */
+    --navy:    #1A2A4A;
+    --navy2:   #0F1C34;
+    --navy3:   #172340;
+    --navy-light: #2A4070;
+    --accent:  #2B5BAE;
+    --accent2: #3D7DE0;
+    --accent3: #6FA3F5;
+    --blanc:   #F0F4FF;
+    --gris:    #8A95B0;
+    --gris2:   #1E2B42;
+    --whatsapp:  #25D366;
+    --whatsapp2: #1EBE57;
+    --test-color: #E8A020;
+    --test-color2: #F5C060;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--navy2);
+    color: var(--blanc);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+
+  /* ─── RTL ARABIC SUPPORT ─── */
+  [lang="ar"] body, body.ar {
+    font-family: 'Cairo', sans-serif;
+    direction: rtl;
+  }
+  body.ar .step-arrow { transform: scaleX(-1); }
+  body.ar .plan.featured::before { right: auto; left: -28px; transform: rotate(-40deg); transform-origin: left center; }
+  body.ar .faq-q { flex-direction: row-reverse; }
+  body.ar .stat { border-left: none; border-right: 2px solid rgba(59,125,224,.35); padding-left: 0; padding-right: 1rem; }
+  body.ar nav { flex-direction: row-reverse; }
+  body.ar .nav-links { flex-direction: row-reverse; }
+  body.ar .hero-content { text-align: right; }
+  body.ar .hero-btns { flex-direction: row-reverse; }
+  body.ar .hero-stats { flex-direction: row-reverse; }
+  body.ar .why-card { text-align: right; }
+  body.ar .plan-features li { flex-direction: row-reverse; }
+  body.ar .review-author { flex-direction: row-reverse; }
+  body.ar .plan.featured::before { right: auto; left: -28px; transform: rotate(-40deg); }
+
+  /* ─── LANG SWITCHER ─── */
+  .lang-switcher {
+    display: flex; align-items: center; gap: .4rem;
+    background: rgba(255,255,255,.06);
+    border: 1px solid rgba(59,125,224,.25);
+    border-radius: 50px;
+    padding: .25rem .5rem;
+  }
+  .lang-btn {
+    background: none; border: none; cursor: pointer;
+    font-size: .78rem; font-weight: 600; letter-spacing: .06em;
+    padding: .2rem .55rem; border-radius: 50px;
+    transition: background .2s, color .2s;
+    color: var(--gris);
+  }
+  .lang-btn.active {
+    background: var(--accent);
+    color: #fff;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.1rem 5%;
+    background: linear-gradient(180deg, rgba(15,28,52,.97) 0%, transparent 100%);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(59,125,224,.15);
+    gap: 1rem;
+  }
+  .logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: .04em;
+    color: var(--accent3);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    white-space: nowrap;
+}
+.logo img{
+    height: 60px;
+    width:auto;
+    max-width:140px;
+    object-fit:contain;
+    display:block;
+}
+  .logo-ball { font-size: 1.1rem; }
+  .logo span { color: var(--blanc); }
+  .nav-links { display: flex; gap: 1.8rem; list-style: none; align-items: center; }
+  .nav-links a {
+    color: var(--gris); text-decoration: none;
+    font-size: .83rem; font-weight: 400; letter-spacing: .06em;
+    text-transform: uppercase; transition: color .25s;
+  }
+  body.ar .nav-links a { letter-spacing: 0; font-size: .9rem; }
+  .nav-links a:hover { color: var(--accent3); }
+  .nav-cta {
+    background: var(--whatsapp); color: #fff !important;
+    padding: .45rem 1.1rem; border-radius: 50px;
+    font-weight: 500 !important; text-transform: none !important;
+    letter-spacing: .02em !important; transition: background .25s, transform .2s !important;
+  }
+  .nav-cta:hover { background: var(--whatsapp2) !important; transform: translateY(-1px); }
+  .nav-right { display: flex; align-items: center; gap: .8rem; }
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+  .hamburger span { width: 24px; height: 2px; background: var(--accent3); border-radius: 2px; }
+
+  /* ─── HERO ─── */
+  #hero {
+    min-height: 100vh; display: flex; align-items: center;
+    position: relative; overflow: hidden; padding: 8rem 5% 5rem;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 70% 60% at 80% 50%, rgba(43,91,174,.18) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 70% at 10% 80%, rgba(26,42,74,.25) 0%, transparent 60%),
+      linear-gradient(135deg, #080C18 0%, #0F1C34 60%, #091226 100%);
+  }
+  .hero-grid {
+    position: absolute; inset: 0;
+    background-image: linear-gradient(rgba(59,125,224,.05) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(59,125,224,.05) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+  }
+  .hero-orb { position: absolute; border-radius: 50%; filter: blur(80px); animation: float 8s ease-in-out infinite; }
+  .orb1 { width: 500px; height: 500px; background: rgba(43,91,174,.15); right: -10%; top: -10%; }
+  .orb2 { width: 300px; height: 300px; background: rgba(61,126,224,.08); left: 5%; bottom: 10%; animation-delay: -4s; }
+  @keyframes float { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(20px,-20px) scale(1.05)} }
+
+  .hero-content { position: relative; z-index: 1; max-width: 740px; }
+  .badge {
+    display: inline-flex; align-items: center; gap: .5rem;
+    background: rgba(43,91,174,.12); border: 1px solid rgba(59,125,224,.3);
+    border-radius: 50px; padding: .4rem 1rem;
+    font-size: .78rem; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--accent3); margin-bottom: 1.8rem;
+    animation: fadeUp .8s ease both;
+  }
+  body.ar .badge { letter-spacing: 0; font-size: .85rem; }
+  .badge-dot { width: 6px; height: 6px; background: var(--whatsapp); border-radius: 50%; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(1.4)} }
+
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.8rem, 6vw, 5.2rem);
+    font-weight: 700; line-height: 1.1; letter-spacing: -.01em;
+    margin-bottom: 1.4rem; animation: fadeUp .8s .15s ease both;
+  }
+  body.ar h1 { font-family: 'Cairo', sans-serif; letter-spacing: 0; }
+  h1 .accent { color: var(--accent3); }
+  h1 .accent2 { color: var(--test-color2); }
+
+  .hero-sub {
+    font-size: clamp(1rem, 2vw, 1.15rem); color: var(--gris);
+    max-width: 580px; margin-bottom: 2.4rem;
+    animation: fadeUp .8s .3s ease both;
+  }
+  .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; animation: fadeUp .8s .45s ease both; }
+  .btn-wa {
+    display: inline-flex; align-items: center; gap: .6rem;
+    background: var(--whatsapp); color: #fff; text-decoration: none;
+    font-size: 1rem; font-weight: 500; padding: .9rem 2rem; border-radius: 50px;
+    transition: transform .2s, box-shadow .2s, background .2s;
+    box-shadow: 0 4px 30px rgba(37,211,102,.25);
+  }
+  .btn-wa:hover { background: var(--whatsapp2); transform: translateY(-2px); box-shadow: 0 8px 40px rgba(37,211,102,.35); }
+  .btn-wa svg { width: 20px; height: 20px; fill: #fff; flex-shrink: 0; }
+  .btn-ghost {
+    display: inline-flex; align-items: center; gap: .5rem;
+    background: transparent; border: 1px solid rgba(59,125,224,.4);
+    color: var(--accent3); text-decoration: none; font-size: .95rem;
+    font-weight: 400; padding: .9rem 1.8rem; border-radius: 50px;
+    transition: border-color .2s, background .2s;
+  }
+  .btn-ghost:hover { border-color: var(--accent3); background: rgba(59,125,224,.08); }
+
+  .hero-stats {
+    display: flex; gap: 2.5rem; margin-top: 3.5rem;
+    animation: fadeUp .8s .6s ease both; flex-wrap: wrap;
+  }
+  .stat { border-left: 2px solid rgba(59,125,224,.35); padding-left: 1rem; }
+  .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 700; color: var(--accent3); line-height: 1; }
+  body.ar .stat-num { font-family: 'Cairo', sans-serif; }
+  .stat-label { font-size: .78rem; color: var(--gris); letter-spacing: .06em; text-transform: uppercase; margin-top: .2rem; }
+  body.ar .stat-label { letter-spacing: 0; font-size: .83rem; }
+  @keyframes fadeUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
+
+  /* ─── SECTIONS ─── */
+  section { padding: 5rem 5%; }
+  .section-label {
+    font-size: .75rem; letter-spacing: .16em; text-transform: uppercase;
+    color: var(--accent2); font-weight: 500; margin-bottom: .7rem;
+  }
+  body.ar .section-label { letter-spacing: 0; font-size: .82rem; }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; line-height: 1.15; margin-bottom: 1rem;
+  }
+  body.ar .section-title { font-family: 'Cairo', sans-serif; }
+  .section-sub { color: var(--gris); max-width: 520px; margin-bottom: 3.5rem; }
+  .center { text-align: center; }
+  .center .section-sub { margin-left: auto; margin-right: auto; }
+
+  /* ─── TEST BANNER ─── */
+  .test-banner {
+    background: linear-gradient(135deg, rgba(232,160,32,.12) 0%, rgba(43,91,174,.12) 100%);
+    border: 1px solid rgba(232,160,32,.3);
+    border-radius: 20px;
+    padding: 2rem 2.5rem;
+    max-width: 860px;
+    margin: 0 auto 3.5rem;
+    display: flex; align-items: center; gap: 2rem;
+    position: relative; overflow: hidden;
+  }
+  .test-banner::before {
+    content: '';
+    position: absolute; top: -50%; left: -10%;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(232,160,32,.15), transparent 70%);
+    pointer-events: none;
+  }
+  .test-icon { font-size: 3rem; flex-shrink: 0; }
+  .test-content h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem; font-weight: 700; color: var(--test-color2);
+    margin-bottom: .4rem;
+  }
+  body.ar .test-content h3 { font-family: 'Cairo', sans-serif; }
+  .test-content p { font-size: .9rem; color: var(--gris); margin-bottom: 1rem; }
+  .btn-test {
+    display: inline-flex; align-items: center; gap: .5rem;
+    background: var(--test-color); color: #fff; text-decoration: none;
+    font-size: .88rem; font-weight: 600; padding: .7rem 1.5rem; border-radius: 50px;
+    transition: background .2s, transform .2s; white-space: nowrap;
+  }
+  .btn-test:hover { background: var(--test-color2); transform: translateY(-1px); }
+  @media (max-width: 600px) { .test-banner { flex-direction: column; text-align: center; } }
+
+  /* ─── ABONNEMENTS ─── */
+  #abonnements { background: var(--navy3); }
+  .plans-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem; max-width: 1100px; margin: 0 auto;
+  }
+  .plan {
+    background: var(--navy2); border: 1px solid rgba(59,125,224,.15);
+    border-radius: 20px; padding: 2.2rem 1.8rem;
+    position: relative; overflow: hidden;
+    transition: transform .3s, border-color .3s, box-shadow .3s;
+  }
+  .plan:hover { transform: translateY(-6px); border-color: rgba(59,125,224,.4); box-shadow: 0 20px 60px rgba(0,0,0,.4); }
+  .plan.featured {
+    border-color: var(--accent2);
+    box-shadow: 0 0 0 1px rgba(59,125,224,.35), 0 20px 60px rgba(43,91,174,.15);
+  }
+  .plan.featured::before {
+    content: '★ POPULAIRE';
+    position: absolute; top: 16px; right: -28px;
+    background: var(--accent2); color: #fff;
+    font-size: .65rem; font-weight: 700; letter-spacing: .1em;
+    padding: .3rem 2.4rem; transform: rotate(40deg); transform-origin: right center;
+  }
+  body.ar .plan.featured::before { content: '★ الأكثر طلباً'; font-size: .6rem; letter-spacing: 0; }
+  .plan-duration {
+    font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--accent3);
+    font-weight: 600; letter-spacing: .05em; text-transform: uppercase; margin-bottom: .8rem;
+  }
+  body.ar .plan-duration { font-family: 'Cairo', sans-serif; letter-spacing: 0; }
+  .plan-price {
+    font-family: 'Cormorant Garamond', serif; font-size: 3.2rem; font-weight: 700;
+    line-height: 1; color: var(--blanc); margin-bottom: .3rem;
+  }
+  body.ar .plan-price { font-family: 'Cairo', sans-serif; }
+  .plan-price sup { font-size: 1.4rem; vertical-align: super; color: var(--accent3); }
+  .plan-price span { font-size: 1rem; color: var(--gris); font-family: 'DM Sans', sans-serif; font-weight: 300; }
+  .plan-perday { font-size: .8rem; color: var(--whatsapp); margin-bottom: 1.5rem; }
+  .plan-divider { height: 1px; background: rgba(59,125,224,.1); margin: 1.2rem 0; }
+  .plan-features { list-style: none; display: flex; flex-direction: column; gap: .7rem; margin-bottom: 1.8rem; }
+  .plan-features li { display: flex; align-items: flex-start; gap: .6rem; font-size: .88rem; color: var(--gris); }
+  .plan-features li::before { content: '✦'; color: var(--accent2); font-size: .65rem; margin-top: .3rem; flex-shrink: 0; }
+  .plan-features li b { color: var(--blanc); }
+  .btn-plan {
+    display: flex; align-items: center; justify-content: center; gap: .5rem;
+    background: var(--whatsapp); color: #fff; text-decoration: none;
+    font-size: .9rem; font-weight: 500; padding: .85rem 1.5rem; border-radius: 50px;
+    transition: background .2s, transform .2s, box-shadow .2s; width: 100%;
+    box-shadow: 0 4px 20px rgba(37,211,102,.2);
+  }
+  .btn-plan:hover { background: var(--whatsapp2); transform: translateY(-1px); box-shadow: 0 6px 30px rgba(37,211,102,.3); }
+  .btn-plan svg { width: 16px; height: 16px; fill: #fff; }
+
+  /* ─── APPS STREAMING ─── */
+  #apps { background: var(--navy2); }
+  .apps-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.2rem; max-width: 960px; margin: 0 auto;
+  }
+  .app-card {
+    background: rgba(255,255,255,.03); border: 1px solid rgba(59,125,224,.12);
+    border-radius: 16px; padding: 1.6rem 1.4rem; text-align: center;
+    transition: border-color .3s, background .3s, transform .3s;
+    display: flex; flex-direction: column; align-items: center; gap: .8rem;
+  }
+  .app-card:hover { border-color: rgba(59,125,224,.35); background: rgba(59,125,224,.06); transform: translateY(-4px); }
+  .app-logo {
+    width: 64px; height: 64px; border-radius: 16px; overflow: hidden;
+    background: rgba(255,255,255,.06); display: flex; align-items: center; justify-content: center;
+    font-size: 2rem;
+  }
+  .app-logo img { width: 100%; height: 100%; object-fit: cover; border-radius: 16px; }
+  .app-name { font-size: .95rem; font-weight: 500; color: var(--blanc); }
+  .app-desc { font-size: .78rem; color: var(--gris); line-height: 1.5; }
+  .app-badge {
+    font-size: .68rem; font-weight: 600; letter-spacing: .08em;
+    background: rgba(43,91,174,.2); color: var(--accent3);
+    border: 1px solid rgba(59,125,224,.25); border-radius: 50px;
+    padding: .2rem .65rem; text-transform: uppercase;
+  }
+
+  /* ─── WHY ─── */
+  #pourquoi { background: var(--navy); }
+  .why-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem; max-width: 1100px; margin: 0 auto;
+  }
+  .why-card {
+    background: rgba(255,255,255,.02); border: 1px solid rgba(255,255,255,.06);
+    border-radius: 16px; padding: 2rem;
+    transition: border-color .3s, background .3s;
+  }
+  .why-card:hover { border-color: rgba(59,125,224,.25); background: rgba(43,91,174,.05); }
+  .why-icon {
+    width: 52px; height: 52px; background: rgba(43,91,174,.1);
+    border: 1px solid rgba(59,125,224,.2); border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.5rem; margin-bottom: 1.2rem;
+  }
+  .why-card h3 { font-size: 1.05rem; font-weight: 500; margin-bottom: .5rem; color: var(--blanc); }
+  .why-card p { font-size: .87rem; color: var(--gris); line-height: 1.65; }
+
+  /* ─── HOW ─── */
+  #comment { background: var(--navy3); }
+  .steps { display: flex; gap: 2rem; max-width: 960px; margin: 0 auto; flex-wrap: wrap; }
+  .step {
+    flex: 1; min-width: 220px; position: relative;
+    display: flex; flex-direction: column; align-items: flex-start;
+  }
+  .step-num {
+    font-family: 'Cormorant Garamond', serif; font-size: 5rem; font-weight: 700;
+    line-height: 1; color: rgba(59,125,224,.08); margin-bottom: .2rem; user-select: none;
+  }
+  .step-icon { font-size: 2rem; margin-bottom: 1rem; }
+  .step h3 { font-size: 1.1rem; font-weight: 500; color: var(--blanc); margin-bottom: .5rem; }
+  .step p { font-size: .87rem; color: var(--gris); line-height: 1.65; }
+  .step-arrow { position: absolute; right: -1.5rem; top: 5rem; color: rgba(59,125,224,.3); font-size: 1.5rem; }
+  @media (max-width: 768px) { .step-arrow { display: none; } }
+
+  /* ─── TÉMOIGNAGES ─── */
+  #temoignages { background: var(--navy2); overflow: hidden; }
+  .reviews-scroll {
+    display: flex; gap: 1.5rem; overflow-x: auto;
+    padding: 1rem 0 1.5rem; scroll-snap-type: x mandatory;
+    scrollbar-width: none; max-width: 1100px; margin: 0 auto;
+  }
+  .reviews-scroll::-webkit-scrollbar { display: none; }
+  .review {
+    background: var(--navy3); border: 1px solid rgba(59,125,224,.12);
+    border-radius: 16px; padding: 1.8rem; min-width: 300px; max-width: 340px;
+    flex-shrink: 0; scroll-snap-align: start; transition: border-color .3s;
+  }
+  .review:hover { border-color: rgba(59,125,224,.3); }
+  .review-stars { color: #F5C060; font-size: 1rem; margin-bottom: 1rem; letter-spacing: .1em; }
+  .review-text { font-size: .9rem; color: var(--gris); line-height: 1.7; margin-bottom: 1.2rem; font-style: italic; }
+  .review-author { display: flex; align-items: center; gap: .8rem; }
+  .review-avatar {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), var(--accent3));
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: .9rem; color: #fff; flex-shrink: 0;
+  }
+  .review-name { font-size: .88rem; font-weight: 500; color: var(--blanc); }
+  .review-country { font-size: .75rem; color: var(--gris); }
+
+  /* ─── FAQ ─── */
+  #faq { background: var(--navy3); }
+  .faq-list { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem; }
+  .faq-item {
+    background: var(--navy2); border: 1px solid rgba(59,125,224,.12);
+    border-radius: 12px; overflow: hidden; transition: border-color .3s;
+  }
+  .faq-item.open { border-color: rgba(59,125,224,.35); }
+  .faq-q {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.3rem 1.5rem; cursor: pointer;
+    font-size: .95rem; font-weight: 500; color: var(--blanc);
+    user-select: none; gap: 1rem;
+  }
+  .faq-q span { font-size: 1.2rem; color: var(--accent3); transition: transform .3s; flex-shrink: 0; }
+  .faq-item.open .faq-q span { transform: rotate(45deg); }
+  .faq-a {
+    max-height: 0; overflow: hidden;
+    transition: max-height .4s ease, padding .3s;
+    font-size: .88rem; color: var(--gris); line-height: 1.7; padding: 0 1.5rem;
+  }
+  .faq-item.open .faq-a { max-height: 300px; padding: 0 1.5rem 1.3rem; }
+
+  /* ─── CONTACT ─── */
+  #contact {
+    background: linear-gradient(135deg, var(--navy2) 0%, #071224 50%, var(--navy2) 100%);
+    text-align: center; position: relative; overflow: hidden;
+  }
+  #contact::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse 60% 60% at 50% 100%, rgba(43,91,174,.08), transparent);
+    pointer-events: none;
+  }
+  .contact-inner { position: relative; z-index: 1; max-width: 640px; margin: 0 auto; }
+  .contact-wa {
+    display: inline-flex; align-items: center; gap: .8rem;
+    background: var(--whatsapp); color: #fff; text-decoration: none;
+    font-size: 1.2rem; font-weight: 500; padding: 1.1rem 2.5rem; border-radius: 50px;
+    margin-top: 2rem; box-shadow: 0 6px 40px rgba(37,211,102,.3);
+    transition: transform .25s, box-shadow .25s, background .2s;
+  }
+  .contact-wa:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 12px 50px rgba(37,211,102,.4); background: var(--whatsapp2); }
+  .contact-wa svg { width: 26px; height: 26px; fill: #fff; }
+  .contact-number { font-size: 1rem; color: var(--gris); margin-top: 1rem; }
+  .contact-number b { color: var(--accent3); }
+  .contact-badges { display: flex; flex-wrap: wrap; gap: .8rem; justify-content: center; margin-top: 2rem; }
+  .contact-badge {
+    background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08);
+    border-radius: 50px; padding: .4rem 1rem; font-size: .78rem; color: var(--gris); letter-spacing: .04em;
+  }
+  .contact-badge b { color: var(--accent3); }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--navy2); border-top: 1px solid rgba(59,125,224,.12);
+    padding: 2.5rem 5%; text-align: center; font-size: .8rem; color: var(--gris);
+  }
+  footer .f-logo {
+    font-family: 'Cormorant Garamond', serif; font-size: 1.4rem;
+    color: var(--accent3); font-weight: 700; margin-bottom: .5rem; display: block;
+  }
+  body.ar footer .f-logo { font-family: 'Cairo', sans-serif; }
+
+  /* ─── WA FLOAT ─── */
+  .wa-float {
+    position: fixed; bottom: 1.8rem; right: 1.8rem; z-index: 200;
+    width: 58px; height: 58px; background: var(--whatsapp);
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 20px rgba(37,211,102,.4); text-decoration: none;
+    transition: transform .25s, box-shadow .25s; animation: waPop 1s 1s ease both;
+  }
+  .wa-float:hover { transform: scale(1.1); box-shadow: 0 8px 30px rgba(37,211,102,.5); }
+  .wa-float svg { width: 28px; height: 28px; fill: #fff; }
+  .wa-float::after {
+    content: ''; position: absolute; border-radius: 50%; inset: -4px;
+    border: 2px solid rgba(37,211,102,.4); animation: ripple 2s infinite;
+  }
+  @keyframes ripple { 0%{transform:scale(1);opacity:1} 100%{transform:scale(1.5);opacity:0} }
+  @keyframes waPop { from{opacity:0;transform:scale(0) translateY(20px)} to{opacity:1;transform:scale(1) translateY(0)} }
+
+  /* ─── SCROLL REVEAL ─── */
+  .reveal { opacity: 0; transform: translateY(30px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .nav-links.open {
+      display: flex; flex-direction: column;
+      position: absolute; top: 70px; left: 0; right: 0;
+      background: rgba(15,28,52,.98);
+      padding: 1.5rem 5%; border-bottom: 1px solid rgba(59,125,224,.15);
+      backdrop-filter: blur(12px);
+    }
+    .nav-links.open a { font-size: 1rem; padding: .5rem 0; }
+    #hero { padding-top: 6rem; }
+    .hero-stats { gap: 1.5rem; }
+    .steps { flex-direction: column; }
+    section { padding: 4rem 5%; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav>
+<a href="#" class="logo">
+  <img src="seconda.png" alt="Logo">
+</a>  <a href="#" class="logo">
+    <span class="logo-ball">⚽</span>
+    <span>KARIM</span> Football
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#abonnements" data-fr="Abonnements" data-ar="الاشتراكات">Abonnements</a></li>
+    <li><a href="#apps" data-fr="Applications" data-ar="التطبيقات">Applications</a></li>
+    <li><a href="#pourquoi" data-fr="Avantages" data-ar="المميزات">Avantages</a></li>
+    <li><a href="#faq" data-fr="FAQ" data-ar="الأسئلة">FAQ</a></li>
+    <li>
+      <a href="https://wa.me/212663629674" target="_blank" class="nav-cta"
+         data-fr="📲 Commander" data-ar="📲 اطلب الآن">📲 Commander</a>
+    </li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setLang('fr')">FR</button>
+      <button class="lang-btn" onclick="setLang('ar')">AR</button>
+    </div>
+    <div class="hamburger" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-orb orb1"></div>
+  <div class="hero-orb orb2"></div>
+  <div class="hero-content">
+    <div class="badge">
+      <span class="badge-dot"></span>
+      <span data-fr="Service Premium Disponible Maintenant" data-ar="الخدمة المميزة متاحة الآن">Service Premium Disponible Maintenant</span>
+    </div>
+    <h1>
+      <span data-fr="Football" data-ar="كرة القدم">Football</span>
+      <span class="accent"> Premium</span><br>
+      <span data-fr="Sans" data-ar="بدون">Sans</span>
+      <span class="accent2"> <span data-fr="Frontières" data-ar="حدود">Frontières</span></span>
+    </h1>
+    <p class="hero-sub" data-fr="Accédez à tous les matchs et contenus sportifs premium, depuis n'importe quel pays. Qualité HD/4K, activation rapide, support 24/7 via WhatsApp." data-ar="شاهد جميع المباريات والمحتوى الرياضي المميز من أي مكان في العالم. جودة HD/4K، تفعيل سريع، ودعم على مدار الساعة عبر واتساب.">
+      Accédez à tous les matchs et contenus sportifs premium, depuis n'importe quel pays. Qualité HD/4K, activation rapide, support 24/7 via WhatsApp.
+    </p>
+    <div class="hero-btns">
+      <a href="https://wa.me/212663629674" target="_blank" class="btn-wa">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span data-fr="Commander via WhatsApp" data-ar="اطلب عبر واتساب">Commander via WhatsApp</span>
+      </a>
+      <a href="#abonnements" class="btn-ghost" data-fr="Voir les offres →" data-ar="عرض الباقات ←">Voir les offres →</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-num">4K</div><div class="stat-label" data-fr="Qualité Ultra HD" data-ar="جودة فائقة">Qualité Ultra HD</div></div>
+      <div class="stat"><div class="stat-num">24/7</div><div class="stat-label" data-fr="Support Client" data-ar="دعم متواصل">Support Client</div></div>
+      <div class="stat"><div class="stat-num">1</div><div class="stat-label" data-fr="Appareil par ligne" data-ar="جهاز واحد لكل خط">Appareil par ligne</div></div>
+      <div class="stat"><div class="stat-num">130+</div><div class="stat-label" data-fr="Pays disponibles" data-ar="دولة متاحة">Pays disponibles</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ABONNEMENTS ═══ -->
+<section id="abonnements">
+  <div class="center reveal">
+    <div class="section-label" data-fr="Nos Offres" data-ar="باقاتنا">Nos Offres</div>
+    <h2 class="section-title" data-fr='Abonnements <span style="color:var(--accent3)">Flexibles</span>' data-ar='اشتراكات <span style="color:var(--accent3)">مرنة</span>'>
+      Abonnements <span style="color:var(--accent3)">Flexibles</span>
+    </h2>
+    <p class="section-sub" data-fr="Choisissez la durée qui vous convient. Tous les plans incluent un accès complet, une qualité optimale et un support dédié. 1 abonnement = 1 appareil." data-ar="اختر المدة المناسبة لك. جميع الباقات تشمل وصولاً كاملاً وجودة مثالية ودعماً متخصصاً. اشتراك واحد = جهاز واحد.">
+      Choisissez la durée qui vous convient. Tous les plans incluent un accès complet, une qualité optimale et un support dédié. <strong style="color:var(--accent3)">1 abonnement = 1 appareil.</strong>
+    </p>
+  </div>
+
+  <!-- TEST 48H BANNER -->
+  <div class="test-banner reveal">
+    <div class="test-icon">🧪</div>
+    <div class="test-content">
+      <h3 data-fr="Test Gratuit 48h — Essayez Avant d'Acheter !" data-ar="تجربة مجانية 48 ساعة — جرب قبل الشراء!">
+        Test Gratuit 48h — Essayez Avant d'Acheter !
+      </h3>
+      <p data-fr="Profitez d'un accès test de 48 heures sur tous nos packs. Aucun engagement, juste la qualité pour vous convaincre. Contactez-nous sur WhatsApp pour activer votre test." data-ar="استمتع بوصول تجريبي لمدة 48 ساعة على جميع باقاتنا. لا التزام، فقط الجودة لتقنعك. تواصل معنا عبر واتساب لتفعيل تجربتك.">
+        Profitez d'un accès test de 48 heures sur tous nos packs. Aucun engagement, juste la qualité pour vous convaincre. Contactez-nous sur WhatsApp pour activer votre test.
+      </p>
+      <a href="https://wa.me/212663629674?text=Bonjour%2C%20je%20souhaite%20un%20test%2048h." target="_blank" class="btn-test">
+        ⚡ <span data-fr="Demander mon Test 48h" data-ar="طلب تجربة 48 ساعة">Demander mon Test 48h</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="plans-grid">
+
+    <!-- 6 MOIS -->
+    <div class="plan reveal">
+      <div class="plan-duration" data-fr="6 Mois" data-ar="6 أشهر">6 Mois</div>
+      <div class="plan-price" data-fr="À partir de 150 dh" data-ar="ابتداءً من 150 درهم">
+        Prix variable
+      </div>
+
+     <div class="plan-perday" 
+      data-fr="Selon qualité, application et appareil (Smart TV / Récepteur)"
+      data-ar="حسب الجودة والتطبيق ونوع الجهاز (تلفاز ذكي أو رسيفر)">
+      Selon qualité, application et appareil (Smart TV / Récepteur)
+      </div>
+      <div class="plan-divider"></div>
+      <ul class="plan-features">
+        <li><b data-fr="Accès complet" data-ar="وصول كامل">Accès complet</b> <span data-fr="à tous les contenus" data-ar="لجميع المحتوى"> à tous les contenus</span></li>
+        <li><span data-fr="Qualité" data-ar="جودة">Qualité</span> <b>HD / 4K</b></li>
+        <li><b>1</b> <span data-fr="appareil (1 connexion simultanée)" data-ar="جهاز (اتصال واحد في نفس الوقت)">appareil (1 connexion simultanée)</span></li>
+        <li><span data-fr="Activation" data-ar="تفعيل">Activation</span> <b data-fr="en moins d'1h" data-ar="في أقل من ساعة">en moins d'1h</b></li>
+        <li><span data-fr="Support" data-ar="دعم">Support</span> <b>24/7 WhatsApp</b></li>
+        <li><span data-fr="Renouvellement" data-ar="تجديد">Renouvellement</span> <b data-fr="simplifié" data-ar="سهل">simplifié</b></li>
+      </ul>
+      <a href="https://wa.me/212663629674?text=Bonjour%2C%20je%20souhaite%20l%27abonnement%206%20mois." target="_blank" class="btn-plan">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span data-fr="Commander — 6 Mois" data-ar="اطلب — 6 أشهر">Commander — 6 Mois</span>
+      </a>
+    </div>
+
+    <!-- 1 AN - FEATURED -->
+    <div class="plan featured reveal">
+      <div class="plan-duration" data-fr="1 An" data-ar="سنة واحدة">1 An</div>
+      <div class="plan-price" data-fr="A partir de 250 dh" data-ar="ابتداءً من 250 درهم">
+       Prix variable
+      </div>
+
+      <div class="plan-perday" 
+     data-fr="Selon qualité, application et appareil (Smart TV / Récepteur)"
+     data-ar="حسب الجودة والتطبيق ونوع الجهاز (تلفاز ذكي أو رسيفر)">
+  Selon qualité, application et appareil (Smart TV / Récepteur)
+      </div>
+      <div class="plan-divider"></div>
+      <ul class="plan-features">
+        <li><b data-fr="Accès complet" data-ar="وصول كامل">Accès complet</b> <span data-fr="toute l'année" data-ar="طوال العام"> toute l'année</span></li>
+        <li><span data-fr="Qualité" data-ar="جودة">Qualité</span> <b>HD / 4K</b></li>
+        <li><b>1</b> <span data-fr="appareil (1 connexion simultanée)" data-ar="جهاز (اتصال واحد في نفس الوقت)">appareil (1 connexion simultanée)</span></li>
+        <li><span data-fr="Activation" data-ar="تفعيل">Activation</span> <b data-fr="en moins d'1h" data-ar="في أقل من ساعة">en moins d'1h</b></li>
+        <li><span data-fr="Support" data-ar="دعم">Support</span> <b>24/7 VIP</b></li>
+        <li><span data-fr="Tarif annuel" data-ar="سعر سنوي">Tarif annuel</span> <b data-fr="le plus avantageux" data-ar="الأفضل قيمة">le plus avantageux</b></li>
+        <li><span data-fr="Accès" data-ar="وصول">Accès</span> <b data-fr="prioritaire aux nouveautés" data-ar="أولوية للمحتوى الجديد">prioritaire aux nouveautés</b></li>
+      </ul>
+      <a href="https://wa.me/212663629674?text=Bonjour%2C%20je%20souhaite%20l%27abonnement%201%20an." target="_blank" class="btn-plan">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span data-fr="Commander — 1 An" data-ar="اطلب — سنة واحدة">Commander — 1 An</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ APPS STREAMING ═══ -->
+<section id="apps">
+  <div class="center reveal">
+    <div class="section-label" data-fr="Applications Compatibles" data-ar="التطبيقات المتوافقة">Applications Compatibles</div>
+    <h2 class="section-title" data-fr="Jouez sur <span style='color:var(--accent3)'>Vos Apps</span>" data-ar='شاهد على <span style="color:var(--accent3)">تطبيقاتك</span>'>
+      Jouez sur <span style="color:var(--accent3)">Vos Apps</span>
+    </h2>
+    <p class="section-sub" data-fr="Notre service est compatible avec les meilleures applications de streaming. Choisissez celle que vous préférez et commencez immédiatement." data-ar="خدمتنا متوافقة مع أفضل تطبيقات البث. اختر التطبيق الذي تفضله وابدأ فوراً.">
+      Notre service est compatible avec les meilleures applications de streaming. Choisissez celle que vous préférez et commencez immédiatement.
+    </p>
+  </div>
+  <div class="apps-grid">
+
+    <div class="app-card reveal">
+      <div class="app-logo">
+           <img src="ibbo player.png" alt="IBBO">
+      </div>
+      <div class="app-name">IBBO Player</div>
+      <div class="app-desc" data-fr="Lecteur IPTV fluide et rapide, idéal pour les abonnements football." data-ar="مشغل IPTV سلس وسريع، مثالي لاشتراكات كرة القدم.">Lecteur IPTV fluide et rapide, idéal pour les abonnements football.</div>
+      <div class="app-badge">Android / Smart TV</div>
+    </div>
+
+    <div class="app-card reveal">
+      <div class="app-logo">
+          <img src="smrtx2.jfif" alt="Smart X2">
+      </div>
+      <div class="app-name">Smart X2</div>
+      <div class="app-desc" data-fr="Application premium avec interface moderne et stabilité optimale." data-ar="تطبيق مميز بواجهة حديثة واستقرار مثالي.">Application premium avec interface moderne et stabilité optimale.</div>
+      <div class="app-badge">Android / Smart TV</div>
+    </div>
+
+    <div class="app-card reveal">
+      <div class="app-logo">
+         <img src="ibo player pro.png" alt="IBBO pro">
+      </div>
+      <div class="app-name">Ibo Player Pro</div>
+      <div class="app-desc" data-fr="Solution IPTV professionnelle avec support multi-formats et qualité 4K." data-ar="حل IPTV احترافي يدعم صيغ متعددة وجودة 4K.">Solution IPTV professionnelle avec support multi-formats et qualité 4K.</div>
+      <div class="app-badge">Android / Smart TV</div>
+    </div>
+
+    <div class="app-card reveal">
+      <div class="app-logo">
+        <img src="bein.png" alt="BEIN">
+      </div>
+      <div class="app-name">Bein Sport</div>
+      <div class="app-desc" data-fr="Bouquet sportif premium diffusant les plus grandes compétitions en direct, avec haute qualité et analyses expertes." data-ar="باقة رياضية عالمية تنقل أبرز البطولات والمباريات المباشرة بجودة عالية وتحليل احترافي.">
+        Bouquet sportif premium diffusant les plus grandes compétitions en direct, avec haute qualité et analyses expertes.</div>
+      <div class="app-badge">Android / Smart TV</div>
+    </div>
+
+    <div class="app-card reveal">
+      <div class="app-logo">🖥️</div>
+      <div class="app-name">La télévision française</div>
+      <div class="app-desc" data-fr="Diffusion des chaînes de télévision françaises proposant des programmes variés incluant actualités, divertissement et séries, avec une qualité de diffusion élevée et une expérience fluide. ( TF1, France 2, M6 et Arte)." data-ar="بث القنوات التلفزيونية الفرنسية التي تقدم برامج متنوعة تشمل الأخبار، الترفيه، والمسلسلات، مع جودة مشاهدة عالية وتجربة بث مستقرة.  (TF1، France 2، M6، وArte).">Interface élégante avec EPG intégré et gestion facile des listes.</div>
+      <div class="app-badge">Android / Smart TV</div>
+    </div>
+
+    <div class="app-card reveal">
+      <div class="app-logo">🎬</div>
+      <div class="app-name">Films</div>
+      <div class="app-desc" data-fr="Catalogue de films varié offrant les derniers films et classiques, avec une qualité d'image élevée et une expérience de visionnage immersive." data-ar="مكتبة أفلام متنوعة تضم أحدث الأفلام والكلاسيكيات، بجودة عرض عالية وتجربة مشاهدة ممتعة وغامرة.">Catalogue de films varié offrant les derniers films et classiques, avec une qualité d'image élevée et une expérience de visionnage immersive.</div>
+      <div class="app-badge">Android / Smart TV</div>
+    </div>
+
+    <div class="app-card reveal">
+      <div class="app-logo">
+          <img src="iptv smarters pro.png" alt="IPTV Sparters Pro">
+      </div>
+      <div class="app-name">IPTV Sparters Pro</div>
+      <div class="app-desc" data-fr="Application performante avec une interface moderne et une stabilité optimale pour une expérience fluide et agréable." data-ar="تطبيق مميز بواجهة عصرية وأداء مستقر يضمن تجربة استخدام سلسة ومريحة.">Application performante avec une interface moderne et une stabilité optimale pour une expérience fluide et agréable.</div>
+      <div class="app-badge">Android / Smart TV</div>
+    </div>
+
+    <div class="app-card reveal">
+      <div class="app-logo">❓</div>
+      <div class="app-name" data-fr="Autre App ?" data-ar="تطبيق آخر؟">Autre App ?</div>
+      <div class="app-desc" data-fr="Contactez-nous sur WhatsApp pour vérifier la compatibilité de votre application préférée." data-ar="تواصل معنا عبر واتساب للتحقق من توافق تطبيقك المفضل.">Contactez-nous sur WhatsApp pour vérifier la compatibilité de votre application préférée.</div>
+      <div class="app-badge" data-fr="Nous Contacter" data-ar="اتصل بنا">Nous Contacter</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ POURQUOI ═══ -->
+<section id="pourquoi">
+  <div class="center reveal">
+    <div class="section-label" data-fr="Nos Atouts" data-ar="مميزاتنا">Nos Atouts</div>
+    <h2 class="section-title" data-fr='Pourquoi Nous <span style="color:var(--accent3)">Choisir ?</span>' data-ar='لماذا <span style="color:var(--accent3)">تختارنا؟</span>'>
+      Pourquoi Nous <span style="color:var(--accent3)">Choisir ?</span>
+    </h2>
+    <p class="section-sub" data-fr="Nous mettons tout en œuvre pour vous offrir une expérience fluide, rapide et fiable à chaque instant." data-ar="نبذل كل جهد لنقدم لك تجربة سلسة وسريعة وموثوقة في كل وقت.">
+      Nous mettons tout en œuvre pour vous offrir une expérience fluide, rapide et fiable à chaque instant.
+    </p>
+  </div>
+  <div class="why-grid">
+    <div class="why-card reveal">
+      <div class="why-icon">⚽</div>
+      <h3 data-fr="Contenu Football Premium" data-ar="محتوى كرة قدم مميز">Contenu Football Premium</h3>
+      <p data-fr="Tous les grands championnats, coupes et compétitions internationales. Ne ratez plus aucun match de vos équipes favorites." data-ar="جميع البطولات الكبرى والكؤوس والمسابقات الدولية. لا تفوّت أي مباراة لفرقك المفضلة.">Tous les grands championnats, coupes et compétitions internationales. Ne ratez plus aucun match de vos équipes favorites.</p>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-icon">⚡</div>
+      <h3 data-fr="Activation Rapide" data-ar="تفعيل سريع">Activation Rapide</h3>
+      <p data-fr="Votre accès est configuré et opérationnel en moins d'une heure après confirmation. Aucune attente inutile." data-ar="يتم تفعيل اشتراكك وتشغيله في أقل من ساعة بعد التأكيد. لا انتظار غير ضروري.">Votre accès est configuré et opérationnel en moins d'une heure après confirmation. Aucune attente inutile.</p>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-icon">🌍</div>
+      <h3 data-fr="Disponible Partout" data-ar="متاح في كل مكان">Disponible Partout</h3>
+      <p data-fr="Service accessible depuis plus de 130 pays. Voyagez l'esprit tranquille, votre abonnement vous suit partout." data-ar="الخدمة متاحة من أكثر من 130 دولة. سافر مطمئناً، اشتراكك يرافقك في كل مكان.">Service accessible depuis plus de 130 pays. Voyagez l'esprit tranquille, votre abonnement vous suit partout.</p>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-icon">📱</div>
+      <h3 data-fr="1 Appareil par Abonnement" data-ar="جهاز واحد لكل اشتراك">1 Appareil par Abonnement</h3>
+      <p data-fr="Chaque abonnement est dédié à un seul appareil pour garantir stabilité et qualité maximales. Compatible smartphone, tablette, PC, Smart TV et box Android." data-ar="كل اشتراك مخصص لجهاز واحد لضمان الاستقرار وأعلى جودة. متوافق مع الهاتف، الكمبيوتر، Smart TV وبوكس أندرويد.">Chaque abonnement est dédié à un seul appareil pour garantir stabilité et qualité maximales. Compatible smartphone, tablette, PC, Smart TV et box Android.</p>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-icon">🛡️</div>
+      <h3 data-fr="Stabilité & Fiabilité" data-ar="استقرار وموثوقية">Stabilité & Fiabilité</h3>
+      <p data-fr="Infrastructure robuste et connexion stable. Nous garantissons une continuité de service optimale pour une expérience sans interruption." data-ar="بنية تحتية متينة واتصال مستقر. نضمن استمرارية الخدمة للحصول على تجربة بلا انقطاعات.">Infrastructure robuste et connexion stable. Nous garantissons une continuité de service optimale pour une expérience sans interruption.</p>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-icon">💬</div>
+      <h3 data-fr="Support Client 24/7" data-ar="دعم العملاء 24/7">Support Client 24/7</h3>
+      <p data-fr="Notre équipe dédiée est disponible à toute heure par WhatsApp. Un problème ? Une question ? Nous répondons rapidement." data-ar="فريقنا المتخصص متاح على مدار الساعة عبر واتساب. مشكلة؟ سؤال؟ نرد بسرعة.">Notre équipe dédiée est disponible à toute heure par WhatsApp. Un problème ? Une question ? Nous répondons rapidement.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ COMMENT ÇA MARCHE ═══ -->
+<section id="comment">
+  <div class="center reveal">
+    <div class="section-label" data-fr="Processus" data-ar="الخطوات">Processus</div>
+    <h2 class="section-title" data-fr='Comment Ça <span style="color:var(--accent3)">Marche ?</span>' data-ar='كيف <span style="color:var(--accent3)">يعمل؟</span>'>
+      Comment Ça <span style="color:var(--accent3)">Marche ?</span>
+    </h2>
+    <p class="section-sub" data-fr="Trois étapes simples pour commencer à profiter de votre service en quelques minutes." data-ar="ثلاث خطوات بسيطة للبدء والاستمتاع بخدمتك في دقائق.">
+      Trois étapes simples pour commencer à profiter de votre service en quelques minutes.
+    </p>
+  </div>
+  <div class="steps">
+    <div class="step reveal">
+      <div class="step-num">01</div>
+      <div class="step-icon">📋</div>
+      <h3 data-fr="Choisissez votre offre" data-ar="اختر باقتك">Choisissez votre offre</h3>
+      <p data-fr="Parcourez nos abonnements et sélectionnez la durée qui correspond à vos besoins et à votre budget." data-ar="تصفح اشتراكاتنا واختر المدة التي تناسب احتياجاتك وميزانيتك.">Parcourez nos abonnements et sélectionnez la durée qui correspond à vos besoins et à votre budget.</p>
+      <div class="step-arrow">→</div>
+    </div>
+    <div class="step reveal">
+      <div class="step-num">02</div>
+      <div class="step-icon">📲</div>
+      <h3 data-fr="Contactez-nous sur WhatsApp" data-ar="تواصل معنا عبر واتساب">Contactez-nous sur WhatsApp</h3>
+      <p data-fr="Cliquez sur le bouton WhatsApp de l'offre choisie. Notre équipe vous répondra rapidement et prendra en charge votre commande." data-ar="انقر على زر واتساب الخاص بالعرض المختار. فريقنا سيرد بسرعة ويتولى طلبك.">Cliquez sur le bouton WhatsApp de l'offre choisie. Notre équipe vous répondra rapidement et prendra en charge votre commande.</p>
+      <div class="step-arrow">→</div>
+    </div>
+    <div class="step reveal">
+      <div class="step-num">03</div>
+      <div class="step-icon">✅</div>
+      <h3 data-fr="Recevez votre accès" data-ar="احصل على وصولك">Recevez votre accès</h3>
+      <p data-fr="Après confirmation, vous recevez vos identifiants d'accès en moins d'une heure. Profitez immédiatement de votre service." data-ar="بعد التأكيد، تصلك بيانات الوصول في أقل من ساعة. استمتع فوراً بخدمتك.">Après confirmation, vous recevez vos identifiants d'accès en moins d'une heure. Profitez immédiatement de votre service.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TÉMOIGNAGES ═══ -->
+<section id="temoignages">
+    <div class="center reveal">
+    <div class="section-label" data-fr="Clients Satisfaits" data-ar="عملاء راضون">Clients Satisfaits</div>
+    
+    <h2 class="section-title" data-fr="Ce Qu'ils <span style=&quot;color:var(--accent3)&quot;>Disent</span>" data-ar="ماذا <span style=&quot;color:var(--accent3)&quot;>يقولون</span>">
+      Ce Qu'ils <span style="color:var(--accent3)">Disent</span>
+    </h2>
+
+    <p class="section-sub" data-fr="Des milliers de clients satisfaits à travers le monde font confiance à notre service." data-ar="آلاف العملاء الراضين حول العالم يثقون في خدمتنا.">
+      Des milliers de clients satisfaits à travers le monde font confiance à notre service.
+    </p>
+  </div>
+  <div class="reviews-scroll">
+    <div class="review">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text" data-fr="Service impeccable ! L'activation a été ultra rapide et la qualité d'image est excellente. Le support WhatsApp est réactif et très professionnel." data-ar="خدمة لا تشوبها شائبة! التفعيل كان سريعاً جداً وجودة الصورة ممتازة. الدعم عبر واتساب سريع الاستجابة واحترافي.">Service impeccable ! L'activation a été ultra rapide et la qualité d'image est excellente. Le support WhatsApp est réactif et très professionnel.</p>
+      <div class="review-author">
+        <div class="review-avatar">KA</div>
+        <div>
+          <div class="review-name">Karim A.</div>
+          <div class="review-country">🇲🇦 Maroc</div>
+        </div>
+      </div>
+    </div>
+    <div class="review">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text" data-fr="J'utilise ce service depuis 6 mois et aucun problème. Connexion stable, qualité 4K parfaite sur ma Smart TV." data-ar="أستخدم هذه الخدمة منذ 6 أشهر ولا توجد أي مشاكل. اتصال مستقر وجودة 4K رائعة على Smart TV الخاص بي.">J'utilise ce service depuis 6 mois et aucun problème. Connexion stable, qualité 4K parfaite sur ma Smart TV.</p>
+      <div class="review-author">
+        <div class="review-avatar">SB</div>
+        <div>
+          <div class="review-name">Sofia B.</div>
+          <div class="review-country">🇫🇷 France</div>
+        </div>
+      </div>
+    </div>
+    <div class="review">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text" data-fr="Vraiment satisfait ! Fonctionne parfaitement sur mon téléphone. Le support a résolu mon problème en moins de 10 minutes." data-ar="راضٍ حقاً! يعمل بشكل مثالي على هاتفي. حل الدعم مشكلتي في أقل من 10 دقائق.">Vraiment satisfait ! Fonctionne parfaitement sur mon téléphone. Le support a résolu mon problème en moins de 10 minutes.</p>
+      <div class="review-author">
+        <div class="review-avatar">MA</div>
+        <div>
+          <div class="review-name">Mohamed A.</div>
+          <div class="review-country">🇩🇿 Algérie</div>
+        </div>
+      </div>
+    </div>
+    <div class="review">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text" data-fr="Super service ! J'ai commandé l'abonnement annuel et c'est le meilleur investissement. Stable, rapide, disponible partout." data-ar="خدمة رائعة! طلبت الاشتراك السنوي وهو أفضل استثمار. مستقر، سريع، متاح في كل مكان.">Super service ! J'ai commandé l'abonnement annuel et c'est le meilleur investissement. Stable, rapide, disponible partout.</p>
+      <div class="review-author">
+        <div class="review-avatar">LT</div>
+        <div>
+          <div class="review-name">Laura T.</div>
+          <div class="review-country">🇧🇪 Belgique</div>
+        </div>
+      </div>
+    </div>
+    <div class="review">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text" data-fr="Excellente expérience du début à la fin. Commande simple via WhatsApp, activation rapide, qualité irréprochable." data-ar="تجربة ممتازة من البداية للنهاية. طلب سهل عبر واتساب، تفعيل سريع، جودة لا تشوبها شائبة.">Excellente expérience du début à la fin. Commande simple via WhatsApp, activation rapide, qualité irréprochable.</p>
+      <div class="review-author">
+        <div class="review-avatar">YM</div>
+        <div>
+          <div class="review-name">Youssef M.</div>
+          <div class="review-country">🇹🇳 Tunisie</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section id="faq">
+  <div class="center reveal">
+    <div class="section-label" data-fr="Questions Fréquentes" data-ar="الأسئلة الشائعة">Questions Fréquentes</div>
+    <h2 class="section-title" data-fr='Vos <span style="color:var(--accent3)">Questions</span>' data-ar='<span style="color:var(--accent3)">أسئلتكم</span>'>
+      Vos <span style="color:var(--accent3)">Questions</span>
+    </h2>
+    <p class="section-sub" data-fr="Tout ce que vous devez savoir avant de commander." data-ar="كل ما تحتاج معرفته قبل الطلب.">Tout ce que vous devez savoir avant de commander.</p>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span class="faq-qtext" data-fr="Sur combien d'appareils fonctionne un abonnement ?" data-ar="على كم جهاز يعمل الاشتراك الواحد؟">Sur combien d'appareils fonctionne un abonnement ?</span>
+        <span>+</span>
+      </div>
+      <div class="faq-a" data-fr="Chaque abonnement est dédié à 1 seul appareil et 1 seule connexion simultanée. Cela garantit la stabilité et la qualité maximales pour votre service. Si vous avez besoin de plusieurs appareils, il faudra prendre plusieurs abonnements." data-ar="كل اشتراك مخصص لجهاز واحد فقط واتصال متزامن واحد. هذا يضمن أقصى استقرار وجودة لخدمتك. إذا كنت بحاجة لأجهزة متعددة، يجب أخذ اشتراكات متعددة.">
+        Chaque abonnement est dédié à 1 seul appareil et 1 seule connexion simultanée. Cela garantit la stabilité et la qualité maximales pour votre service. Si vous avez besoin de plusieurs appareils, il faudra prendre plusieurs abonnements.
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span class="faq-qtext" data-fr="Comment fonctionne le test 48h ?" data-ar="كيف تعمل التجربة لمدة 48 ساعة؟">Comment fonctionne le test 48h ?</span>
+        <span>+</span>
+      </div>
+      <div class="faq-a" data-fr="Nous proposons un accès test de 48 heures sur tous nos packs. Contactez-nous simplement sur WhatsApp en demandant votre test. Après vérification, nous activons votre accès test rapidement. Aucun paiement requis pour le test." data-ar="نقدم وصولاً تجريبياً لمدة 48 ساعة على جميع باقاتنا. فقط تواصل معنا عبر واتساب وأطلب تجربتك. بعد التحقق، نفعّل وصولك التجريبي بسرعة. لا يلزم دفع أي مبلغ للتجربة.">
+        Nous proposons un accès test de 48 heures sur tous nos packs. Contactez-nous simplement sur WhatsApp en demandant votre test. Après vérification, nous activons votre accès test rapidement. Aucun paiement requis pour le test.
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span class="faq-qtext" data-fr="Quelles applications sont supportées ?" data-ar="ما هي التطبيقات المدعومة؟">Quelles applications sont supportées ?</span>
+        <span>+</span>
+      </div>
+      <div class="faq-a" data-fr="Notre service est compatible avec IBBO Player, Smart X2, Ibo Player Pro, TiviMate, XCIPTV, GSE IPTV, VLC et bien d'autres. Si vous avez une application spécifique, contactez-nous pour vérifier la compatibilité." data-ar="خدمتنا متوافقة مع IBBO Player و Smart X2 و Ibo Player Pro و TiviMate و XCIPTV و GSE IPTV و VLC وغيرها الكثير. إذا كان لديك تطبيق محدد، تواصل معنا للتحقق من التوافق.">
+        Notre service est compatible avec IBBO Player, Smart X2, Ibo Player Pro, TiviMate, XCIPTV, GSE IPTV, VLC et bien d'autres. Si vous avez une application spécifique, contactez-nous pour vérifier la compatibilité.
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span class="faq-qtext" data-fr="Combien de temps prend l'activation ?" data-ar="كم يستغرق التفعيل؟">Combien de temps prend l'activation ?</span>
+        <span>+</span>
+      </div>
+      <div class="faq-a" data-fr="L'activation de votre abonnement est réalisée en moins d'une heure après confirmation de votre commande. Notre équipe traite chaque demande rapidement, même le week-end et les jours fériés." data-ar="يتم تفعيل اشتراكك في أقل من ساعة بعد تأكيد طلبك. يعالج فريقنا كل طلب بسرعة، حتى في عطل نهاية الأسبوع والأعياد.">
+        L'activation de votre abonnement est réalisée en moins d'une heure après confirmation de votre commande. Notre équipe traite chaque demande rapidement, même le week-end et les jours fériés.
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span class="faq-qtext" data-fr="Le service est-il disponible dans mon pays ?" data-ar="هل الخدمة متوفرة في بلدي؟">Le service est-il disponible dans mon pays ?</span>
+        <span>+</span>
+      </div>
+      <div class="faq-a" data-fr="Oui ! Notre service est accessible depuis plus de 130 pays à travers le monde. Où que vous soyez, vous bénéficiez de la même qualité de service et du même support client." data-ar="نعم! خدمتنا متاحة من أكثر من 130 دولة حول العالم. أينما كنت، تستفيد من نفس جودة الخدمة ودعم العملاء.">
+        Oui ! Notre service est accessible depuis plus de 130 pays à travers le monde. Où que vous soyez, vous bénéficiez de la même qualité de service et du même support client.
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span class="faq-qtext" data-fr="Quelle est la qualité d'image proposée ?" data-ar="ما هي جودة الصورة المقدمة؟">Quelle est la qualité d'image proposée ?</span>
+        <span>+</span>
+      </div>
+      <div class="faq-a" data-fr="Nous proposons la meilleure qualité disponible selon le contenu, allant de la HD à la 4K Ultra HD. La qualité s'adapte automatiquement à votre connexion internet pour une expérience optimale sans coupure." data-ar="نقدم أفضل جودة متاحة حسب المحتوى، من HD إلى 4K Ultra HD. تتكيف الجودة تلقائياً مع اتصالك بالإنترنت لتجربة مثلى بدون انقطاعات.">
+        Nous proposons la meilleure qualité disponible selon le contenu, allant de la HD à la 4K Ultra HD. La qualité s'adapte automatiquement à votre connexion internet pour une expérience optimale sans coupure.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONTACT ═══ -->
+<section id="contact">
+  <div class="contact-inner reveal">
+    <div class="section-label" data-fr="Contactez-Nous" data-ar="تواصل معنا">Contactez-Nous</div>
+    <h2 class="section-title" data-fr="Prêt à Commencer ?" data-ar="هل أنت مستعد للبدء؟">Prêt à Commencer ?</h2>
+    <p class="section-sub" style="margin: 0 auto 0;" data-fr="Commandez en quelques secondes via WhatsApp. Notre équipe est disponible maintenant pour prendre en charge votre demande." data-ar="اطلب في ثوانٍ عبر واتساب. فريقنا متاح الآن لتلبية طلبك.">
+      Commandez en quelques secondes via WhatsApp. Notre équipe est disponible maintenant pour prendre en charge votre demande.
+    </p>
+    <a href="https://wa.me/212663629674" target="_blank" class="contact-wa">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      <span data-fr="Commander sur WhatsApp" data-ar="اطلب عبر واتساب">Commander sur WhatsApp</span>
+    </a>
+    <div class="contact-number">WhatsApp : <b>+212 663 629 674</b></div>
+    <div class="contact-badges">
+      <div class="contact-badge"><b>⚡</b> <span data-fr="Accès rapide" data-ar="وصول سريع">Accès rapide</span></div>
+      <div class="contact-badge"><b>💬</b> <span data-fr="Support 24/7" data-ar="دعم 24/7">Support 24/7</span></div>
+      <div class="contact-badge"><b>🌍</b> <span data-fr="Disponible partout" data-ar="متاح في كل مكان">Disponible partout</span></div>
+      <div class="contact-badge"><b>⚽</b> <span data-fr="Football Premium" data-ar="كرة قدم مميزة">Football Premium</span></div>
+      <div class="contact-badge"><b>🧪</b> <span data-fr="Test 48h gratuit" data-ar="تجربة 48 ساعة مجانية">Test 48h gratuit</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <span class="f-logo">⚽ KARIM Football Subscriptions</span>
+  <p style="margin-bottom:.4rem">© 2025 KARIM Football Subscriptions — <span data-fr="Tous droits réservés." data-ar="جميع الحقوق محفوظة.">Tous droits réservés.</span></p>
+  <p style="color:rgba(138,149,176,.5);font-size:.75rem" data-fr="Service de streaming légal et abonnements numériques" data-ar="خدمة بث قانونية واشتراكات رقمية">Service de streaming légal et abonnements numériques</p>
+</footer>
+
+<!-- ═══ WA FLOAT ═══ -->
+<a href="https://wa.me/212663629674" target="_blank" class="wa-float" title="Commander sur WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+  // ─── LANGUAGE SYSTEM ───
+  // Detect from cookie or browser language
+  function detectLang() {
+    const cookie = document.cookie.split(';').map(c => c.trim()).find(c => c.startsWith('karim_lang='));
+    if (cookie) return cookie.split('=')[1];
+    const browserLang = navigator.language || navigator.userLanguage || 'fr';
+    return browserLang.startsWith('ar') ? 'ar' : 'fr';
+  }
+
+  function setLang(lang) {
+    // Save cookie (1 year)
+    document.cookie = `karim_lang=${lang};path=/;max-age=31536000`;
+    applyLang(lang);
+    // Update buttons
+    document.querySelectorAll('.lang-btn').forEach(b => {
+      b.classList.toggle('active', b.textContent.toLowerCase() === lang);
+    });
+  }
+
+  function applyLang(lang) {
+    const isAr = lang === 'ar';
+    document.documentElement.lang = lang;
+    document.body.classList.toggle('ar', isAr);
+    document.body.style.direction = isAr ? 'rtl' : 'ltr';
+
+    // Translate all data-fr / data-ar elements
+    document.querySelectorAll('[data-fr],[data-ar]').forEach(el => {
+      const text = el.getAttribute('data-' + lang);
+      if (text !== null) {
+        // Check if the text has HTML tags
+        if (text.includes('<')) {
+          el.innerHTML = text;
+        } else {
+          el.textContent = text;
+        }
+      }
+    });
+
+    // Translate FAQ answers
+    document.querySelectorAll('.faq-a').forEach(el => {
+      const text = el.getAttribute('data-' + lang);
+      if (text) el.textContent = text;
+    });
+
+    // Translate section titles with innerHTML
+    document.querySelectorAll('.section-title[data-fr]').forEach(el => {
+      const text = el.getAttribute('data-' + lang);
+      if (text) el.innerHTML = text;
+    });
+  }
+
+  // Init on load
+  const initLang = detectLang();
+  applyLang(initLang);
+  document.querySelectorAll('.lang-btn').forEach(b => {
+    b.classList.toggle('active', b.textContent.toLowerCase() === initLang);
+  });
+
+  // ─── NAV TOGGLE ───
+  function toggleNav() {
+    document.getElementById('navLinks').classList.toggle('open');
+  }
+
+  // ─── SCROLL REVEAL ───
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 80);
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(r => observer.observe(r));
+
+  // ─── FAQ TOGGLE ───
+  function toggleFaq(el) {
+    const item = el.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  // ─── CLOSE NAV ON LINK CLICK ───
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.addEventListener('click', () => {
+      document.getElementById('navLinks').classList.remove('open');
+    });
+  });
+</script>
+</body>
+</html>
