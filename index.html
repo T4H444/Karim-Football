@@ -13,13 +13,9 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:type" content="image/jpeg">
-
-<!-- Locale -->
 <meta property="og:site_name" content="KARIM TV">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:locale:alternate" content="ar_MA">
-
-<!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="KARIM TV - Football Live Streaming">
 <meta name="twitter:description" content="Watch football matches in HD/4K on all devices. Fast activation & 24/7 support.">
@@ -29,7 +25,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=DM+Sans:wght@300;400;500;600&family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    /* Brand colors extracted from KARIM logo: deep navy blue */
     --navy:    #1A2A4A;
     --navy2:   #0F1C34;
     --navy3:   #172340;
@@ -118,14 +113,14 @@
     align-items: center;
     gap: .5rem;
     white-space: nowrap;
-}
-.logo img{
+  }
+  .logo img{
     height: 60px;
     width:auto;
     max-width:140px;
     object-fit:contain;
     display:block;
-}
+  }
   .logo-ball { font-size: 1.1rem; }
   .logo span { color: var(--blanc); }
   .nav-links { display: flex; gap: 1.8rem; list-style: none; align-items: center; }
@@ -279,565 +274,7 @@
   }
   .btn-test:hover { background: var(--test-color2); transform: translateY(-1px); }
   @media (max-width: 600px) { .test-banner { flex-direction: column; text-align: center; } }
-  /*save */
 
-
-  <!-- ═══════════════════════════════════════════════════════
-     KARIM TV — TODAY'S MATCHES SLIDER
-     Drop this entire block into your index.html
-     Recommended position: just after #hero, before #abonnements
-     ═══════════════════════════════════════════════════════ -->
-
-<!-- ─── MATCHES SECTION ─── -->
-<section id="matches">
-  <div class="matches-header reveal">
-    <div class="section-label" data-fr="En Direct &amp; Aujourd'hui" data-ar="مباشر واليوم">En Direct &amp; Aujourd'hui</div>
-    <h2 class="section-title" data-fr="Matchs du Jour" data-ar="مباريات اليوم">Matchs du Jour</h2>
-    <p class="section-sub matches-sub" data-fr="Tous les matchs d'aujourd'hui en un coup d'œil — scores, horaires et compétitions." data-ar="كل مباريات اليوم في لمحة واحدة — النتائج، المواعيد والبطولات.">
-      Tous les matchs d'aujourd'hui en un coup d'œil — scores, horaires et compétitions.
-    </p>
-  </div>
-
-  <!-- Slider wrapper -->
-  <div class="matches-slider-wrap">
-    <!-- Scroll buttons (desktop) -->
-    <button class="ms-arrow ms-arrow-left" id="msLeft" aria-label="Scroll left">
-      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
-    </button>
-
-    <div class="matches-track" id="matchesTrack">
-      <!-- Cards injected by JS -->
-      <div class="ms-loading" id="msLoading">
-        <div class="ms-spinner"></div>
-        <span data-fr="Chargement des matchs…" data-ar="جاري تحميل المباريات…">Chargement des matchs…</span>
-      </div>
-    </div>
-
-    <button class="ms-arrow ms-arrow-right" id="msRight" aria-label="Scroll right">
-      <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
-    </button>
-  </div>
-
-  <!-- League filter pills -->
-  <div class="ms-filters" id="msFilters"></div>
-</section>
-
-<!-- ─── MATCHES STYLES ─── -->
-<style>
-  /* ── Section ── */
-  #matches {
-    background: var(--navy2);
-    padding: 5rem 0 3rem;
-    overflow: hidden;
-  }
-  .matches-header {
-    padding: 0 5%;
-    margin-bottom: 2.5rem;
-  }
-  .matches-sub {
-    margin-bottom: 0 !important;
-  }
-
-  /* ── Slider wrapper ── */
-  .matches-slider-wrap {
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: .5rem;
-  }
-
-  /* ── Track ── */
-  .matches-track {
-    display: flex;
-    gap: 1rem;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    padding: 1rem 5% 1.5rem;
-    scroll-behavior: smooth;
-    flex: 1;
-  }
-  .matches-track::-webkit-scrollbar { display: none; }
-
-  /* ── Arrow buttons ── */
-  .ms-arrow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    flex-shrink: 0;
-    background: rgba(43,91,174,.15);
-    border: 1px solid rgba(59,125,224,.25);
-    border-radius: 50%;
-    cursor: pointer;
-    color: var(--accent3);
-    transition: background .2s, border-color .2s, transform .15s;
-    z-index: 2;
-  }
-  .ms-arrow:hover {
-    background: rgba(43,91,174,.35);
-    border-color: var(--accent3);
-    transform: scale(1.08);
-  }
-  .ms-arrow svg {
-    width: 18px; height: 18px;
-    stroke: currentColor; fill: none;
-    stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;
-  }
-  .ms-arrow-left  { margin-left: 2%; }
-  .ms-arrow-right { margin-right: 2%; }
-  @media (max-width: 768px) {
-    .ms-arrow { display: none; }
-  }
-
-  /* ── Match card ── */
-  .ms-card {
-    flex-shrink: 0;
-    width: 220px;
-    background: var(--navy3);
-    border: 1px solid rgba(59,125,224,.12);
-    border-radius: 18px;
-    padding: 1.1rem 1rem 1.2rem;
-    scroll-snap-align: start;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: .55rem;
-    cursor: default;
-    transition: border-color .25s, transform .25s, box-shadow .25s;
-    position: relative;
-    overflow: hidden;
-  }
-  .ms-card::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(59,125,224,.06), transparent 70%);
-    pointer-events: none;
-  }
-  .ms-card:hover {
-    border-color: rgba(59,125,224,.35);
-    transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(0,0,0,.35);
-  }
-
-  /* Live card glow */
-  .ms-card.is-live {
-    border-color: rgba(239,68,68,.35);
-    box-shadow: 0 0 0 1px rgba(239,68,68,.15);
-    animation: liveGlow 2.5s ease-in-out infinite;
-  }
-  @keyframes liveGlow {
-    0%,100% { box-shadow: 0 0 0 1px rgba(239,68,68,.15), 0 0 18px rgba(239,68,68,.08); }
-    50%      { box-shadow: 0 0 0 1px rgba(239,68,68,.3),  0 0 28px rgba(239,68,68,.18); }
-  }
-
-  /* ── Competition badge ── */
-  .ms-comp {
-    font-size: .64rem;
-    font-weight: 600;
-    letter-spacing: .09em;
-    text-transform: uppercase;
-    color: var(--accent2);
-    background: rgba(43,91,174,.12);
-    border: 1px solid rgba(59,125,224,.2);
-    border-radius: 50px;
-    padding: .18rem .7rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 100%;
-  }
-  body.ar .ms-comp { letter-spacing: 0; font-size: .72rem; }
-
-  /* ── Teams row ── */
-  .ms-teams {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    gap: .4rem;
-    margin: .2rem 0;
-  }
-
-  .ms-team {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: .35rem;
-    flex: 1;
-    min-width: 0;
-  }
-
-  .ms-logo {
-    width: 44px;
-    height: 44px;
-    object-fit: contain;
-    filter: drop-shadow(0 2px 6px rgba(0,0,0,.4));
-    transition: transform .2s;
-  }
-  .ms-card:hover .ms-logo { transform: scale(1.08); }
-
-  .ms-logo-fallback {
-    width: 44px;
-    height: 44px;
-    background: rgba(59,125,224,.1);
-    border: 1px solid rgba(59,125,224,.2);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.3rem;
-  }
-
-  .ms-team-name {
-    font-size: .7rem;
-    font-weight: 500;
-    color: var(--blanc);
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 100%;
-    max-width: 72px;
-  }
-  body.ar .ms-team-name { font-family: 'Cairo', sans-serif; font-size: .75rem; }
-
-  /* ── Center score/time block ── */
-  .ms-center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: .2rem;
-    flex-shrink: 0;
-    min-width: 52px;
-  }
-
-  .ms-score {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.75rem;
-    font-weight: 700;
-    line-height: 1;
-    color: var(--blanc);
-    letter-spacing: .04em;
-  }
-  body.ar .ms-score { font-family: 'Cairo', sans-serif; }
-
-  .ms-vs {
-    font-size: .7rem;
-    color: var(--gris);
-    letter-spacing: .08em;
-    font-weight: 500;
-  }
-
-  /* ── Status pill ── */
-  .ms-status {
-    font-size: .64rem;
-    font-weight: 700;
-    letter-spacing: .1em;
-    border-radius: 50px;
-    padding: .22rem .7rem;
-    text-transform: uppercase;
-    margin-top: .1rem;
-  }
-  body.ar .ms-status { letter-spacing: 0; font-size: .72rem; }
-
-  .ms-status.scheduled {
-    background: rgba(59,125,224,.12);
-    border: 1px solid rgba(59,125,224,.25);
-    color: var(--accent3);
-  }
-  .ms-status.finished {
-    background: rgba(138,149,176,.08);
-    border: 1px solid rgba(138,149,176,.2);
-    color: var(--gris);
-  }
-  .ms-status.live {
-    background: rgba(239,68,68,.15);
-    border: 1px solid rgba(239,68,68,.4);
-    color: #F87171;
-    display: flex;
-    align-items: center;
-    gap: .3rem;
-  }
-  .ms-status.live::before {
-    content: '';
-    width: 6px; height: 6px;
-    background: #EF4444;
-    border-radius: 50%;
-    flex-shrink: 0;
-    animation: pulse 1.4s infinite;
-  }
-  .ms-status.halftime {
-    background: rgba(232,160,32,.12);
-    border: 1px solid rgba(232,160,32,.3);
-    color: var(--test-color2);
-  }
-  .ms-status.postponed,
-  .ms-status.cancelled {
-    background: rgba(138,149,176,.08);
-    border: 1px solid rgba(138,149,176,.15);
-    color: var(--gris);
-  }
-
-  /* ── Loading state ── */
-  .ms-loading {
-    display: flex;
-    align-items: center;
-    gap: .8rem;
-    padding: 2.5rem 1.5rem;
-    color: var(--gris);
-    font-size: .9rem;
-    white-space: nowrap;
-  }
-  .ms-spinner {
-    width: 20px; height: 20px;
-    border: 2px solid rgba(59,125,224,.2);
-    border-top-color: var(--accent3);
-    border-radius: 50%;
-    animation: spin .7s linear infinite;
-    flex-shrink: 0;
-  }
-  @keyframes spin { to { transform: rotate(360deg); } }
-
-  /* ── Empty state ── */
-  .ms-empty {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: .6rem;
-    padding: 3rem 2rem;
-    color: var(--gris);
-    font-size: .9rem;
-    text-align: center;
-  }
-  .ms-empty-icon { font-size: 2.5rem; opacity: .5; }
-
-  /* ── Filter pills ── */
-  .ms-filters {
-    display: flex;
-    gap: .6rem;
-    flex-wrap: wrap;
-    padding: .8rem 5% 0;
-  }
-  .ms-filter-pill {
-    background: rgba(255,255,255,.04);
-    border: 1px solid rgba(59,125,224,.15);
-    border-radius: 50px;
-    padding: .28rem .85rem;
-    font-size: .72rem;
-    font-weight: 500;
-    color: var(--gris);
-    cursor: pointer;
-    transition: background .2s, color .2s, border-color .2s;
-    letter-spacing: .05em;
-    text-transform: uppercase;
-    white-space: nowrap;
-  }
-  body.ar .ms-filter-pill { letter-spacing: 0; font-size: .78rem; }
-  .ms-filter-pill:hover { border-color: rgba(59,125,224,.35); color: var(--accent3); }
-  .ms-filter-pill.active {
-    background: var(--accent);
-    border-color: var(--accent2);
-    color: #fff;
-  }
-</style>
-
-<!-- ─── MATCHES JAVASCRIPT ─── -->
-<script>
-(function () {
-  const track   = document.getElementById('matchesTrack');
-  const loading = document.getElementById('msLoading');
-  const filters = document.getElementById('msFilters');
-  const btnL    = document.getElementById('msLeft');
-  const btnR    = document.getElementById('msRight');
-
-  let allMatches = [];
-  let activeFilter = 'ALL';
-
-  // ── Fetch JSON ──────────────────────────────────────────
-  async function loadMatches() {
-    try {
-      const res = await fetch('/data/matches.json?t=' + Date.now());
-      if (!res.ok) throw new Error('HTTP ' + res.status);
-      const data = await res.json();
-      allMatches = data.matches || [];
-      buildFilters();
-      renderCards(allMatches);
-    } catch (err) {
-      showEmpty('Impossible de charger les matchs.', 'تعذّر تحميل المباريات.');
-      console.error('[Matches]', err);
-    }
-  }
-
-  // ── Build filter pills ──────────────────────────────────
-  function buildFilters() {
-    const seen = new Set();
-    const comps = [{ code: 'ALL', label: '🌐 Tous', labelAr: '🌐 الكل' }];
-    allMatches.forEach(m => {
-      if (!seen.has(m.competitionCode)) {
-        seen.add(m.competitionCode);
-        comps.push({
-          code: m.competitionCode,
-          label: (m.competitionFlag || '⚽') + ' ' + m.competition,
-          labelAr: (m.competitionFlag || '⚽') + ' ' + m.competition,
-        });
-      }
-    });
-
-    filters.innerHTML = '';
-    comps.forEach(c => {
-      const btn = document.createElement('button');
-      btn.className = 'ms-filter-pill' + (c.code === 'ALL' ? ' active' : '');
-      btn.textContent = c.label;
-      btn.dataset.code = c.code;
-      btn.dataset.labelFr = c.label;
-      btn.dataset.labelAr = c.labelAr;
-      btn.addEventListener('click', () => {
-        activeFilter = c.code;
-        document.querySelectorAll('.ms-filter-pill').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const filtered = c.code === 'ALL' ? allMatches : allMatches.filter(m => m.competitionCode === c.code);
-        renderCards(filtered);
-      });
-      filters.appendChild(btn);
-    });
-  }
-
-  // ── Render cards ────────────────────────────────────────
-  function renderCards(matches) {
-    track.innerHTML = '';
-
-    if (!matches.length) {
-      showEmpty('Aucun match aujourd\'hui.', 'لا مباريات اليوم.');
-      return;
-    }
-
-    matches.forEach(m => {
-      const card = document.createElement('div');
-      const isLive = m.status === 'live';
-      card.className = 'ms-card' + (isLive ? ' is-live' : '');
-
-      // Score or VS
-      let centerHTML;
-      if (m.homeScore !== null && m.awayScore !== null) {
-        centerHTML = `<div class="ms-score">${m.homeScore} – ${m.awayScore}</div>`;
-      } else {
-        centerHTML = `<div class="ms-vs">VS</div>`;
-      }
-
-      // Status pill label (translate for Arabic if needed)
-      const statusLabel = getStatusLabel(m);
-
-      card.innerHTML = `
-        <div class="ms-comp">${escHtml(m.competitionFlag || '⚽')} ${escHtml(m.competition)}</div>
-        <div class="ms-teams">
-          <div class="ms-team">
-            ${logoHTML(m.homeLogo, m.home)}
-            <span class="ms-team-name">${escHtml(m.home)}</span>
-          </div>
-          <div class="ms-center">
-            ${centerHTML}
-          </div>
-          <div class="ms-team">
-            ${logoHTML(m.awayLogo, m.away)}
-            <span class="ms-team-name">${escHtml(m.away)}</span>
-          </div>
-        </div>
-        <div class="ms-status ${escHtml(m.status)}">${escHtml(statusLabel)}</div>
-      `;
-      track.appendChild(card);
-    });
-  }
-
-  // ── Helpers ─────────────────────────────────────────────
-  function logoHTML(src, name) {
-    if (src) {
-      return `<img class="ms-logo" src="${escHtml(src)}" alt="${escHtml(name)}" loading="lazy" onerror="this.outerHTML=fallbackLogo()">`;
-    }
-    return fallbackLogo();
-  }
-  function fallbackLogo() {
-    return `<div class="ms-logo-fallback">⚽</div>`;
-  }
-
-  function getStatusLabel(m) {
-    const lang = document.documentElement.lang || 'fr';
-    const isAr = lang === 'ar';
-    if (m.status === 'live')      return isAr ? 'مباشر' : 'LIVE';
-    if (m.status === 'halftime')  return isAr ? 'استراحة' : 'MT';
-    if (m.status === 'finished')  return isAr ? 'انتهى' : 'FT';
-    if (m.status === 'postponed') return isAr ? 'مؤجل' : 'PPD';
-    if (m.status === 'cancelled') return isAr ? 'ملغى' : 'CANC';
-    return m.statusLabel; // scheduled → shows time like "20:00"
-  }
-
-  function showEmpty(fr, ar) {
-    const lang = document.documentElement.lang || 'fr';
-    track.innerHTML = `
-      <div class="ms-empty">
-        <div class="ms-empty-icon">⚽</div>
-        <span>${lang === 'ar' ? ar : fr}</span>
-      </div>`;
-  }
-
-  function escHtml(str) {
-    if (str == null) return '';
-    return String(str)
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;');
-  }
-
-  // ── Arrow scroll ────────────────────────────────────────
-  function scrollBy(dir) {
-    track.scrollBy({ left: dir * 260, behavior: 'smooth' });
-  }
-  btnL.addEventListener('click', () => scrollBy(-1));
-  btnR.addEventListener('click', () => scrollBy(1));
-
-  // ── Touch drag support ──────────────────────────────────
-  let dragStartX = 0, dragging = false;
-  track.addEventListener('pointerdown', e => {
-    dragStartX = e.clientX;
-    dragging = true;
-    track.style.cursor = 'grabbing';
-  });
-  track.addEventListener('pointermove', e => {
-    if (!dragging) return;
-    track.scrollLeft -= (e.clientX - dragStartX) * 0.6;
-    dragStartX = e.clientX;
-  });
-  track.addEventListener('pointerup',   () => { dragging = false; track.style.cursor = ''; });
-  track.addEventListener('pointerleave',() => { dragging = false; track.style.cursor = ''; });
-
-  // ── Re-translate status labels when lang switches ───────
-  const origSetLang = window.setLang;
-  window.setLang = function(lang) {
-    if (origSetLang) origSetLang(lang);
-    // Re-render with current filter
-    const filtered = activeFilter === 'ALL'
-      ? allMatches
-      : allMatches.filter(m => m.competitionCode === activeFilter);
-    renderCards(filtered);
-    // Update filter pills text
-    document.querySelectorAll('.ms-filter-pill').forEach(btn => {
-      const key = lang === 'ar' ? 'labelAr' : 'labelFr';
-      if (btn.dataset[key]) btn.textContent = btn.dataset[key];
-    });
-  };
-
-  // ── Init ────────────────────────────────────────────────
-  loadMatches();
-})();
-</script>
-<!-- ═══ END MATCHES SECTION ═══ -->
-
-
-<style>
-  
   /* ─── ABONNEMENTS ─── */
   #abonnements { background: var(--navy3); }
   .plans-grid {
@@ -1085,6 +522,294 @@
     .steps { flex-direction: column; }
     section { padding: 4rem 5%; }
   }
+
+  /* ─── MATCHES SECTION STYLES (your original code) ─── */
+  #matches {
+    background: var(--navy2);
+    padding: 5rem 0 3rem;
+    overflow: hidden;
+  }
+  .matches-header {
+    padding: 0 5%;
+    margin-bottom: 2.5rem;
+  }
+  .matches-sub {
+    margin-bottom: 0 !important;
+  }
+  .matches-slider-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+  }
+  .matches-track {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    padding: 1rem 5% 1.5rem;
+    scroll-behavior: smooth;
+    flex: 1;
+  }
+  .matches-track::-webkit-scrollbar { display: none; }
+  .ms-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    background: rgba(43,91,174,.15);
+    border: 1px solid rgba(59,125,224,.25);
+    border-radius: 50%;
+    cursor: pointer;
+    color: var(--accent3);
+    transition: background .2s, border-color .2s, transform .15s;
+    z-index: 2;
+  }
+  .ms-arrow:hover {
+    background: rgba(43,91,174,.35);
+    border-color: var(--accent3);
+    transform: scale(1.08);
+  }
+  .ms-arrow svg {
+    width: 18px; height: 18px;
+    stroke: currentColor; fill: none;
+    stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;
+  }
+  .ms-arrow-left  { margin-left: 2%; }
+  .ms-arrow-right { margin-right: 2%; }
+  @media (max-width: 768px) {
+    .ms-arrow { display: none; }
+  }
+  .ms-card {
+    flex-shrink: 0;
+    width: 220px;
+    background: var(--navy3);
+    border: 1px solid rgba(59,125,224,.12);
+    border-radius: 18px;
+    padding: 1.1rem 1rem 1.2rem;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .55rem;
+    cursor: default;
+    transition: border-color .25s, transform .25s, box-shadow .25s;
+    position: relative;
+    overflow: hidden;
+  }
+  .ms-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(59,125,224,.06), transparent 70%);
+    pointer-events: none;
+  }
+  .ms-card:hover {
+    border-color: rgba(59,125,224,.35);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0,0,0,.35);
+  }
+  .ms-card.is-live {
+    border-color: rgba(239,68,68,.35);
+    box-shadow: 0 0 0 1px rgba(239,68,68,.15);
+    animation: liveGlow 2.5s ease-in-out infinite;
+  }
+  @keyframes liveGlow {
+    0%,100% { box-shadow: 0 0 0 1px rgba(239,68,68,.15), 0 0 18px rgba(239,68,68,.08); }
+    50%      { box-shadow: 0 0 0 1px rgba(239,68,68,.3),  0 0 28px rgba(239,68,68,.18); }
+  }
+  .ms-comp {
+    font-size: .64rem;
+    font-weight: 600;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    background: rgba(43,91,174,.12);
+    border: 1px solid rgba(59,125,224,.2);
+    border-radius: 50px;
+    padding: .18rem .7rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
+  body.ar .ms-comp { letter-spacing: 0; font-size: .72rem; }
+  .ms-teams {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: .4rem;
+    margin: .2rem 0;
+  }
+  .ms-team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .35rem;
+    flex: 1;
+    min-width: 0;
+  }
+  .ms-logo {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,.4));
+    transition: transform .2s;
+  }
+  .ms-card:hover .ms-logo { transform: scale(1.08); }
+  .ms-logo-fallback {
+    width: 44px;
+    height: 44px;
+    background: rgba(59,125,224,.1);
+    border: 1px solid rgba(59,125,224,.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+  }
+  .ms-team-name {
+    font-size: .7rem;
+    font-weight: 500;
+    color: var(--blanc);
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    max-width: 72px;
+  }
+  body.ar .ms-team-name { font-family: 'Cairo', sans-serif; font-size: .75rem; }
+  .ms-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .2rem;
+    flex-shrink: 0;
+    min-width: 52px;
+  }
+  .ms-score {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--blanc);
+    letter-spacing: .04em;
+  }
+  body.ar .ms-score { font-family: 'Cairo', sans-serif; }
+  .ms-vs {
+    font-size: .7rem;
+    color: var(--gris);
+    letter-spacing: .08em;
+    font-weight: 500;
+  }
+  .ms-status {
+    font-size: .64rem;
+    font-weight: 700;
+    letter-spacing: .1em;
+    border-radius: 50px;
+    padding: .22rem .7rem;
+    text-transform: uppercase;
+    margin-top: .1rem;
+  }
+  body.ar .ms-status { letter-spacing: 0; font-size: .72rem; }
+  .ms-status.scheduled {
+    background: rgba(59,125,224,.12);
+    border: 1px solid rgba(59,125,224,.25);
+    color: var(--accent3);
+  }
+  .ms-status.finished {
+    background: rgba(138,149,176,.08);
+    border: 1px solid rgba(138,149,176,.2);
+    color: var(--gris);
+  }
+  .ms-status.live {
+    background: rgba(239,68,68,.15);
+    border: 1px solid rgba(239,68,68,.4);
+    color: #F87171;
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+  }
+  .ms-status.live::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: #EF4444;
+    border-radius: 50%;
+    flex-shrink: 0;
+    animation: pulse 1.4s infinite;
+  }
+  .ms-status.halftime {
+    background: rgba(232,160,32,.12);
+    border: 1px solid rgba(232,160,32,.3);
+    color: var(--test-color2);
+  }
+  .ms-status.postponed,
+  .ms-status.cancelled {
+    background: rgba(138,149,176,.08);
+    border: 1px solid rgba(138,149,176,.15);
+    color: var(--gris);
+  }
+  .ms-loading {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    padding: 2.5rem 1.5rem;
+    color: var(--gris);
+    font-size: .9rem;
+    white-space: nowrap;
+  }
+  .ms-spinner {
+    width: 20px; height: 20px;
+    border: 2px solid rgba(59,125,224,.2);
+    border-top-color: var(--accent3);
+    border-radius: 50%;
+    animation: spin .7s linear infinite;
+    flex-shrink: 0;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .ms-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .6rem;
+    padding: 3rem 2rem;
+    color: var(--gris);
+    font-size: .9rem;
+    text-align: center;
+  }
+  .ms-empty-icon { font-size: 2.5rem; opacity: .5; }
+  .ms-filters {
+    display: flex;
+    gap: .6rem;
+    flex-wrap: wrap;
+    padding: .8rem 5% 0;
+  }
+  .ms-filter-pill {
+    background: rgba(255,255,255,.04);
+    border: 1px solid rgba(59,125,224,.15);
+    border-radius: 50px;
+    padding: .28rem .85rem;
+    font-size: .72rem;
+    font-weight: 500;
+    color: var(--gris);
+    cursor: pointer;
+    transition: background .2s, color .2s, border-color .2s;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  body.ar .ms-filter-pill { letter-spacing: 0; font-size: .78rem; }
+  .ms-filter-pill:hover { border-color: rgba(59,125,224,.35); color: var(--accent3); }
+  .ms-filter-pill.active {
+    background: var(--accent);
+    border-color: var(--accent2);
+    color: #fff;
+  }
 </style>
 </head>
 <body>
@@ -1153,6 +878,209 @@
   </div>
 </section>
 
+<!-- ═══════════════════════════════════════════════════════
+     KARIM TV — TODAY'S MATCHES SLIDER (your original code)
+     ═══════════════════════════════════════════════════════ -->
+<section id="matches">
+  <div class="matches-header reveal">
+    <div class="section-label" data-fr="En Direct &amp; Aujourd'hui" data-ar="مباشر واليوم">En Direct &amp; Aujourd'hui</div>
+    <h2 class="section-title" data-fr="Matchs du Jour" data-ar="مباريات اليوم">Matchs du Jour</h2>
+    <p class="section-sub matches-sub" data-fr="Tous les matchs d'aujourd'hui en un coup d'œil — scores, horaires et compétitions." data-ar="كل مباريات اليوم في لمحة واحدة — النتائج، المواعيد والبطولات.">
+      Tous les matchs d'aujourd'hui en un coup d'œil — scores, horaires et compétitions.
+    </p>
+  </div>
+
+  <div class="matches-slider-wrap">
+    <button class="ms-arrow ms-arrow-left" id="msLeft" aria-label="Scroll left">
+      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+
+    <div class="matches-track" id="matchesTrack">
+      <div class="ms-loading" id="msLoading">
+        <div class="ms-spinner"></div>
+        <span data-fr="Chargement des matchs…" data-ar="جاري تحميل المباريات…">Chargement des matchs…</span>
+      </div>
+    </div>
+
+    <button class="ms-arrow ms-arrow-right" id="msRight" aria-label="Scroll right">
+      <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+  </div>
+
+  <div class="ms-filters" id="msFilters"></div>
+</section>
+
+<script>
+(function () {
+  const track   = document.getElementById('matchesTrack');
+  const loading = document.getElementById('msLoading');
+  const filters = document.getElementById('msFilters');
+  const btnL    = document.getElementById('msLeft');
+  const btnR    = document.getElementById('msRight');
+
+  let allMatches = [];
+  let activeFilter = 'ALL';
+
+  async function loadMatches() {
+    try {
+      const res = await fetch('/data/matches.json?t=' + Date.now());
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      const data = await res.json();
+      allMatches = data.matches || [];
+      buildFilters();
+      renderCards(allMatches);
+    } catch (err) {
+      showEmpty('Aucun match aujourd\'hui.', 'لا مباريات اليوم.');
+      console.warn('[Matches]', err);
+    }
+  }
+
+  function buildFilters() {
+    const seen = new Set();
+    const comps = [{ code: 'ALL', label: '🌐 Tous', labelAr: '🌐 الكل' }];
+    allMatches.forEach(m => {
+      if (!seen.has(m.competitionCode)) {
+        seen.add(m.competitionCode);
+        comps.push({
+          code: m.competitionCode,
+          label: (m.competitionFlag || '⚽') + ' ' + m.competition,
+          labelAr: (m.competitionFlag || '⚽') + ' ' + m.competition,
+        });
+      }
+    });
+
+    filters.innerHTML = '';
+    comps.forEach(c => {
+      const btn = document.createElement('button');
+      btn.className = 'ms-filter-pill' + (c.code === 'ALL' ? ' active' : '');
+      btn.textContent = c.label;
+      btn.dataset.code = c.code;
+      btn.dataset.labelFr = c.label;
+      btn.dataset.labelAr = c.labelAr;
+      btn.addEventListener('click', () => {
+        activeFilter = c.code;
+        document.querySelectorAll('.ms-filter-pill').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filtered = c.code === 'ALL' ? allMatches : allMatches.filter(m => m.competitionCode === c.code);
+        renderCards(filtered);
+      });
+      filters.appendChild(btn);
+    });
+  }
+
+  function renderCards(matches) {
+    track.innerHTML = '';
+
+    if (!matches.length) {
+      showEmpty('Aucun match aujourd\'hui.', 'لا مباريات اليوم.');
+      return;
+    }
+
+    matches.forEach(m => {
+      const card = document.createElement('div');
+      const isLive = m.status === 'live';
+      card.className = 'ms-card' + (isLive ? ' is-live' : '');
+
+      let centerHTML;
+      if (m.homeScore !== null && m.awayScore !== null) {
+        centerHTML = `<div class="ms-score">${m.homeScore} – ${m.awayScore}</div>`;
+      } else {
+        centerHTML = `<div class="ms-vs">VS</div>`;
+      }
+
+      const statusLabel = getStatusLabel(m);
+
+      card.innerHTML = `
+        <div class="ms-comp">${escHtml(m.competitionFlag || '⚽')} ${escHtml(m.competition)}</div>
+        <div class="ms-teams">
+          <div class="ms-team">
+            ${logoHTML(m.homeLogo, m.home)}
+            <span class="ms-team-name">${escHtml(m.home)}</span>
+          </div>
+          <div class="ms-center">
+            ${centerHTML}
+          </div>
+          <div class="ms-team">
+            ${logoHTML(m.awayLogo, m.away)}
+            <span class="ms-team-name">${escHtml(m.away)}</span>
+          </div>
+        </div>
+        <div class="ms-status ${escHtml(m.status)}">${escHtml(statusLabel)}</div>
+      `;
+      track.appendChild(card);
+    });
+  }
+
+  function logoHTML(src, name) {
+    if (src) {
+      return `<img class="ms-logo" src="${escHtml(src)}" alt="${escHtml(name)}" loading="lazy" onerror="this.outerHTML='<div class=ms-logo-fallback>⚽</div>'">`;
+    }
+    return `<div class="ms-logo-fallback">⚽</div>`;
+  }
+
+  function getStatusLabel(m) {
+    const lang = document.documentElement.lang || 'fr';
+    const isAr = lang === 'ar';
+    if (m.status === 'live')      return isAr ? 'مباشر' : 'LIVE';
+    if (m.status === 'halftime')  return isAr ? 'استراحة' : 'MT';
+    if (m.status === 'finished')  return isAr ? 'انتهى' : 'FT';
+    if (m.status === 'postponed') return isAr ? 'مؤجل' : 'PPD';
+    if (m.status === 'cancelled') return isAr ? 'ملغى' : 'CANC';
+    return m.statusLabel;
+  }
+
+  function showEmpty(fr, ar) {
+    const lang = document.documentElement.lang || 'fr';
+    track.innerHTML = `
+      <div class="ms-empty">
+        <div class="ms-empty-icon">⚽</div>
+        <span>${lang === 'ar' ? ar : fr}</span>
+      </div>`;
+  }
+
+  function escHtml(str) {
+    if (str == null) return '';
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  btnL.addEventListener('click', () => track.scrollBy({ left: -260, behavior: 'smooth' }));
+  btnR.addEventListener('click', () => track.scrollBy({ left:  260, behavior: 'smooth' }));
+
+  let dragStartX = 0, dragging = false;
+  track.addEventListener('pointerdown', e => {
+    dragStartX = e.clientX;
+    dragging = true;
+    track.style.cursor = 'grabbing';
+  });
+  track.addEventListener('pointermove', e => {
+    if (!dragging) return;
+    track.scrollLeft -= (e.clientX - dragStartX) * 0.6;
+    dragStartX = e.clientX;
+  });
+  track.addEventListener('pointerup',   () => { dragging = false; track.style.cursor = ''; });
+  track.addEventListener('pointerleave',() => { dragging = false; track.style.cursor = ''; });
+
+  const origSetLang = window.setLang;
+  window.setLang = function(lang) {
+    if (origSetLang) origSetLang(lang);
+    const filtered = activeFilter === 'ALL'
+      ? allMatches
+      : allMatches.filter(m => m.competitionCode === activeFilter);
+    renderCards(filtered);
+    document.querySelectorAll('.ms-filter-pill').forEach(btn => {
+      const key = lang === 'ar' ? 'labelAr' : 'labelFr';
+      if (btn.dataset[key]) btn.textContent = btn.dataset[key];
+    });
+  };
+
+  loadMatches();
+})();
+</script>
+
 <!-- ═══ ABONNEMENTS ═══ -->
 <section id="abonnements">
   <div class="center reveal">
@@ -1165,7 +1093,6 @@
     </p>
   </div>
 
-  <!-- TEST 48H BANNER -->
   <div class="test-banner reveal">
     <div class="test-icon">🧪</div>
     <div class="test-content">
@@ -1182,18 +1109,13 @@
   </div>
 
   <div class="plans-grid">
-
-    <!-- 6 MOIS -->
     <div class="plan reveal">
       <div class="plan-duration" data-fr="6 Mois" data-ar="6 أشهر">6 Mois</div>
-      <div class="plan-price" data-fr="À partir de 150 dh" data-ar="ابتداءً من 150 درهم">
-        Prix variable
-      </div>
-
-     <div class="plan-perday" 
-      data-fr="Selon qualité, application et appareil (Smart TV / Récepteur)"
-      data-ar="حسب الجودة والتطبيق ونوع الجهاز (تلفاز ذكي أو رسيفر)">
-      Selon qualité, application et appareil (Smart TV / Récepteur)
+      <div class="plan-price" data-fr="À partir de 150 dh" data-ar="ابتداءً من 150 درهم">Prix variable</div>
+      <div class="plan-perday"
+        data-fr="Selon qualité, application et appareil (Smart TV / Récepteur)"
+        data-ar="حسب الجودة والتطبيق ونوع الجهاز (تلفاز ذكي أو رسيفر)">
+        Selon qualité, application et appareil (Smart TV / Récepteur)
       </div>
       <div class="plan-divider"></div>
       <ul class="plan-features">
@@ -1210,17 +1132,13 @@
       </a>
     </div>
 
-    <!-- 1 AN - FEATURED -->
     <div class="plan featured reveal">
       <div class="plan-duration" data-fr="1 An" data-ar="سنة واحدة">1 An</div>
-      <div class="plan-price" data-fr="A partir de 250 dh" data-ar="ابتداءً من 250 درهم">
-       Prix variable
-      </div>
-
-      <div class="plan-perday" 
-     data-fr="Selon qualité, application et appareil (Smart TV / Récepteur)"
-     data-ar="حسب الجودة والتطبيق ونوع الجهاز (تلفاز ذكي أو رسيفر)">
-  Selon qualité, application et appareil (Smart TV / Récepteur)
+      <div class="plan-price" data-fr="A partir de 250 dh" data-ar="ابتداءً من 250 درهم">Prix variable</div>
+      <div class="plan-perday"
+        data-fr="Selon qualité, application et appareil (Smart TV / Récepteur)"
+        data-ar="حسب الجودة والتطبيق ونوع الجهاز (تلفاز ذكي أو رسيفر)">
+        Selon qualité, application et appareil (Smart TV / Récepteur)
       </div>
       <div class="plan-divider"></div>
       <ul class="plan-features">
@@ -1237,7 +1155,6 @@
         <span data-fr="Commander — 1 An" data-ar="اطلب — سنة واحدة">Commander — 1 An</span>
       </a>
     </div>
-
   </div>
 </section>
 
@@ -1253,74 +1170,54 @@
     </p>
   </div>
   <div class="apps-grid">
-
     <div class="app-card reveal">
-      <div class="app-logo">
-           <img src="ibbo player.png" alt="IBBO">
-      </div>
+      <div class="app-logo"><img src="ibbo player.png" alt="IBBO"></div>
       <div class="app-name">IBBO Player</div>
       <div class="app-desc" data-fr="Lecteur IPTV fluide et rapide, idéal pour les abonnements football." data-ar="مشغل IPTV سلس وسريع، مثالي لاشتراكات كرة القدم.">Lecteur IPTV fluide et rapide, idéal pour les abonnements football.</div>
       <div class="app-badge">Android / Smart TV</div>
     </div>
-
     <div class="app-card reveal">
-      <div class="app-logo">
-          <img src="smrtx2.jfif" alt="Smart X2">
-      </div>
+      <div class="app-logo"><img src="smrtx2.jfif" alt="Smart X2"></div>
       <div class="app-name">Smart X2</div>
       <div class="app-desc" data-fr="Application premium avec interface moderne et stabilité optimale." data-ar="تطبيق مميز بواجهة حديثة واستقرار مثالي.">Application premium avec interface moderne et stabilité optimale.</div>
       <div class="app-badge">Android / Smart TV</div>
     </div>
-
     <div class="app-card reveal">
-      <div class="app-logo">
-         <img src="ibo player pro.png" alt="IBBO pro">
-      </div>
+      <div class="app-logo"><img src="ibo player pro.png" alt="IBBO pro"></div>
       <div class="app-name">Ibo Player Pro</div>
       <div class="app-desc" data-fr="Solution IPTV professionnelle avec support multi-formats et qualité 4K." data-ar="حل IPTV احترافي يدعم صيغ متعددة وجودة 4K.">Solution IPTV professionnelle avec support multi-formats et qualité 4K.</div>
       <div class="app-badge">Android / Smart TV</div>
     </div>
-
     <div class="app-card reveal">
-      <div class="app-logo">
-        <img src="bein.png" alt="BEIN">
-      </div>
+      <div class="app-logo"><img src="bein.png" alt="BEIN"></div>
       <div class="app-name">Bein Sport</div>
-      <div class="app-desc" data-fr="Bouquet sportif premium diffusant les plus grandes compétitions en direct, avec haute qualité et analyses expertes." data-ar="باقة رياضية عالمية تنقل أبرز البطولات والمباريات المباشرة بجودة عالية وتحليل احترافي.">
-        Bouquet sportif premium diffusant les plus grandes compétitions en direct, avec haute qualité et analyses expertes.</div>
+      <div class="app-desc" data-fr="Bouquet sportif premium diffusant les plus grandes compétitions en direct, avec haute qualité et analyses expertes." data-ar="باقة رياضية عالمية تنقل أبرز البطولات والمباريات المباشرة بجودة عالية وتحليل احترافي.">Bouquet sportif premium diffusant les plus grandes compétitions en direct, avec haute qualité et analyses expertes.</div>
       <div class="app-badge">Android / Smart TV</div>
     </div>
-
     <div class="app-card reveal">
       <div class="app-logo">🖥️</div>
       <div class="app-name">La télévision française</div>
-      <div class="app-desc" data-fr="Diffusion des chaînes de télévision françaises proposant des programmes variés incluant actualités, divertissement et séries, avec une qualité de diffusion élevée et une expérience fluide. ( TF1, France 2, M6 et Arte)." data-ar="بث القنوات التلفزيونية الفرنسية التي تقدم برامج متنوعة تشمل الأخبار، الترفيه، والمسلسلات، مع جودة مشاهدة عالية وتجربة بث مستقرة.  (TF1، France 2، M6، وArte).">Interface élégante avec EPG intégré et gestion facile des listes.</div>
+      <div class="app-desc" data-fr="Diffusion des chaînes de télévision françaises proposant des programmes variés incluant actualités, divertissement et séries, avec une qualité de diffusion élevée et une expérience fluide. ( TF1, France 2, M6 et Arte)." data-ar="بث القنوات التلفزيونية الفرنسية التي تقدم برامج متنوعة تشمل الأخبار، الترفيه، والمسلسلات، مع جودة مشاهدة عالية وتجربة بث مستقرة. (TF1، France 2، M6، وArte).">Interface élégante avec EPG intégré et gestion facile des listes.</div>
       <div class="app-badge">Android / Smart TV</div>
     </div>
-
     <div class="app-card reveal">
       <div class="app-logo">🎬</div>
       <div class="app-name">Films</div>
       <div class="app-desc" data-fr="Catalogue de films varié offrant les derniers films et classiques, avec une qualité d'image élevée et une expérience de visionnage immersive." data-ar="مكتبة أفلام متنوعة تضم أحدث الأفلام والكلاسيكيات، بجودة عرض عالية وتجربة مشاهدة ممتعة وغامرة.">Catalogue de films varié offrant les derniers films et classiques, avec une qualité d'image élevée et une expérience de visionnage immersive.</div>
       <div class="app-badge">Android / Smart TV</div>
     </div>
-
     <div class="app-card reveal">
-      <div class="app-logo">
-          <img src="iptv smarters pro.png" alt="IPTV Sparters Pro">
-      </div>
+      <div class="app-logo"><img src="iptv smarters pro.png" alt="IPTV Sparters Pro"></div>
       <div class="app-name">IPTV Sparters Pro</div>
       <div class="app-desc" data-fr="Application performante avec une interface moderne et une stabilité optimale pour une expérience fluide et agréable." data-ar="تطبيق مميز بواجهة عصرية وأداء مستقر يضمن تجربة استخدام سلسة ومريحة.">Application performante avec une interface moderne et une stabilité optimale pour une expérience fluide et agréable.</div>
       <div class="app-badge">Android / Smart TV</div>
     </div>
-
     <div class="app-card reveal">
       <div class="app-logo">❓</div>
       <div class="app-name" data-fr="Autre App ?" data-ar="تطبيق آخر؟">Autre App ?</div>
       <div class="app-desc" data-fr="Contactez-nous sur WhatsApp pour vérifier la compatibilité de votre application préférée." data-ar="تواصل معنا عبر واتساب للتحقق من توافق تطبيقك المفضل.">Contactez-nous sur WhatsApp pour vérifier la compatibilité de votre application préférée.</div>
       <div class="app-badge" data-fr="Nous Contacter" data-ar="اتصل بنا">Nous Contacter</div>
     </div>
-
   </div>
 </section>
 
@@ -1406,13 +1303,11 @@
 
 <!-- ═══ TÉMOIGNAGES ═══ -->
 <section id="temoignages">
-    <div class="center reveal">
+  <div class="center reveal">
     <div class="section-label" data-fr="Clients Satisfaits" data-ar="عملاء راضون">Clients Satisfaits</div>
-    
     <h2 class="section-title" data-fr="Ce Qu'ils <span style=&quot;color:var(--accent3)&quot;>Disent</span>" data-ar="ماذا <span style=&quot;color:var(--accent3)&quot;>يقولون</span>">
       Ce Qu'ils <span style="color:var(--accent3)">Disent</span>
     </h2>
-
     <p class="section-sub" data-fr="Des milliers de clients satisfaits à travers le monde font confiance à notre service." data-ar="آلاف العملاء الراضين حول العالم يثقون في خدمتنا.">
       Des milliers de clients satisfaits à travers le monde font confiance à notre service.
     </p>
@@ -1423,10 +1318,7 @@
       <p class="review-text" data-fr="Service impeccable ! L'activation a été ultra rapide et la qualité d'image est excellente. Le support WhatsApp est réactif et très professionnel." data-ar="خدمة لا تشوبها شائبة! التفعيل كان سريعاً جداً وجودة الصورة ممتازة. الدعم عبر واتساب سريع الاستجابة واحترافي.">Service impeccable ! L'activation a été ultra rapide et la qualité d'image est excellente. Le support WhatsApp est réactif et très professionnel.</p>
       <div class="review-author">
         <div class="review-avatar">KA</div>
-        <div>
-          <div class="review-name">Karim A.</div>
-          <div class="review-country">🇲🇦 Maroc</div>
-        </div>
+        <div><div class="review-name">Karim A.</div><div class="review-country">🇲🇦 Maroc</div></div>
       </div>
     </div>
     <div class="review">
@@ -1434,10 +1326,7 @@
       <p class="review-text" data-fr="J'utilise ce service depuis 6 mois et aucun problème. Connexion stable, qualité 4K parfaite sur ma Smart TV." data-ar="أستخدم هذه الخدمة منذ 6 أشهر ولا توجد أي مشاكل. اتصال مستقر وجودة 4K رائعة على Smart TV الخاص بي.">J'utilise ce service depuis 6 mois et aucun problème. Connexion stable, qualité 4K parfaite sur ma Smart TV.</p>
       <div class="review-author">
         <div class="review-avatar">SB</div>
-        <div>
-          <div class="review-name">Sofia B.</div>
-          <div class="review-country">🇫🇷 France</div>
-        </div>
+        <div><div class="review-name">Sofia B.</div><div class="review-country">🇫🇷 France</div></div>
       </div>
     </div>
     <div class="review">
@@ -1445,10 +1334,7 @@
       <p class="review-text" data-fr="Vraiment satisfait ! Fonctionne parfaitement sur mon téléphone. Le support a résolu mon problème en moins de 10 minutes." data-ar="راضٍ حقاً! يعمل بشكل مثالي على هاتفي. حل الدعم مشكلتي في أقل من 10 دقائق.">Vraiment satisfait ! Fonctionne parfaitement sur mon téléphone. Le support a résolu mon problème en moins de 10 minutes.</p>
       <div class="review-author">
         <div class="review-avatar">MA</div>
-        <div>
-          <div class="review-name">Mohamed A.</div>
-          <div class="review-country">🇩🇿 Algérie</div>
-        </div>
+        <div><div class="review-name">Mohamed A.</div><div class="review-country">🇩🇿 Algérie</div></div>
       </div>
     </div>
     <div class="review">
@@ -1456,10 +1342,7 @@
       <p class="review-text" data-fr="Super service ! J'ai commandé l'abonnement annuel et c'est le meilleur investissement. Stable, rapide, disponible partout." data-ar="خدمة رائعة! طلبت الاشتراك السنوي وهو أفضل استثمار. مستقر، سريع، متاح في كل مكان.">Super service ! J'ai commandé l'abonnement annuel et c'est le meilleur investissement. Stable, rapide, disponible partout.</p>
       <div class="review-author">
         <div class="review-avatar">LT</div>
-        <div>
-          <div class="review-name">Laura T.</div>
-          <div class="review-country">🇧🇪 Belgique</div>
-        </div>
+        <div><div class="review-name">Laura T.</div><div class="review-country">🇧🇪 Belgique</div></div>
       </div>
     </div>
     <div class="review">
@@ -1467,10 +1350,7 @@
       <p class="review-text" data-fr="Excellente expérience du début à la fin. Commande simple via WhatsApp, activation rapide, qualité irréprochable." data-ar="تجربة ممتازة من البداية للنهاية. طلب سهل عبر واتساب، تفعيل سريع، جودة لا تشوبها شائبة.">Excellente expérience du début à la fin. Commande simple via WhatsApp, activation rapide, qualité irréprochable.</p>
       <div class="review-author">
         <div class="review-avatar">YM</div>
-        <div>
-          <div class="review-name">Youssef M.</div>
-          <div class="review-country">🇹🇳 Tunisie</div>
-        </div>
+        <div><div class="review-name">Youssef M.</div><div class="review-country">🇹🇳 Tunisie</div></div>
       </div>
     </div>
   </div>
@@ -1580,7 +1460,6 @@
 
 <script>
   // ─── LANGUAGE SYSTEM ───
-  // Detect from cookie or browser language
   function detectLang() {
     const cookie = document.cookie.split(';').map(c => c.trim()).find(c => c.startsWith('karim_lang='));
     if (cookie) return cookie.split('=')[1];
@@ -1589,10 +1468,8 @@
   }
 
   function setLang(lang) {
-    // Save cookie (1 year)
     document.cookie = `karim_lang=${lang};path=/;max-age=31536000`;
     applyLang(lang);
-    // Update buttons
     document.querySelectorAll('.lang-btn').forEach(b => {
       b.classList.toggle('active', b.textContent.toLowerCase() === lang);
     });
@@ -1604,33 +1481,25 @@
     document.body.classList.toggle('ar', isAr);
     document.body.style.direction = isAr ? 'rtl' : 'ltr';
 
-    // Translate all data-fr / data-ar elements
     document.querySelectorAll('[data-fr],[data-ar]').forEach(el => {
       const text = el.getAttribute('data-' + lang);
       if (text !== null) {
-        // Check if the text has HTML tags
-        if (text.includes('<')) {
-          el.innerHTML = text;
-        } else {
-          el.textContent = text;
-        }
+        if (text.includes('<')) { el.innerHTML = text; }
+        else { el.textContent = text; }
       }
     });
 
-    // Translate FAQ answers
     document.querySelectorAll('.faq-a').forEach(el => {
       const text = el.getAttribute('data-' + lang);
       if (text) el.textContent = text;
     });
 
-    // Translate section titles with innerHTML
     document.querySelectorAll('.section-title[data-fr]').forEach(el => {
       const text = el.getAttribute('data-' + lang);
       if (text) el.innerHTML = text;
     });
   }
 
-  // Init on load
   const initLang = detectLang();
   applyLang(initLang);
   document.querySelectorAll('.lang-btn').forEach(b => {
@@ -1671,3 +1540,4 @@
 </script>
 </body>
 </html>
+HTMLEOF
