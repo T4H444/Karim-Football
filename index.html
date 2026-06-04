@@ -279,7 +279,565 @@
   }
   .btn-test:hover { background: var(--test-color2); transform: translateY(-1px); }
   @media (max-width: 600px) { .test-banner { flex-direction: column; text-align: center; } }
+  /*save */
 
+
+  <!-- ═══════════════════════════════════════════════════════
+     KARIM TV — TODAY'S MATCHES SLIDER
+     Drop this entire block into your index.html
+     Recommended position: just after #hero, before #abonnements
+     ═══════════════════════════════════════════════════════ -->
+
+<!-- ─── MATCHES SECTION ─── -->
+<section id="matches">
+  <div class="matches-header reveal">
+    <div class="section-label" data-fr="En Direct &amp; Aujourd'hui" data-ar="مباشر واليوم">En Direct &amp; Aujourd'hui</div>
+    <h2 class="section-title" data-fr="Matchs du Jour" data-ar="مباريات اليوم">Matchs du Jour</h2>
+    <p class="section-sub matches-sub" data-fr="Tous les matchs d'aujourd'hui en un coup d'œil — scores, horaires et compétitions." data-ar="كل مباريات اليوم في لمحة واحدة — النتائج، المواعيد والبطولات.">
+      Tous les matchs d'aujourd'hui en un coup d'œil — scores, horaires et compétitions.
+    </p>
+  </div>
+
+  <!-- Slider wrapper -->
+  <div class="matches-slider-wrap">
+    <!-- Scroll buttons (desktop) -->
+    <button class="ms-arrow ms-arrow-left" id="msLeft" aria-label="Scroll left">
+      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+
+    <div class="matches-track" id="matchesTrack">
+      <!-- Cards injected by JS -->
+      <div class="ms-loading" id="msLoading">
+        <div class="ms-spinner"></div>
+        <span data-fr="Chargement des matchs…" data-ar="جاري تحميل المباريات…">Chargement des matchs…</span>
+      </div>
+    </div>
+
+    <button class="ms-arrow ms-arrow-right" id="msRight" aria-label="Scroll right">
+      <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+  </div>
+
+  <!-- League filter pills -->
+  <div class="ms-filters" id="msFilters"></div>
+</section>
+
+<!-- ─── MATCHES STYLES ─── -->
+<style>
+  /* ── Section ── */
+  #matches {
+    background: var(--navy2);
+    padding: 5rem 0 3rem;
+    overflow: hidden;
+  }
+  .matches-header {
+    padding: 0 5%;
+    margin-bottom: 2.5rem;
+  }
+  .matches-sub {
+    margin-bottom: 0 !important;
+  }
+
+  /* ── Slider wrapper ── */
+  .matches-slider-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+  }
+
+  /* ── Track ── */
+  .matches-track {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    padding: 1rem 5% 1.5rem;
+    scroll-behavior: smooth;
+    flex: 1;
+  }
+  .matches-track::-webkit-scrollbar { display: none; }
+
+  /* ── Arrow buttons ── */
+  .ms-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    background: rgba(43,91,174,.15);
+    border: 1px solid rgba(59,125,224,.25);
+    border-radius: 50%;
+    cursor: pointer;
+    color: var(--accent3);
+    transition: background .2s, border-color .2s, transform .15s;
+    z-index: 2;
+  }
+  .ms-arrow:hover {
+    background: rgba(43,91,174,.35);
+    border-color: var(--accent3);
+    transform: scale(1.08);
+  }
+  .ms-arrow svg {
+    width: 18px; height: 18px;
+    stroke: currentColor; fill: none;
+    stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;
+  }
+  .ms-arrow-left  { margin-left: 2%; }
+  .ms-arrow-right { margin-right: 2%; }
+  @media (max-width: 768px) {
+    .ms-arrow { display: none; }
+  }
+
+  /* ── Match card ── */
+  .ms-card {
+    flex-shrink: 0;
+    width: 220px;
+    background: var(--navy3);
+    border: 1px solid rgba(59,125,224,.12);
+    border-radius: 18px;
+    padding: 1.1rem 1rem 1.2rem;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .55rem;
+    cursor: default;
+    transition: border-color .25s, transform .25s, box-shadow .25s;
+    position: relative;
+    overflow: hidden;
+  }
+  .ms-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(59,125,224,.06), transparent 70%);
+    pointer-events: none;
+  }
+  .ms-card:hover {
+    border-color: rgba(59,125,224,.35);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0,0,0,.35);
+  }
+
+  /* Live card glow */
+  .ms-card.is-live {
+    border-color: rgba(239,68,68,.35);
+    box-shadow: 0 0 0 1px rgba(239,68,68,.15);
+    animation: liveGlow 2.5s ease-in-out infinite;
+  }
+  @keyframes liveGlow {
+    0%,100% { box-shadow: 0 0 0 1px rgba(239,68,68,.15), 0 0 18px rgba(239,68,68,.08); }
+    50%      { box-shadow: 0 0 0 1px rgba(239,68,68,.3),  0 0 28px rgba(239,68,68,.18); }
+  }
+
+  /* ── Competition badge ── */
+  .ms-comp {
+    font-size: .64rem;
+    font-weight: 600;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    background: rgba(43,91,174,.12);
+    border: 1px solid rgba(59,125,224,.2);
+    border-radius: 50px;
+    padding: .18rem .7rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
+  body.ar .ms-comp { letter-spacing: 0; font-size: .72rem; }
+
+  /* ── Teams row ── */
+  .ms-teams {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: .4rem;
+    margin: .2rem 0;
+  }
+
+  .ms-team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .35rem;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .ms-logo {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,.4));
+    transition: transform .2s;
+  }
+  .ms-card:hover .ms-logo { transform: scale(1.08); }
+
+  .ms-logo-fallback {
+    width: 44px;
+    height: 44px;
+    background: rgba(59,125,224,.1);
+    border: 1px solid rgba(59,125,224,.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+  }
+
+  .ms-team-name {
+    font-size: .7rem;
+    font-weight: 500;
+    color: var(--blanc);
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    max-width: 72px;
+  }
+  body.ar .ms-team-name { font-family: 'Cairo', sans-serif; font-size: .75rem; }
+
+  /* ── Center score/time block ── */
+  .ms-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .2rem;
+    flex-shrink: 0;
+    min-width: 52px;
+  }
+
+  .ms-score {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--blanc);
+    letter-spacing: .04em;
+  }
+  body.ar .ms-score { font-family: 'Cairo', sans-serif; }
+
+  .ms-vs {
+    font-size: .7rem;
+    color: var(--gris);
+    letter-spacing: .08em;
+    font-weight: 500;
+  }
+
+  /* ── Status pill ── */
+  .ms-status {
+    font-size: .64rem;
+    font-weight: 700;
+    letter-spacing: .1em;
+    border-radius: 50px;
+    padding: .22rem .7rem;
+    text-transform: uppercase;
+    margin-top: .1rem;
+  }
+  body.ar .ms-status { letter-spacing: 0; font-size: .72rem; }
+
+  .ms-status.scheduled {
+    background: rgba(59,125,224,.12);
+    border: 1px solid rgba(59,125,224,.25);
+    color: var(--accent3);
+  }
+  .ms-status.finished {
+    background: rgba(138,149,176,.08);
+    border: 1px solid rgba(138,149,176,.2);
+    color: var(--gris);
+  }
+  .ms-status.live {
+    background: rgba(239,68,68,.15);
+    border: 1px solid rgba(239,68,68,.4);
+    color: #F87171;
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+  }
+  .ms-status.live::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: #EF4444;
+    border-radius: 50%;
+    flex-shrink: 0;
+    animation: pulse 1.4s infinite;
+  }
+  .ms-status.halftime {
+    background: rgba(232,160,32,.12);
+    border: 1px solid rgba(232,160,32,.3);
+    color: var(--test-color2);
+  }
+  .ms-status.postponed,
+  .ms-status.cancelled {
+    background: rgba(138,149,176,.08);
+    border: 1px solid rgba(138,149,176,.15);
+    color: var(--gris);
+  }
+
+  /* ── Loading state ── */
+  .ms-loading {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    padding: 2.5rem 1.5rem;
+    color: var(--gris);
+    font-size: .9rem;
+    white-space: nowrap;
+  }
+  .ms-spinner {
+    width: 20px; height: 20px;
+    border: 2px solid rgba(59,125,224,.2);
+    border-top-color: var(--accent3);
+    border-radius: 50%;
+    animation: spin .7s linear infinite;
+    flex-shrink: 0;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* ── Empty state ── */
+  .ms-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .6rem;
+    padding: 3rem 2rem;
+    color: var(--gris);
+    font-size: .9rem;
+    text-align: center;
+  }
+  .ms-empty-icon { font-size: 2.5rem; opacity: .5; }
+
+  /* ── Filter pills ── */
+  .ms-filters {
+    display: flex;
+    gap: .6rem;
+    flex-wrap: wrap;
+    padding: .8rem 5% 0;
+  }
+  .ms-filter-pill {
+    background: rgba(255,255,255,.04);
+    border: 1px solid rgba(59,125,224,.15);
+    border-radius: 50px;
+    padding: .28rem .85rem;
+    font-size: .72rem;
+    font-weight: 500;
+    color: var(--gris);
+    cursor: pointer;
+    transition: background .2s, color .2s, border-color .2s;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  body.ar .ms-filter-pill { letter-spacing: 0; font-size: .78rem; }
+  .ms-filter-pill:hover { border-color: rgba(59,125,224,.35); color: var(--accent3); }
+  .ms-filter-pill.active {
+    background: var(--accent);
+    border-color: var(--accent2);
+    color: #fff;
+  }
+</style>
+
+<!-- ─── MATCHES JAVASCRIPT ─── -->
+<script>
+(function () {
+  const track   = document.getElementById('matchesTrack');
+  const loading = document.getElementById('msLoading');
+  const filters = document.getElementById('msFilters');
+  const btnL    = document.getElementById('msLeft');
+  const btnR    = document.getElementById('msRight');
+
+  let allMatches = [];
+  let activeFilter = 'ALL';
+
+  // ── Fetch JSON ──────────────────────────────────────────
+  async function loadMatches() {
+    try {
+      const res = await fetch('/data/matches.json?t=' + Date.now());
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      const data = await res.json();
+      allMatches = data.matches || [];
+      buildFilters();
+      renderCards(allMatches);
+    } catch (err) {
+      showEmpty('Impossible de charger les matchs.', 'تعذّر تحميل المباريات.');
+      console.error('[Matches]', err);
+    }
+  }
+
+  // ── Build filter pills ──────────────────────────────────
+  function buildFilters() {
+    const seen = new Set();
+    const comps = [{ code: 'ALL', label: '🌐 Tous', labelAr: '🌐 الكل' }];
+    allMatches.forEach(m => {
+      if (!seen.has(m.competitionCode)) {
+        seen.add(m.competitionCode);
+        comps.push({
+          code: m.competitionCode,
+          label: (m.competitionFlag || '⚽') + ' ' + m.competition,
+          labelAr: (m.competitionFlag || '⚽') + ' ' + m.competition,
+        });
+      }
+    });
+
+    filters.innerHTML = '';
+    comps.forEach(c => {
+      const btn = document.createElement('button');
+      btn.className = 'ms-filter-pill' + (c.code === 'ALL' ? ' active' : '');
+      btn.textContent = c.label;
+      btn.dataset.code = c.code;
+      btn.dataset.labelFr = c.label;
+      btn.dataset.labelAr = c.labelAr;
+      btn.addEventListener('click', () => {
+        activeFilter = c.code;
+        document.querySelectorAll('.ms-filter-pill').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filtered = c.code === 'ALL' ? allMatches : allMatches.filter(m => m.competitionCode === c.code);
+        renderCards(filtered);
+      });
+      filters.appendChild(btn);
+    });
+  }
+
+  // ── Render cards ────────────────────────────────────────
+  function renderCards(matches) {
+    track.innerHTML = '';
+
+    if (!matches.length) {
+      showEmpty('Aucun match aujourd\'hui.', 'لا مباريات اليوم.');
+      return;
+    }
+
+    matches.forEach(m => {
+      const card = document.createElement('div');
+      const isLive = m.status === 'live';
+      card.className = 'ms-card' + (isLive ? ' is-live' : '');
+
+      // Score or VS
+      let centerHTML;
+      if (m.homeScore !== null && m.awayScore !== null) {
+        centerHTML = `<div class="ms-score">${m.homeScore} – ${m.awayScore}</div>`;
+      } else {
+        centerHTML = `<div class="ms-vs">VS</div>`;
+      }
+
+      // Status pill label (translate for Arabic if needed)
+      const statusLabel = getStatusLabel(m);
+
+      card.innerHTML = `
+        <div class="ms-comp">${escHtml(m.competitionFlag || '⚽')} ${escHtml(m.competition)}</div>
+        <div class="ms-teams">
+          <div class="ms-team">
+            ${logoHTML(m.homeLogo, m.home)}
+            <span class="ms-team-name">${escHtml(m.home)}</span>
+          </div>
+          <div class="ms-center">
+            ${centerHTML}
+          </div>
+          <div class="ms-team">
+            ${logoHTML(m.awayLogo, m.away)}
+            <span class="ms-team-name">${escHtml(m.away)}</span>
+          </div>
+        </div>
+        <div class="ms-status ${escHtml(m.status)}">${escHtml(statusLabel)}</div>
+      `;
+      track.appendChild(card);
+    });
+  }
+
+  // ── Helpers ─────────────────────────────────────────────
+  function logoHTML(src, name) {
+    if (src) {
+      return `<img class="ms-logo" src="${escHtml(src)}" alt="${escHtml(name)}" loading="lazy" onerror="this.outerHTML=fallbackLogo()">`;
+    }
+    return fallbackLogo();
+  }
+  function fallbackLogo() {
+    return `<div class="ms-logo-fallback">⚽</div>`;
+  }
+
+  function getStatusLabel(m) {
+    const lang = document.documentElement.lang || 'fr';
+    const isAr = lang === 'ar';
+    if (m.status === 'live')      return isAr ? 'مباشر' : 'LIVE';
+    if (m.status === 'halftime')  return isAr ? 'استراحة' : 'MT';
+    if (m.status === 'finished')  return isAr ? 'انتهى' : 'FT';
+    if (m.status === 'postponed') return isAr ? 'مؤجل' : 'PPD';
+    if (m.status === 'cancelled') return isAr ? 'ملغى' : 'CANC';
+    return m.statusLabel; // scheduled → shows time like "20:00"
+  }
+
+  function showEmpty(fr, ar) {
+    const lang = document.documentElement.lang || 'fr';
+    track.innerHTML = `
+      <div class="ms-empty">
+        <div class="ms-empty-icon">⚽</div>
+        <span>${lang === 'ar' ? ar : fr}</span>
+      </div>`;
+  }
+
+  function escHtml(str) {
+    if (str == null) return '';
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  // ── Arrow scroll ────────────────────────────────────────
+  function scrollBy(dir) {
+    track.scrollBy({ left: dir * 260, behavior: 'smooth' });
+  }
+  btnL.addEventListener('click', () => scrollBy(-1));
+  btnR.addEventListener('click', () => scrollBy(1));
+
+  // ── Touch drag support ──────────────────────────────────
+  let dragStartX = 0, dragging = false;
+  track.addEventListener('pointerdown', e => {
+    dragStartX = e.clientX;
+    dragging = true;
+    track.style.cursor = 'grabbing';
+  });
+  track.addEventListener('pointermove', e => {
+    if (!dragging) return;
+    track.scrollLeft -= (e.clientX - dragStartX) * 0.6;
+    dragStartX = e.clientX;
+  });
+  track.addEventListener('pointerup',   () => { dragging = false; track.style.cursor = ''; });
+  track.addEventListener('pointerleave',() => { dragging = false; track.style.cursor = ''; });
+
+  // ── Re-translate status labels when lang switches ───────
+  const origSetLang = window.setLang;
+  window.setLang = function(lang) {
+    if (origSetLang) origSetLang(lang);
+    // Re-render with current filter
+    const filtered = activeFilter === 'ALL'
+      ? allMatches
+      : allMatches.filter(m => m.competitionCode === activeFilter);
+    renderCards(filtered);
+    // Update filter pills text
+    document.querySelectorAll('.ms-filter-pill').forEach(btn => {
+      const key = lang === 'ar' ? 'labelAr' : 'labelFr';
+      if (btn.dataset[key]) btn.textContent = btn.dataset[key];
+    });
+  };
+
+  // ── Init ────────────────────────────────────────────────
+  loadMatches();
+})();
+</script>
+<!-- ═══ END MATCHES SECTION ═══ -->
+
+
+
+  
   /* ─── ABONNEMENTS ─── */
   #abonnements { background: var(--navy3); }
   .plans-grid {
