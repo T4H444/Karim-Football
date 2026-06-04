@@ -107,8 +107,12 @@ async function fetchMatches() {
   }
 
   const rawMatches = data.matches || [];
+  const matchesToday = rawMatches.filter(match => {
+  const matchDate = match.utcDate.split('T')[0];
+  return matchDate === today;
+});
 
-  const matches = rawMatches.map(match => {
+  const matches = matchesToday.map(match => {
     const compCode = match.competition?.code || 'UNKNOWN';
     const meta = COMPETITION_META[compCode] || {
       name: match.competition?.name || compCode,
