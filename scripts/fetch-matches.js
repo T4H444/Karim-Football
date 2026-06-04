@@ -3,81 +3,10 @@ const fs = require('fs');
 const path = require('path');
 
 const API_KEY = process.env.FOOTBALL_API_KEY;
-const BASE_URL = 'https://api.football-data.org/v4';
+const BASE_URL = 'https://v3.football.api-sports.io';
 
-// Today's date in YYYY-MM-DD format (UTC)
+// Today date (YYYY-MM-DD)
 const today = new Date().toISOString().split('T')[0];
-
-// Competition display names
-const COMPETITION_META = {
-  PL:  { name: 'Premier League', flag: '' },
-  CL:  { name: 'Champions League', flag: '' },
-  BL1: { name: 'Bundesliga', flag: '' },
-  PD:  { name: 'La Liga', flag: '' },
-  FL1: { name: 'Ligue 1', flag: '' },
-  SA:  { name: 'Serie A', flag: '' },
-  WC:  { name: 'FIFA World Cup', flag: '' },
-  EC:  { name: 'Euro Championship', flag: '' },
-  ELC: { name: 'Championship', flag: '' },
-  DED: { name: 'Eredivisie', flag: '' },
-  BSA: { name: 'Brasileirao Serie A', flag: '' },
-  PPL: { name: 'Primeira Liga', flag: '' }
-};
-
-function parseStatus(match) {
-  const s = match.status;
-  const score = match.score;
-
-  if (s === 'FINISHED') {
-    return {
-      label: 'FT',
-      type: 'finished',
-      homeScore: score?.fullTime?.home ?? null,
-      awayScore: score?.fullTime?.away ?? null
-    };
-  }
-
-  if (s === 'IN_PLAY') {
-    return {
-      label: 'LIVE',
-      type: 'live',
-      homeScore: score?.fullTime?.home ?? null,
-      awayScore: score?.fullTime?.away ?? null
-    };
-  }
-
-  if (s === 'PAUSED') {
-    return {
-      label: 'HT',
-      type: 'halftime',
-      homeScore: score?.halfTime?.home ?? null,
-      awayScore: score?.halfTime?.away ?? null
-    };
-  }
-
-  if (s === 'TIMED' || s === 'SCHEDULED') {
-    const utcDate = new Date(match.utcDate);
-    const hours = String(utcDate.getUTCHours()).padStart(2, '0');
-    const mins = String(utcDate.getUTCMinutes()).padStart(2, '0');
-
-    return {
-      label: hours + ':' + mins,
-      type: 'scheduled',
-      homeScore: null,
-      awayScore: null
-    };
-  }
-
-  if (s === 'POSTPONED') {
-    return { label: 'PPD', type: 'postponed', homeScore: null, awayScore: null };
-  }
-
-  if (s === 'CANCELLED') {
-    return { label: 'CANC', type: 'cancelled', homeScore: null, awayScore: null };
-  }
-
-  return { label: s, type: 'unknown', homeScore: null, awayScore: null };
-}
 
 async function fetchMatches() {
   if (!API_KEY) {
@@ -85,13 +14,15 @@ async function fetchMatches() {
     process.exit(1);
   }
 
-  const url = BASE_URL + '/matches?dateFrom=' + today + '&dateTo=' + today;
+  const url = `${BASE_URL}/fixtures?date=${today}`;
 
   let data;
 
   try {
     const res = await fetch(url, {
-      headers: { 'X-Auth-Token': API_KEY }
+      headers: {
+        "x-apisports-key": API_KEY
+      }
     });
 
     if (!res.ok) {
@@ -106,34 +37,43 @@ async function fetchMatches() {
     process.exit(1);
   }
 
-  const rawMatches = data.matches || [];
-  const matchesToday = rawMatches.filter(match => {
-  const matchDate = match.utcDate.split('T')[0];
-  return matchDate === today;
-});
+  const rawMatches = data.response || [];
 
-  const matches = matchesToday.map(match => {
-    const compCode = match.competition?.code || 'UNKNOWN';
-    const meta = COMPETITION_META[compCode] || {
-      name: match.competition?.name || compCode,
-      flag: ''
-    };
+  // ❌ NO FILTER NEEDED (API already filters by date)
+  const matches = rawMatches.map(item => {
+    const fixture = item.fixture;
+    const teams = item.teams;
+    const goals = item.goals;
+    const league = item.league;
 
-    const status = parseStatus(match);
+    const status = fixture.status.short;
+
+    // simple status label (no need for your old parseStatus)
+    let statusLabel = status;
+
+    if (status === 'FT') statusLabel = 'FT';
+    if (status === 'HT') statusLabel = 'HT';
+    if (status === 'NS') statusLabel = new Date(fixture.date).toTimeString().slice(0, 5);
+    if (status === 'LIVE') statusLabel = 'LIVE';
 
     return {
-      id: match.id,
-      competition: meta.name,
-      competitionCode: compCode,
-      home: match.homeTeam?.name || 'TBD',
-      away: match.awayTeam?.name || 'TBD',
-      homeLogo: match.homeTeam?.crest || null,
-      awayLogo: match.awayTeam?.crest || null,
-      utcDate: match.utcDate,
-      status: status.type,
-      statusLabel: status.label,
-      homeScore: status.homeScore,
-      awayScore: status.awayScore
+      id: fixture.id,
+      competition: league.name,
+      competitionCode: league.code || league.id,
+
+      home: teams.home.name,
+      away: teams.away.name,
+
+      homeLogo: teams.home.logo,
+      awayLogo: teams.away.logo,
+
+      utcDate: fixture.date,
+
+      status: status,
+      statusLabel: statusLabel,
+
+      homeScore: goals.home,
+      awayScore: goals.away
     };
   });
 
@@ -145,7 +85,6 @@ async function fetchMatches() {
   };
 
   const outDir = path.join(__dirname, '..', 'data');
-
   if (!fs.existsSync(outDir)) {
     fs.mkdirSync(outDir, { recursive: true });
   }
