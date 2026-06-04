@@ -39,38 +39,65 @@ async function fetchMatches() {
 
   const rawMatches = data.response || [];
 
-  // ❌ NO FILTER NEEDED (API already filters by date)
   const matches = rawMatches.map(item => {
     const fixture = item.fixture;
     const teams = item.teams;
     const goals = item.goals;
     const league = item.league;
 
-    const status = fixture.status.short;
+    const statusShort = fixture.status.short; // FT, HT, NS, 1H, 2H...
 
-    // simple status label (no need for your old parseStatus)
-    let statusLabel = status;
+    // ---- STATUS NORMALIZATION ----
+    let status = 'scheduled';
+    let statusLabel = '';
 
-    if (status === 'FT') statusLabel = 'FT';
-    if (status === 'HT') statusLabel = 'HT';
-    if (status === 'NS') statusLabel = new Date(fixture.date).toTimeString().slice(0, 5);
-    if (status === 'LIVE') statusLabel = 'LIVE';
+    if (statusShort === 'FT') {
+      status = 'finished';
+      statusLabel = 'FT';
+    } 
+    else if (statusShort === 'HT') {
+      status = 'halftime';
+      statusLabel = 'HT';
+    } 
+    else if (statusShort === 'NS') {
+      status = 'scheduled';
+      const d = new Date(fixture.date);
+      statusLabel = d.toISOString().slice(11, 16); // HH:MM
+    } 
+    else if (['1H', '2H', 'LIVE'].includes(statusShort)) {
+      status = 'live';
+      statusLabel = 'LIVE';
+    } 
+    else if (statusShort === 'PST') {
+      status = 'postponed';
+      statusLabel = 'PPD';
+    } 
+    else if (statusShort === 'CANC') {
+      status = 'cancelled';
+      statusLabel = 'CANC';
+    } 
+    else {
+      status = 'unknown';
+      statusLabel = statusShort;
+    }
 
     return {
       id: fixture.id,
-      competition: league.name,
-      competitionCode: league.code || league.id,
 
-      home: teams.home.name,
-      away: teams.away.name,
+      // FIXED: proper league mapping
+      competition: league.name || 'Unknown',
+      competitionCode: league.id || league.name || 'UNKNOWN',
 
-      homeLogo: teams.home.logo,
-      awayLogo: teams.away.logo,
+      home: teams.home.name || 'TBD',
+      away: teams.away.name || 'TBD',
+
+      homeLogo: teams.home.logo || null,
+      awayLogo: teams.away.logo || null,
 
       utcDate: fixture.date,
 
-      status: status,
-      statusLabel: statusLabel,
+      status,
+      statusLabel,
 
       homeScore: goals.home,
       awayScore: goals.away
@@ -81,7 +108,7 @@ async function fetchMatches() {
     date: today,
     fetchedAt: new Date().toISOString(),
     total: matches.length,
-    matches: matches
+    matches
   };
 
   const outDir = path.join(__dirname, '..', 'data');
