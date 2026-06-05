@@ -1,6 +1,6 @@
 {
   "date": "2026-06-05",
-  "fetchedAt": "2026-06-05T01:34:57.388Z",
+  "fetchedAt": "2026-06-05T01:41:50.385Z",
   "total": 206,
   "matches": [
     {
@@ -42,7 +42,7 @@
       "utcDate": "2026-06-05T00:00:00+00:00",
       "status": "live",
       "statusLabel": "LIVE",
-      "homeScore": 6,
+      "homeScore": 7,
       "awayScore": 1
     },
     {
@@ -56,7 +56,7 @@
       "utcDate": "2026-06-05T00:00:00+00:00",
       "status": "live",
       "statusLabel": "LIVE",
-      "homeScore": 3,
+      "homeScore": 5,
       "awayScore": 0
     },
     {
@@ -70,7 +70,7 @@
       "utcDate": "2026-06-05T00:00:00+00:00",
       "status": "live",
       "statusLabel": "LIVE",
-      "homeScore": 2,
+      "homeScore": 3,
       "awayScore": 1
     },
     {
@@ -98,7 +98,7 @@
       "utcDate": "2026-06-05T01:00:00+00:00",
       "status": "live",
       "statusLabel": "LIVE",
-      "homeScore": 2,
+      "homeScore": 3,
       "awayScore": 0
     },
     {
