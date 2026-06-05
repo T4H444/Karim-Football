@@ -1,6 +1,6 @@
 {
   "date": "2026-06-05",
-  "fetchedAt": "2026-06-05T01:29:58.941Z",
+  "fetchedAt": "2026-06-05T01:34:57.388Z",
   "total": 206,
   "matches": [
     {
@@ -42,7 +42,7 @@
       "utcDate": "2026-06-05T00:00:00+00:00",
       "status": "live",
       "statusLabel": "LIVE",
-      "homeScore": 5,
+      "homeScore": 6,
       "awayScore": 1
     },
     {
@@ -70,7 +70,7 @@
       "utcDate": "2026-06-05T00:00:00+00:00",
       "status": "live",
       "statusLabel": "LIVE",
-      "homeScore": 1,
+      "homeScore": 2,
       "awayScore": 1
     },
     {
