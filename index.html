@@ -919,22 +919,24 @@
   // ║  Put the league IDs you want to show today.         ║
   // ║  Leave the array EMPTY to show ALL matches.         ║
   // ║                                                      ║
-  // ║  Common IDs (from API-Football):                    ║
-  // ║    140  → La Liga                                   ║
-  // ║    39   → Premier League                            ║
-  // ║    2    → Champions League                          ║
-  // ║    78   → Bundesliga                                ║
-  // ║    135  → Serie A                                   ║
-  // ║    61   → Ligue 1                                   ║
-  // ║    1    → World Cup                                 ║
-  // ║    667  → Friendlies (International)                ║
-  // ║    666  → Friendlies (Clubs)                        ║
-  // ║                                                      ║
-  // ║  Example — show only La Liga + Friendlies:          ║
-  // ║    const SHOW_LEAGUES = [140, 667];                 ║
+  // ║  Common IDs (confirmed from your API data):         ║
+  // ║    10   → Friendlies (International)                ║
+  // ║    666  → Friendlies Women                         ║
+  // ║    39   → Premier League (England)                 ║
+  // ║    140  → La Liga (Spain)                          ║
+  // ║    2    → Champions League                         ║
+  // ║    78   → Bundesliga (Germany)                     ║
+  // ║    135  → Serie A (Italy)                          ║
+  // ║    61   → Ligue 1 (France)                         ║
+  // ║    1    → World Cup                                ║
+  // ║    880  → World Cup Women Qualification            ║
+  // ║    []   → show ALL matches                         ║
+  // ║                                                     ║
+  // ║  Example — Friendlies only:                        ║
+  // ║    const SHOW_LEAGUES = [10];                      ║
   // ╚══════════════════════════════════════════════════════╝
 
-  const SHOW_LEAGUES = [140, 667]; // ← change this whenever you want
+  const SHOW_LEAGUES = [10]; // ← change this whenever you want
 
   // ── DOM refs ─────────────────────────────────────────────
   const track = document.getElementById('matchesTrack');
@@ -1545,4 +1547,3 @@
 </script>
 </body>
 </html>
-HTMLEOF
