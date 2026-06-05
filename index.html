@@ -912,62 +912,63 @@
 
 <script>
 (function () {
-  const track   = document.getElementById('matchesTrack');
-  const loading = document.getElementById('msLoading');
-  const filters = document.getElementById('msFilters');
-  const btnL    = document.getElementById('msLeft');
-  const btnR    = document.getElementById('msRight');
 
-  let allMatches = [];
-  let activeFilter = 'ALL';
+  // ╔══════════════════════════════════════════════════════╗
+  // ║           ADMIN FILTER — EDIT THIS ONLY             ║
+  // ║                                                      ║
+  // ║  Put the league IDs you want to show today.         ║
+  // ║  Leave the array EMPTY to show ALL matches.         ║
+  // ║                                                      ║
+  // ║  Common IDs (from API-Football):                    ║
+  // ║    140  → La Liga                                   ║
+  // ║    39   → Premier League                            ║
+  // ║    2    → Champions League                          ║
+  // ║    78   → Bundesliga                                ║
+  // ║    135  → Serie A                                   ║
+  // ║    61   → Ligue 1                                   ║
+  // ║    1    → World Cup                                 ║
+  // ║    667  → Friendlies (International)                ║
+  // ║    666  → Friendlies (Clubs)                        ║
+  // ║                                                      ║
+  // ║  Example — show only La Liga + Friendlies:          ║
+  // ║    const SHOW_LEAGUES = [140, 667];                 ║
+  // ╚══════════════════════════════════════════════════════╝
 
+  const SHOW_LEAGUES = [140, 667]; // ← change this whenever you want
+
+  // ── DOM refs ─────────────────────────────────────────────
+  const track = document.getElementById('matchesTrack');
+  const btnL  = document.getElementById('msLeft');
+  const btnR  = document.getElementById('msRight');
+
+  // Hide the filter pills container — admin-controlled only
+  const filtersEl = document.getElementById('msFilters');
+  if (filtersEl) filtersEl.style.display = 'none';
+
+  // ── Load matches ─────────────────────────────────────────
   async function loadMatches() {
     try {
       const res = await fetch('/data/matches.json?t=' + Date.now());
       if (!res.ok) throw new Error('HTTP ' + res.status);
       const data = await res.json();
-      allMatches = data.matches || [];
-      buildFilters();
-      renderCards(allMatches);
+
+      let matches = data.matches || [];
+
+      // Apply admin filter if list is not empty
+      if (SHOW_LEAGUES.length > 0) {
+        matches = matches.filter(m =>
+          SHOW_LEAGUES.includes(Number(m.competitionCode))
+        );
+      }
+
+      renderCards(matches);
     } catch (err) {
-      showEmpty('Aucun match aujourd\'hui.', 'لا مباريات اليوم.');
+      showEmpty('Aucun match disponible.', 'لا مباريات متاحة.');
       console.warn('[Matches]', err);
     }
   }
 
-  function buildFilters() {
-    const seen = new Set();
-    const comps = [{ code: 'ALL', label: '🌐 Tous', labelAr: '🌐 الكل' }];
-    allMatches.forEach(m => {
-      if (!seen.has(m.competitionCode)) {
-        seen.add(m.competitionCode);
-        comps.push({
-          code: m.competitionCode,
-          label: (m.competitionFlag || '⚽') + ' ' + m.competition,
-          labelAr: (m.competitionFlag || '⚽') + ' ' + m.competition,
-        });
-      }
-    });
-
-    filters.innerHTML = '';
-    comps.forEach(c => {
-      const btn = document.createElement('button');
-      btn.className = 'ms-filter-pill' + (c.code === 'ALL' ? ' active' : '');
-      btn.textContent = c.label;
-      btn.dataset.code = c.code;
-      btn.dataset.labelFr = c.label;
-      btn.dataset.labelAr = c.labelAr;
-      btn.addEventListener('click', () => {
-        activeFilter = c.code;
-        document.querySelectorAll('.ms-filter-pill').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const filtered = c.code === 'ALL' ? allMatches : allMatches.filter(m => m.competitionCode === c.code);
-        renderCards(filtered);
-      });
-      filters.appendChild(btn);
-    });
-  }
-
+  // ── Render cards ─────────────────────────────────────────
   function renderCards(matches) {
     track.innerHTML = '';
 
@@ -981,6 +982,7 @@
       const isLive = m.status === 'live';
       card.className = 'ms-card' + (isLive ? ' is-live' : '');
 
+      // Score or VS
       let centerHTML;
       if (m.homeScore !== null && m.awayScore !== null) {
         centerHTML = `<div class="ms-score">${m.homeScore} – ${m.awayScore}</div>`;
@@ -988,7 +990,8 @@
         centerHTML = `<div class="ms-vs">VS</div>`;
       }
 
-      const statusLabel = getStatusLabel(m);
+      // Time in user's local timezone
+      const timeLabel = getTimeLabel(m);
 
       card.innerHTML = `
         <div class="ms-comp">${escHtml(m.competitionFlag || '⚽')} ${escHtml(m.competition)}</div>
@@ -1005,28 +1008,41 @@
             <span class="ms-team-name">${escHtml(m.away)}</span>
           </div>
         </div>
-        <div class="ms-status ${escHtml(m.status)}">${escHtml(statusLabel)}</div>
+        <div class="ms-status ${escHtml(m.status)}">${escHtml(timeLabel)}</div>
       `;
       track.appendChild(card);
     });
   }
 
+  // ── Time label — local timezone ───────────────────────────
+  // For finished/live/halftime → show status text
+  // For scheduled → show kick-off in user's own timezone (Morocco = UTC+1, Europe = UTC+2, etc.)
+  function getTimeLabel(m) {
+    const lang = document.documentElement.lang || 'fr';
+    const isAr = lang === 'ar';
+
+    if (m.status === 'live')      return isAr ? 'مباشر'    : 'LIVE';
+    if (m.status === 'halftime')  return isAr ? 'استراحة'  : 'MT';
+    if (m.status === 'finished')  return isAr ? 'انتهى'    : 'FT';
+    if (m.status === 'postponed') return isAr ? 'مؤجل'     : 'PPD';
+    if (m.status === 'cancelled') return isAr ? 'ملغى'     : 'CANC';
+
+    // Scheduled — convert UTC to visitor's local time automatically
+    if (m.utcDate) {
+      const d = new Date(m.utcDate);
+      // toLocaleTimeString uses the browser's own timezone — works everywhere
+      return d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false });
+    }
+
+    return m.statusLabel || '';
+  }
+
+  // ── Helpers ───────────────────────────────────────────────
   function logoHTML(src, name) {
     if (src) {
       return `<img class="ms-logo" src="${escHtml(src)}" alt="${escHtml(name)}" loading="lazy" onerror="this.outerHTML='<div class=ms-logo-fallback>⚽</div>'">`;
     }
     return `<div class="ms-logo-fallback">⚽</div>`;
-  }
-
-  function getStatusLabel(m) {
-    const lang = document.documentElement.lang || 'fr';
-    const isAr = lang === 'ar';
-    if (m.status === 'live')      return isAr ? 'مباشر' : 'LIVE';
-    if (m.status === 'halftime')  return isAr ? 'استراحة' : 'MT';
-    if (m.status === 'finished')  return isAr ? 'انتهى' : 'FT';
-    if (m.status === 'postponed') return isAr ? 'مؤجل' : 'PPD';
-    if (m.status === 'cancelled') return isAr ? 'ملغى' : 'CANC';
-    return m.statusLabel;
   }
 
   function showEmpty(fr, ar) {
@@ -1047,36 +1063,25 @@
       .replace(/"/g, '&quot;');
   }
 
+  // ── Arrows ────────────────────────────────────────────────
   btnL.addEventListener('click', () => track.scrollBy({ left: -260, behavior: 'smooth' }));
   btnR.addEventListener('click', () => track.scrollBy({ left:  260, behavior: 'smooth' }));
 
+  // ── Touch drag ────────────────────────────────────────────
   let dragStartX = 0, dragging = false;
-  track.addEventListener('pointerdown', e => {
-    dragStartX = e.clientX;
-    dragging = true;
-    track.style.cursor = 'grabbing';
-  });
-  track.addEventListener('pointermove', e => {
-    if (!dragging) return;
-    track.scrollLeft -= (e.clientX - dragStartX) * 0.6;
-    dragStartX = e.clientX;
-  });
-  track.addEventListener('pointerup',   () => { dragging = false; track.style.cursor = ''; });
-  track.addEventListener('pointerleave',() => { dragging = false; track.style.cursor = ''; });
+  track.addEventListener('pointerdown', e => { dragStartX = e.clientX; dragging = true; track.style.cursor = 'grabbing'; });
+  track.addEventListener('pointermove', e => { if (!dragging) return; track.scrollLeft -= (e.clientX - dragStartX) * 0.6; dragStartX = e.clientX; });
+  track.addEventListener('pointerup',    () => { dragging = false; track.style.cursor = ''; });
+  track.addEventListener('pointerleave', () => { dragging = false; track.style.cursor = ''; });
 
+  // ── Re-render on lang switch (updates status labels) ─────
   const origSetLang = window.setLang;
   window.setLang = function(lang) {
     if (origSetLang) origSetLang(lang);
-    const filtered = activeFilter === 'ALL'
-      ? allMatches
-      : allMatches.filter(m => m.competitionCode === activeFilter);
-    renderCards(filtered);
-    document.querySelectorAll('.ms-filter-pill').forEach(btn => {
-      const key = lang === 'ar' ? 'labelAr' : 'labelFr';
-      if (btn.dataset[key]) btn.textContent = btn.dataset[key];
-    });
+    loadMatches();
   };
 
+  // ── Init ─────────────────────────────────────────────────
   loadMatches();
 })();
 </script>
