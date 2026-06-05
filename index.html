@@ -934,7 +934,7 @@
   // ║    const SHOW_LEAGUES = [140, 667];                 ║
   // ╚══════════════════════════════════════════════════════╝
 
-  const SHOW_LEAGUES = [667]; // ← change this whenever you want
+  const SHOW_LEAGUES = [140, 667]; // ← change this whenever you want
 
   // ── DOM refs ─────────────────────────────────────────────
   const track = document.getElementById('matchesTrack');
@@ -955,10 +955,10 @@
       let matches = data.matches || [];
 
       // Apply admin filter if list is not empty
+      // Use String() on both sides — works whether competitionCode is stored as number or string
       if (SHOW_LEAGUES.length > 0) {
-        matches = matches.filter(m =>
-          SHOW_LEAGUES.includes(Number(m.competitionCode))
-        );
+        const allowed = SHOW_LEAGUES.map(String);
+        matches = matches.filter(m => allowed.includes(String(m.competitionCode)));
       }
 
       renderCards(matches);
