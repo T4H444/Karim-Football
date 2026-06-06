@@ -938,6 +938,18 @@
 
   const SHOW_LEAGUES = [10]; // ← change this whenever you want
 
+  // ── Youth exceptions — always show these teams even if U17/U19/U20 ──
+  // Add any national youth team you want to keep visible
+  const ALWAYS_SHOW_TEAMS = [
+    "Morocco U17",
+    "Morocco U18",
+    "Morocco U19",
+    "Morocco U20",
+    "Morocco U21",
+    "Morocco U23",
+    // add more here e.g: "France U21", "Spain U20"
+  ];
+
   // ── DOM refs ─────────────────────────────────────────────
   const track = document.getElementById('matchesTrack');
   const btnL  = document.getElementById('msLeft');
@@ -956,18 +968,34 @@
 
       let matches = data.matches || [];
 
-      // Apply admin filter if list is not empty
-      // Use String() on both sides — works whether competitionCode is stored as number or string
+      // Apply league filter
       if (SHOW_LEAGUES.length > 0) {
         const allowed = SHOW_LEAGUES.map(String);
         matches = matches.filter(m => allowed.includes(String(m.competitionCode)));
       }
+
+      // Filter out youth matches (U17, U18, U19, U20, U21, U23)
+      // but always keep teams listed in ALWAYS_SHOW_TEAMS
+      matches = matches.filter(m => !isYouthMatch(m));
 
       renderCards(matches);
     } catch (err) {
       showEmpty('Aucun match disponible.', 'لا مباريات متاحة.');
       console.warn('[Matches]', err);
     }
+  }
+
+  // ── Youth match filter ───────────────────────────────────
+  function isYouthMatch(m) {
+    const youthPattern = /U\d{2}/i;
+    // Check if either team is in the exceptions list
+    const isException = ALWAYS_SHOW_TEAMS.some(t =>
+      m.home.toLowerCase().includes(t.toLowerCase()) ||
+      m.away.toLowerCase().includes(t.toLowerCase())
+    );
+    if (isException) return false; // keep it
+    // Otherwise remove if team name has U17/U18/U19/U20/U21/U23
+    return youthPattern.test(m.home) || youthPattern.test(m.away);
   }
 
   // ── Render cards ─────────────────────────────────────────
@@ -1547,3 +1575,4 @@
 </script>
 </body>
 </html>
+HTMLEOF
