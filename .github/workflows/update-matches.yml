@@ -2,7 +2,7 @@ name: Update Today's Matches
 
 on:
   schedule:
-    - cron: '0 6 * * *'
+    - cron: '*/20 * * * *'
   workflow_dispatch:
 
 permissions:
