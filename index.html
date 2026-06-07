@@ -810,6 +810,79 @@
     border-color: var(--accent2);
     color: #fff;
   }
+
+  /* ── Channels popup ──────────────────────────────────── */
+  .ms-channels-popup {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: rgba(0,0,0,.6);
+    backdrop-filter: blur(6px);
+    animation: fadeIn .2s ease;
+  }
+  @keyframes fadeIn { from{opacity:0} to{opacity:1} }
+  .ms-channels-box {
+    background: var(--navy3);
+    border: 1px solid rgba(59,125,224,.3);
+    border-radius: 20px;
+    padding: 1.8rem;
+    max-width: 360px;
+    width: 100%;
+    position: relative;
+    animation: slideUp .2s ease;
+  }
+  @keyframes slideUp { from{transform:translateY(20px);opacity:0} to{transform:translateY(0);opacity:1} }
+  .ms-channels-close {
+    position: absolute;
+    top: .8rem; right: 1rem;
+    background: none; border: none;
+    color: var(--gris); font-size: 1.4rem;
+    cursor: pointer; line-height: 1;
+    transition: color .2s;
+  }
+  .ms-channels-close:hover { color: var(--blanc); }
+  .ms-channels-teams {
+    font-size: .85rem;
+    color: var(--accent3);
+    margin-bottom: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    padding-right: 1.5rem;
+  }
+  .ms-channels-title {
+    font-size: .72rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--gris);
+    margin-bottom: .8rem;
+    font-weight: 600;
+  }
+  body.ar .ms-channels-title { letter-spacing: 0; }
+  .ms-channels-list {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+  .ms-channel-item {
+    background: rgba(59,125,224,.08);
+    border: 1px solid rgba(59,125,224,.18);
+    border-radius: 10px;
+    padding: .6rem 1rem;
+    font-size: .88rem;
+    color: var(--blanc);
+    font-weight: 500;
+  }
+  .ms-channels-empty {
+    color: var(--gris);
+    font-size: .85rem;
+    text-align: center;
+    padding: .5rem 0;
+  }
+  .ms-card { cursor: pointer; }
 </style>
 </head>
 <body>
@@ -909,6 +982,16 @@
 
   <div class="ms-filters" id="msFilters"></div>
 </section>
+
+<!-- ── Channels popup (hidden by default) ── -->
+<div class="ms-channels-popup" id="msChannelsPopup" style="display:none" onclick="closeChannels(event)">
+  <div class="ms-channels-box">
+    <button class="ms-channels-close" onclick="closeChannelsBtn()">×</button>
+    <div class="ms-channels-teams" id="msChannelsTeams"></div>
+    <div class="ms-channels-title" data-fr="📺 Disponible sur" data-ar="📺 متاح على">📺 Disponible sur</div>
+    <div class="ms-channels-list" id="msChannelsList"></div>
+  </div>
+</div>
 
 <script>
 (function () {
@@ -1040,6 +1123,8 @@
         </div>
         <div class="ms-status ${escHtml(m.status)}">${escHtml(timeLabel)}</div>
       `;
+      // Click to show channels
+      card.addEventListener('click', () => showChannels(m));
       track.appendChild(card);
     });
   }
@@ -1110,6 +1195,43 @@
     if (origSetLang) origSetLang(lang);
     loadMatches();
   };
+
+  // ── Channels popup ───────────────────────────────────────
+  function showChannels(m) {
+    const popup  = document.getElementById('msChannelsPopup');
+    const teams  = document.getElementById('msChannelsTeams');
+    const list   = document.getElementById('msChannelsList');
+    const lang   = document.documentElement.lang || 'fr';
+    const isAr   = lang === 'ar';
+
+    teams.textContent = `${m.home} vs ${m.away}`;
+
+    if (m.channels && m.channels.length > 0) {
+      list.innerHTML = m.channels
+        .map(ch => `<div class="ms-channel-item">📺 ${escHtml(ch)}</div>`)
+        .join('');
+    } else {
+      list.innerHTML = `<div class="ms-channels-empty">${isAr ? 'لا توجد قنوات متاحة' : 'Aucune chaîne disponible pour votre région'}</div>`;
+    }
+
+    // Update title for lang
+    const title = popup.querySelector('.ms-channels-title');
+    if (title) title.textContent = isAr ? '📺 متاح على' : '📺 Disponible sur';
+
+    popup.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+
+  window.closeChannels = function(e) {
+    if (e.target === document.getElementById('msChannelsPopup')) closeChannelsBtn();
+  };
+  window.closeChannelsBtn = function() {
+    document.getElementById('msChannelsPopup').style.display = 'none';
+    document.body.style.overflow = '';
+  };
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') window.closeChannelsBtn();
+  });
 
   // ── Init ─────────────────────────────────────────────────
   loadMatches();
@@ -1575,4 +1697,3 @@
 </script>
 </body>
 </html>
-HTMLEOF
