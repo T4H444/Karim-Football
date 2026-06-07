@@ -1,25 +1,28 @@
 {
   "date": "2026-06-07",
-  "fetchedAt": "2026-06-07T14:31:50.407Z",
+  "fetchedAt": "2026-06-07T15:49:18.700Z",
   "total": 407,
   "matches": [
     {
       "id": 1513143,
       "competition": "MLS Next Pro",
+      "competitionFlag": "⚽",
       "competitionCode": 909,
       "home": "Colorado Rapids II",
       "away": "St. Louis City II",
       "homeLogo": "https://media.api-sports.io/football/teams/4102.png",
       "awayLogo": "https://media.api-sports.io/football/teams/18740.png",
       "utcDate": "2026-06-07T00:00:00+00:00",
-      "status": "unknown",
-      "statusLabel": "PEN",
+      "status": "finished",
+      "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1524762,
       "competition": "USL League Two",
+      "competitionFlag": "⚽",
       "competitionCode": 256,
       "home": "City SC",
       "away": "Tucson",
@@ -29,11 +32,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 2,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1524778,
       "competition": "USL League Two",
+      "competitionFlag": "⚽",
       "competitionCode": 256,
       "home": "Hill Country Lobos",
       "away": "San Antonio FC 2",
@@ -43,11 +48,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 2,
-      "awayScore": 3
+      "awayScore": 3,
+      "channels": []
     },
     {
       "id": 1524779,
       "competition": "USL League Two",
+      "competitionFlag": "⚽",
       "competitionCode": 256,
       "home": "Little Rock Rangers",
       "away": "Jackson Boom",
@@ -57,11 +64,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 2,
-      "awayScore": 0
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1524781,
       "competition": "USL League Two",
+      "competitionFlag": "⚽",
       "competitionCode": 256,
       "home": "Louisiana Krewe",
       "away": "Red River",
@@ -71,11 +80,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1524784,
       "competition": "USL League Two",
+      "competitionFlag": "⚽",
       "competitionCode": 256,
       "home": "Minneapolis City",
       "away": "Sueno",
@@ -85,11 +96,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 2,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1524787,
       "competition": "USL League Two",
+      "competitionFlag": "⚽",
       "competitionCode": 256,
       "home": "Rockford Raptors",
       "away": "River Light",
@@ -99,11 +112,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 4
+      "awayScore": 4,
+      "channels": []
     },
     {
       "id": 1524792,
       "competition": "USL League Two",
+      "competitionFlag": "⚽",
       "competitionCode": 256,
       "home": "St. Louis Ambush",
       "away": "Santafé Wanderers",
@@ -113,11 +128,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 0,
-      "awayScore": 2
+      "awayScore": 2,
+      "channels": []
     },
     {
       "id": 1524793,
       "competition": "USL League Two",
+      "competitionFlag": "⚽",
       "competitionCode": 256,
       "home": "Texoma",
       "away": "Lubbock Matadors",
@@ -127,11 +144,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 2,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1524801,
       "competition": "USL League Two",
+      "competitionFlag": "⚽",
       "competitionCode": 256,
       "home": "Charlottesville Blues",
       "away": "Evergreen",
@@ -141,11 +160,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1525397,
       "competition": "USL League Two",
+      "competitionFlag": "⚽",
       "competitionCode": 256,
       "home": "Hattiesburg",
       "away": "Memphis 901",
@@ -155,11 +176,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 3,
-      "awayScore": 3
+      "awayScore": 3,
+      "channels": []
     },
     {
       "id": 1531210,
       "competition": "USL League One Cup",
+      "competitionFlag": "⚽",
       "competitionCode": 1095,
       "home": "Union Omaha",
       "away": "Fort Wayne",
@@ -169,11 +192,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 4,
-      "awayScore": 2
+      "awayScore": 2,
+      "channels": []
     },
     {
       "id": 1537650,
       "competition": "Friendlies",
+      "competitionFlag": "⚽",
       "competitionCode": 10,
       "home": "Curaçao",
       "away": "Aruba",
@@ -183,11 +208,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 4,
-      "awayScore": 0
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1540355,
       "competition": "Friendlies",
+      "competitionFlag": "⚽",
       "competitionCode": 10,
       "home": "Argentina",
       "away": "Honduras",
@@ -197,11 +224,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 2,
-      "awayScore": 0
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1548199,
       "competition": "Segunda División",
+      "competitionFlag": "⚽",
       "competitionCode": 269,
       "home": "Rentistas",
       "away": "Colón",
@@ -211,11 +240,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 0,
-      "awayScore": 2
+      "awayScore": 2,
+      "channels": []
     },
     {
       "id": 1511603,
       "competition": "Primera B",
+      "competitionFlag": "⚽",
       "competitionCode": 266,
       "home": "Deportes Iquique",
       "away": "Recoleta",
@@ -225,11 +256,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1511606,
       "competition": "Primera B",
+      "competitionFlag": "⚽",
       "competitionCode": 266,
       "home": "Rangers de Talca",
       "away": "Deportes Santa Cruz",
@@ -239,11 +272,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 0,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1524798,
       "competition": "USL League Two",
+      "competitionFlag": "⚽",
       "competitionCode": 256,
       "home": "Denton Diablos",
       "away": "McKinney Chupacabras",
@@ -253,11 +288,13 @@
       "status": "postponed",
       "statusLabel": "PPD",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1542662,
       "competition": "USL League One Cup",
+      "competitionFlag": "⚽",
       "competitionCode": 1095,
       "home": "FC Tulsa",
       "away": "San Antonio",
@@ -267,11 +304,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 2
+      "awayScore": 2,
+      "channels": []
     },
     {
       "id": 1524765,
       "competition": "USL League Two",
+      "competitionFlag": "⚽",
       "competitionCode": 256,
       "home": "Almaden",
       "away": "Marin",
@@ -281,11 +320,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 3,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1524771,
       "competition": "USL League Two",
+      "competitionFlag": "⚽",
       "competitionCode": 256,
       "home": "Unión Villa Krause",
       "away": "Utah United",
@@ -295,11 +336,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 0,
-      "awayScore": 0
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1524776,
       "competition": "USL League Two",
+      "competitionFlag": "⚽",
       "competitionCode": 256,
       "home": "Colorado ISA",
       "away": "Flatirons Rush",
@@ -309,11 +352,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 0,
-      "awayScore": 0
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1524802,
       "competition": "USL League Two",
+      "competitionFlag": "⚽",
       "competitionCode": 256,
       "home": "Laredo Heat",
       "away": "Houston Sur",
@@ -323,11 +368,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 3,
-      "awayScore": 0
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1524803,
       "competition": "USL League Two",
+      "competitionFlag": "⚽",
       "competitionCode": 256,
       "home": "Lonestar",
       "away": "AHFC Royals",
@@ -337,11 +384,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1531230,
       "competition": "USL League One Cup",
+      "competitionFlag": "⚽",
       "competitionCode": 1095,
       "home": "Spokane Velocity",
       "away": "Boise",
@@ -351,11 +400,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 2,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1532347,
       "competition": "USL W League",
+      "competitionFlag": "⚽",
       "competitionCode": 1117,
       "home": "Snohomish United W",
       "away": "West Seattle Rhodies W",
@@ -365,11 +416,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 7,
-      "awayScore": 0
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1534562,
       "competition": "USL League One Cup",
+      "competitionFlag": "⚽",
       "competitionCode": 1095,
       "home": "Colorado Springs",
       "away": "El Paso Locomotive",
@@ -379,11 +432,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 2,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1542663,
       "competition": "USL League One Cup",
+      "competitionFlag": "⚽",
       "competitionCode": 1095,
       "home": "New Mexico United",
       "away": "Phoenix Rising",
@@ -393,11 +448,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 4,
-      "awayScore": 0
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1513142,
       "competition": "MLS Next Pro",
+      "competitionFlag": "⚽",
       "competitionCode": 909,
       "home": "Ventura County",
       "away": "Houston Dynamo FC II",
@@ -407,11 +464,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 3,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1524772,
       "competition": "USL League Two",
+      "competitionFlag": "⚽",
       "competitionCode": 256,
       "home": "Ballard",
       "away": "Bangers",
@@ -421,11 +480,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 0
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1524789,
       "competition": "USL League Two",
+      "competitionFlag": "⚽",
       "competitionCode": 256,
       "home": "Sportivo San Juan",
       "away": "Academica",
@@ -435,11 +496,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 0,
-      "awayScore": 2
+      "awayScore": 2,
+      "channels": []
     },
     {
       "id": 1532133,
       "competition": "USL W League",
+      "competitionFlag": "⚽",
       "competitionCode": 1117,
       "home": "SoCal Dutch Lions W",
       "away": "Sta Clarita Blue Heat W",
@@ -449,11 +512,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 0,
-      "awayScore": 4
+      "awayScore": 4,
+      "channels": []
     },
     {
       "id": 1532386,
       "competition": "USL W League",
+      "competitionFlag": "⚽",
       "competitionCode": 1117,
       "home": "Monterey Bay FC W",
       "away": "Marin FC Siren W",
@@ -463,11 +528,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 5,
-      "awayScore": 0
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1542664,
       "competition": "USL League One Cup",
+      "competitionFlag": "⚽",
       "competitionCode": 1095,
       "home": "Las Vegas Lights",
       "away": "Oakland Roots",
@@ -477,11 +544,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 0,
-      "awayScore": 2
+      "awayScore": 2,
+      "channels": []
     },
     {
       "id": 1523718,
       "competition": "Northern NSW NPL",
+      "competitionFlag": "⚽",
       "competitionCode": 481,
       "home": "Charlestown City Blues",
       "away": "Cooks Hill United",
@@ -491,11 +560,13 @@
       "status": "postponed",
       "statusLabel": "PPD",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1524774,
       "competition": "USL League Two",
+      "competitionFlag": "⚽",
       "competitionCode": 256,
       "home": "Capo",
       "away": "Ventura County Fusion",
@@ -505,11 +576,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1531208,
       "competition": "USL League One Cup",
+      "competitionFlag": "⚽",
       "competitionCode": 1095,
       "home": "Alta",
       "away": "Orange County SC",
@@ -519,11 +592,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 2,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1532570,
       "competition": "NNSW League 1",
+      "competitionFlag": "⚽",
       "competitionCode": 1090,
       "home": "Wallsend Red Devils",
       "away": "Newcastle Croatia FC",
@@ -533,25 +608,29 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 4,
-      "awayScore": 2
+      "awayScore": 2,
+      "channels": []
     },
     {
       "id": 1542665,
       "competition": "USL League One Cup",
+      "competitionFlag": "⚽",
       "competitionCode": 1095,
       "home": "Sacramento Republic",
       "away": "Monterey Bay",
       "homeLogo": "https://media.api-sports.io/football/teams/4015.png",
       "awayLogo": "https://media.api-sports.io/football/teams/18375.png",
       "utcDate": "2026-06-07T03:00:00+00:00",
-      "status": "unknown",
-      "statusLabel": "PEN",
+      "status": "finished",
+      "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1549290,
       "competition": "Npl Nsw U20",
+      "competitionFlag": "⚽",
       "competitionCode": 1230,
       "home": "Blacktown City U20",
       "away": "Rockdale Ilinden U20",
@@ -561,11 +640,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 2,
-      "awayScore": 4
+      "awayScore": 4,
+      "channels": []
     },
     {
       "id": 1549291,
       "competition": "Npl Nsw U20",
+      "competitionFlag": "⚽",
       "competitionCode": 1230,
       "home": "Marconi S. U20",
       "away": "Wollongong Wolves U20",
@@ -575,25 +656,29 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 0,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1548189,
       "competition": "J2/J3 League",
+      "competitionFlag": "⚽",
       "competitionCode": 99,
       "home": "Vanraure Hachinohe",
       "away": "Imabari",
       "homeLogo": "https://media.api-sports.io/football/teams/4326.png",
       "awayLogo": "https://media.api-sports.io/football/teams/10075.png",
       "utcDate": "2026-06-07T04:00:00+00:00",
-      "status": "unknown",
-      "statusLabel": "PEN",
+      "status": "finished",
+      "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1547846,
       "competition": "J2/J3 League",
+      "competitionFlag": "⚽",
       "competitionCode": 99,
       "home": "Tokushima Vortis",
       "away": "Iwaki",
@@ -603,11 +688,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 2,
-      "awayScore": 0
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1517560,
       "competition": "New South Wales NPL",
+      "competitionFlag": "⚽",
       "competitionCode": 192,
       "home": "Marconi Stallions",
       "away": "Wollongong Wolves",
@@ -617,11 +704,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 0
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1517561,
       "competition": "New South Wales NPL",
+      "competitionFlag": "⚽",
       "competitionCode": 192,
       "home": "Blacktown City",
       "away": "Rockdale City Suns",
@@ -631,11 +720,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 2
+      "awayScore": 2,
+      "channels": []
     },
     {
       "id": 1548066,
       "competition": "J2/J3 League",
+      "competitionFlag": "⚽",
       "competitionCode": 99,
       "home": "Blaublitz Akita",
       "away": "Kagoshima United",
@@ -645,11 +736,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 0,
-      "awayScore": 2
+      "awayScore": 2,
+      "channels": []
     },
     {
       "id": 1548067,
       "competition": "J2/J3 League",
+      "competitionFlag": "⚽",
       "competitionCode": 99,
       "home": "Kanazawa",
       "away": "Thespakusatsu Gunma",
@@ -659,39 +752,45 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 4,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1548068,
       "competition": "J2/J3 League",
+      "competitionFlag": "⚽",
       "competitionCode": 99,
       "home": "Tochigi SC",
       "away": "Kitakyushu",
       "homeLogo": "https://media.api-sports.io/football/teams/315.png",
       "awayLogo": "https://media.api-sports.io/football/teams/805.png",
       "utcDate": "2026-06-07T05:00:00+00:00",
-      "status": "unknown",
-      "statusLabel": "AET",
+      "status": "finished",
+      "statusLabel": "FT",
       "homeScore": 2,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1548190,
       "competition": "J2/J3 League",
+      "competitionFlag": "⚽",
       "competitionCode": 99,
       "home": "Fukushima United",
       "away": "FC Ryukyu",
       "homeLogo": "https://media.api-sports.io/football/teams/4318.png",
       "awayLogo": "https://media.api-sports.io/football/teams/2235.png",
       "utcDate": "2026-06-07T05:00:00+00:00",
-      "status": "unknown",
-      "statusLabel": "PEN",
+      "status": "finished",
+      "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1524052,
       "competition": "Queensland NPL",
+      "competitionFlag": "⚽",
       "competitionCode": 482,
       "home": "Gold Coast United",
       "away": "WDSC Wolves",
@@ -701,11 +800,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 2
+      "awayScore": 2,
+      "channels": []
     },
     {
       "id": 1521955,
       "competition": "Victoria NPL",
+      "competitionFlag": "⚽",
       "competitionCode": 195,
       "home": "South Melbourne",
       "away": "Altona Magic",
@@ -715,11 +816,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 2,
-      "awayScore": 3
+      "awayScore": 3,
+      "channels": []
     },
     {
       "id": 1524157,
       "competition": "Queensland Premier League",
+      "competitionFlag": "⚽",
       "competitionCode": 833,
       "home": "St George Willawong",
       "away": "Redlands United",
@@ -729,11 +832,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 0,
-      "awayScore": 3
+      "awayScore": 3,
+      "channels": []
     },
     {
       "id": 1548069,
       "competition": "J2/J3 League",
+      "competitionFlag": "⚽",
       "competitionCode": 99,
       "home": "Oita Trinita",
       "away": "Montedio Yamagata",
@@ -743,11 +848,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 0
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1465503,
       "competition": "Landesliga - Vorarlbergliga",
+      "competitionFlag": "⚽",
       "competitionCode": 231,
       "home": "Ludesch",
       "away": "Nenzing",
@@ -757,11 +864,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 5,
-      "awayScore": 0
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1532760,
       "competition": "League Two",
+      "competitionFlag": "⚽",
       "competitionCode": 929,
       "home": "Changchun Xidu",
       "away": "Qingdao Red Lions",
@@ -771,11 +880,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1487714,
       "competition": "4. liga - Divizie E",
+      "competitionFlag": "⚽",
       "competitionCode": 354,
       "home": "Slavičín",
       "away": "Bzenec",
@@ -785,11 +896,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 0
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1487830,
       "competition": "4. liga - Divizie F",
+      "competitionFlag": "⚽",
       "competitionCode": 686,
       "home": "Havířov",
       "away": "Vratimov",
@@ -799,11 +912,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 0,
-      "awayScore": 3
+      "awayScore": 3,
+      "channels": []
     },
     {
       "id": 1527077,
       "competition": "South Australia NPL",
+      "competitionFlag": "⚽",
       "competitionCode": 194,
       "home": "West Adelaide",
       "away": "Adelaide United II",
@@ -813,11 +928,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 3,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1398953,
       "competition": "Regionalliga - West",
+      "competitionFlag": "⚽",
       "competitionCode": 223,
       "home": "Kuchl",
       "away": "Bischofshofen",
@@ -827,11 +944,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 2,
-      "awayScore": 0
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1526746,
       "competition": "Second League A - Division A Silver",
+      "competitionFlag": "⚽",
       "competitionCode": 1026,
       "home": "Dinamo Vladivostok",
       "away": "Dinamo Kirov",
@@ -841,11 +960,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 0,
-      "awayScore": 0
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1527846,
       "competition": "Second League A - Division A Gold",
+      "competitionFlag": "⚽",
       "competitionCode": 1025,
       "home": "Novosibirsk",
       "away": "Kaluga",
@@ -855,11 +976,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 0
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1536378,
       "competition": "Second League - Group 2",
+      "competitionFlag": "⚽",
       "competitionCode": 652,
       "home": "Yenisey II",
       "away": "Kosmos Dolgoprudny",
@@ -869,11 +992,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 2
+      "awayScore": 2,
+      "channels": []
     },
     {
       "id": 1546441,
       "competition": "Tercera División RFEF - Group 13",
+      "competitionFlag": "⚽",
       "competitionCode": 451,
       "home": "Real Murcia II",
       "away": "Olímpico Totana",
@@ -883,11 +1008,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 2,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1546453,
       "competition": "Tercera División RFEF - Group 6",
+      "competitionFlag": "⚽",
       "competitionCode": 444,
       "home": "Levante II",
       "away": "La Nucía",
@@ -897,11 +1024,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1546451,
       "competition": "Tercera División RFEF - Group 7",
+      "competitionFlag": "⚽",
       "competitionCode": 445,
       "home": "Trival Valderas",
       "away": "Las Rozas",
@@ -911,11 +1040,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 3,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1520502,
       "competition": "K3 League",
+      "competitionFlag": "⚽",
       "competitionCode": 295,
       "home": "Mokpo City",
       "away": "Yangpyeong",
@@ -925,11 +1056,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 0,
-      "awayScore": 0
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1520503,
       "competition": "K3 League",
+      "competitionFlag": "⚽",
       "competitionCode": 295,
       "home": "Yeoju Sejong",
       "away": "Siheung Citizen",
@@ -939,11 +1072,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 0,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1536812,
       "competition": "Second League - Group 4",
+      "competitionFlag": "⚽",
       "competitionCode": 653,
       "home": "Dinamo Barnaul",
       "away": "Pobeda Nizhniy Novgorod",
@@ -953,11 +1088,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 0,
-      "awayScore": 2
+      "awayScore": 2,
+      "channels": []
     },
     {
       "id": 1536814,
       "competition": "Second League - Group 4",
+      "competitionFlag": "⚽",
       "competitionCode": 653,
       "home": "Krylya Sovetov II",
       "away": "Akron II",
@@ -967,11 +1104,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 2,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1546445,
       "competition": "Tercera División RFEF - Group 11",
+      "competitionFlag": "⚽",
       "competitionCode": 449,
       "home": "Manacor",
       "away": "Peña Deportiva",
@@ -981,11 +1120,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 3
+      "awayScore": 3,
+      "channels": []
     },
     {
       "id": 1546458,
       "competition": "Tercera División RFEF - Group 2",
+      "competitionFlag": "⚽",
       "competitionCode": 440,
       "home": "Covadonga",
       "away": "Caudal",
@@ -995,11 +1136,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 2,
-      "awayScore": 4
+      "awayScore": 4,
+      "channels": []
     },
     {
       "id": 1548479,
       "competition": "Friendlies Women",
+      "competitionFlag": "⚽",
       "competitionCode": 666,
       "home": "Portugal U18 W",
       "away": "Finland U18 W",
@@ -1009,11 +1152,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 0,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1510360,
       "competition": "K League 2",
+      "competitionFlag": "⚽",
       "competitionCode": 293,
       "home": "Cheonan City",
       "away": "Suwon City FC",
@@ -1023,11 +1168,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 2,
-      "awayScore": 2
+      "awayScore": 2,
+      "channels": []
     },
     {
       "id": 1510361,
       "competition": "K League 2",
+      "competitionFlag": "⚽",
       "competitionCode": 293,
       "home": "Gimpo Citizen",
       "away": "Jeonnam Dragons",
@@ -1037,11 +1184,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 2,
-      "awayScore": 2
+      "awayScore": 2,
+      "channels": []
     },
     {
       "id": 1510362,
       "competition": "K League 2",
+      "competitionFlag": "⚽",
       "competitionCode": 293,
       "home": "Seoul E-Land FC",
       "away": "Cheongju",
@@ -1051,11 +1200,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 2
+      "awayScore": 2,
+      "channels": []
     },
     {
       "id": 1504452,
       "competition": "Ettan - Södra",
+      "competitionFlag": "⚽",
       "competitionCode": 564,
       "home": "AFC Malmo",
       "away": "Eskilsminne",
@@ -1065,11 +1216,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 2,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1504455,
       "competition": "Ettan - Södra",
+      "competitionFlag": "⚽",
       "competitionCode": 564,
       "home": "Kristianstad",
       "away": "Lund",
@@ -1079,11 +1232,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1510596,
       "competition": "Division 2 - Norra Götaland",
+      "competitionFlag": "⚽",
       "competitionCode": 592,
       "home": "Herrestads",
       "away": "Motala",
@@ -1093,11 +1248,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 0
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1510778,
       "competition": "Division 2 - Norra Svealand",
+      "competitionFlag": "⚽",
       "competitionCode": 593,
       "home": "Helges",
       "away": "Kungsängen",
@@ -1107,11 +1264,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 4
+      "awayScore": 4,
+      "channels": []
     },
     {
       "id": 1510779,
       "competition": "Division 2 - Norra Svealand",
+      "competitionFlag": "⚽",
       "competitionCode": 593,
       "home": "Franke",
       "away": "Bollstanäs",
@@ -1121,11 +1280,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 2,
-      "awayScore": 2
+      "awayScore": 2,
+      "channels": []
     },
     {
       "id": 1510781,
       "competition": "Division 2 - Norra Svealand",
+      "competitionFlag": "⚽",
       "competitionCode": 593,
       "home": "Viggbyholms IK",
       "away": "Lidingö",
@@ -1135,11 +1296,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 2,
-      "awayScore": 2
+      "awayScore": 2,
+      "channels": []
     },
     {
       "id": 1511143,
       "competition": "Division 2 - Södra Svealand",
+      "competitionFlag": "⚽",
       "competitionCode": 595,
       "home": "Karlslund",
       "away": "Sleipner",
@@ -1149,11 +1312,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 3
+      "awayScore": 3,
+      "channels": []
     },
     {
       "id": 1515749,
       "competition": "Division 2 - Norrland",
+      "competitionFlag": "⚽",
       "competitionCode": 594,
       "home": "Storfors",
       "away": "Boden",
@@ -1163,11 +1328,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 0,
-      "awayScore": 2
+      "awayScore": 2,
+      "channels": []
     },
     {
       "id": 1518103,
       "competition": "V.League 1",
+      "competitionFlag": "⚽",
       "competitionCode": 340,
       "home": "Binh Duong",
       "away": "Hoang Anh Gia Lai",
@@ -1177,11 +1344,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 3,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1518104,
       "competition": "V.League 1",
+      "competitionFlag": "⚽",
       "competitionCode": 340,
       "home": "Da Nang",
       "away": "Thanh Hóa",
@@ -1191,11 +1360,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 4,
-      "awayScore": 0
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1518105,
       "competition": "V.League 1",
+      "competitionFlag": "⚽",
       "competitionCode": 340,
       "home": "Hai Phong",
       "away": "Nam Dinh",
@@ -1205,11 +1376,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1518106,
       "competition": "V.League 1",
+      "competitionFlag": "⚽",
       "competitionCode": 340,
       "home": "Ha Noi",
       "away": "Ho Chi Minh",
@@ -1219,11 +1392,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1518107,
       "competition": "V.League 1",
+      "competitionFlag": "⚽",
       "competitionCode": 340,
       "home": "Phu Dong",
       "away": "Hồng Lĩnh Hà Tĩnh",
@@ -1233,11 +1408,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 3,
-      "awayScore": 0
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1518108,
       "competition": "V.League 1",
+      "competitionFlag": "⚽",
       "competitionCode": 340,
       "home": "Song Lam Nghe An",
       "away": "Pho Hien",
@@ -1247,11 +1424,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 3
+      "awayScore": 3,
+      "channels": []
     },
     {
       "id": 1518109,
       "competition": "V.League 1",
+      "competitionFlag": "⚽",
       "competitionCode": 340,
       "home": "Viettel",
       "away": "Công An Nhân Dân",
@@ -1261,11 +1440,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 0
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1527844,
       "competition": "Second League A - Division A Gold",
+      "competitionFlag": "⚽",
       "competitionCode": 1025,
       "home": "Irtysh Omsk",
       "away": "Volgar Astrakhan",
@@ -1275,11 +1456,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 2
+      "awayScore": 2,
+      "channels": []
     },
     {
       "id": 1534325,
       "competition": "1. Division",
+      "competitionFlag": "⚽",
       "competitionCode": 117,
       "home": "Niva",
       "away": "Orsha",
@@ -1289,11 +1472,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1536813,
       "competition": "Second League - Group 4",
+      "competitionFlag": "⚽",
       "competitionCode": 653,
       "home": "KDV",
       "away": "Izhevsk",
@@ -1303,11 +1488,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1545739,
       "competition": "Friendlies Women",
+      "competitionFlag": "⚽",
       "competitionCode": 666,
       "home": "China W",
       "away": "Russia W",
@@ -1317,11 +1504,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 0,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1546443,
       "competition": "Tercera División RFEF - Group 12",
+      "competitionFlag": "⚽",
       "competitionCode": 450,
       "home": "San Fernando CD",
       "away": "Tamaraceite",
@@ -1331,11 +1520,13 @@
       "status": "scheduled",
       "statusLabel": "11:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1546772,
       "competition": "Ligue 1",
+      "competitionFlag": "⚽",
       "competitionCode": 424,
       "home": "Don Bosco",
       "away": "Céleste",
@@ -1345,11 +1536,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 2,
-      "awayScore": 2
+      "awayScore": 2,
+      "channels": []
     },
     {
       "id": 1548444,
       "competition": "Friendlies",
+      "competitionFlag": "⚽",
       "competitionCode": 10,
       "home": "Afghanistan",
       "away": "Pakistan",
@@ -1359,11 +1552,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 0,
-      "awayScore": 2
+      "awayScore": 2,
+      "channels": []
     },
     {
       "id": 1505176,
       "competition": "Ettan - Norra",
+      "competitionFlag": "⚽",
       "competitionCode": 563,
       "home": "Piteå",
       "away": "Enköping",
@@ -1373,11 +1568,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 0,
-      "awayScore": 2
+      "awayScore": 2,
+      "channels": []
     },
     {
       "id": 1510598,
       "competition": "Division 2 - Norra Götaland",
+      "competitionFlag": "⚽",
       "competitionCode": 592,
       "home": "Kumla",
       "away": "Ahlafors",
@@ -1387,11 +1584,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1510951,
       "competition": "Division 2 - Södra Götaland",
+      "competitionFlag": "⚽",
       "competitionCode": 597,
       "home": "Oskarshamns AIK",
       "away": "Österlen",
@@ -1401,11 +1600,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1511325,
       "competition": "Division 2 - Västra Götaland",
+      "competitionFlag": "⚽",
       "competitionCode": 596,
       "home": "Dalstorps",
       "away": "Onsala",
@@ -1415,11 +1616,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 3,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1515746,
       "competition": "Division 2 - Norrland",
+      "competitionFlag": "⚽",
       "competitionCode": 594,
       "home": "Lucksta",
       "away": "Fransta",
@@ -1429,11 +1632,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 3,
-      "awayScore": 3
+      "awayScore": 3,
+      "channels": []
     },
     {
       "id": 1534329,
       "competition": "1. Division",
+      "competitionFlag": "⚽",
       "competitionCode": 117,
       "home": "FC Slutsk",
       "away": "Molodechno-DYuSSh 4",
@@ -1443,11 +1648,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 2,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1536157,
       "competition": "Mineiro U20",
+      "competitionFlag": "⚽",
       "competitionCode": 1107,
       "home": "Social U20",
       "away": "Boston City U20",
@@ -1457,11 +1664,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 2,
-      "awayScore": 3
+      "awayScore": 3,
+      "channels": []
     },
     {
       "id": 1548082,
       "competition": "Derde Divisie - Relegation Round",
+      "competitionFlag": "⚽",
       "competitionCode": 1004,
       "home": "Hollandia",
       "away": "HBC",
@@ -1471,11 +1680,13 @@
       "status": "scheduled",
       "statusLabel": "12:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1548083,
       "competition": "Derde Divisie - Relegation Round",
+      "competitionFlag": "⚽",
       "competitionCode": 1004,
       "home": "TEC",
       "away": "NEO",
@@ -1485,11 +1696,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 3,
-      "awayScore": 0
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1548395,
       "competition": "Super League",
+      "competitionFlag": "⚽",
       "competitionCode": 277,
       "home": "Darajani Gogo",
       "away": "Kisumu All Stars",
@@ -1499,11 +1712,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 2,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1548396,
       "competition": "Super League",
+      "competitionFlag": "⚽",
       "competitionCode": 277,
       "home": "Fortune Sacco",
       "away": "Gucha Stars",
@@ -1513,11 +1728,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 0
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1548397,
       "competition": "Super League",
+      "competitionFlag": "⚽",
       "competitionCode": 277,
       "home": "Kabati Youth FC",
       "away": "Naivas",
@@ -1527,11 +1744,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 2,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1548398,
       "competition": "Super League",
+      "competitionFlag": "⚽",
       "competitionCode": 277,
       "home": "Kibera Black Stars",
       "away": "MCF",
@@ -1541,11 +1760,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 2
+      "awayScore": 2,
+      "channels": []
     },
     {
       "id": 1548399,
       "competition": "Super League",
+      "competitionFlag": "⚽",
       "competitionCode": 277,
       "home": "Migori Youth",
       "away": "Equity Bank",
@@ -1555,11 +1776,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 2,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1548400,
       "competition": "Super League",
+      "competitionFlag": "⚽",
       "competitionCode": 277,
       "home": "Mombasa Elite",
       "away": "Nzoia Sugar",
@@ -1569,11 +1792,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 0
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1548401,
       "competition": "Super League",
+      "competitionFlag": "⚽",
       "competitionCode": 277,
       "home": "Mwatate United",
       "away": "3K",
@@ -1583,11 +1808,13 @@
       "status": "scheduled",
       "statusLabel": "12:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1548402,
       "competition": "Super League",
+      "competitionFlag": "⚽",
       "competitionCode": 277,
       "home": "Soy United",
       "away": "MOFA",
@@ -1597,11 +1824,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 0,
-      "awayScore": 0
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1548403,
       "competition": "Super League",
+      "competitionFlag": "⚽",
       "competitionCode": 277,
       "home": "Talanta",
       "away": "Nairobi City Stars",
@@ -1611,11 +1840,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 5,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1548404,
       "competition": "Super League",
+      "competitionFlag": "⚽",
       "competitionCode": 277,
       "home": "Vihiga United FC",
       "away": "Luanda Villa",
@@ -1625,11 +1856,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1548465,
       "competition": "Friendlies Women",
+      "competitionFlag": "⚽",
       "competitionCode": 666,
       "home": "Saudi Arabia W",
       "away": "Sri Lanka W",
@@ -1639,11 +1872,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 4,
-      "awayScore": 0
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1549393,
       "competition": "Baiano U20",
+      "competitionFlag": "⚽",
       "competitionCode": 1073,
       "home": "SSA U20",
       "away": "Galícia U20",
@@ -1653,11 +1888,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1550633,
       "competition": "Oberliga - Promotion Round",
+      "competitionFlag": "⚽",
       "competitionCode": 988,
       "home": "Eddersheim",
       "away": "Pirmasens",
@@ -1667,11 +1904,13 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 4,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1550635,
       "competition": "Oberliga - Promotion Round",
+      "competitionFlag": "⚽",
       "competitionCode": 988,
       "home": "Germania Egestorf",
       "away": "Todesfelde",
@@ -1681,557 +1920,637 @@
       "status": "finished",
       "statusLabel": "FT",
       "homeScore": 0,
-      "awayScore": 2
+      "awayScore": 2,
+      "channels": []
     },
     {
       "id": 1550636,
       "competition": "Oberliga - Promotion Round",
+      "competitionFlag": "⚽",
       "competitionCode": 988,
       "home": "Eimsbütteler TV",
       "away": "Blumenthaler SV",
       "homeLogo": "https://media.api-sports.io/football/teams/13947.png",
       "awayLogo": "https://media.api-sports.io/football/teams/16091.png",
       "utcDate": "2026-06-07T12:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "12:00",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 6,
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1532517,
       "competition": "Ýokary Liga",
+      "competitionFlag": "⚽",
       "competitionCode": 636,
       "home": "Köpetdag Aşgabat",
       "away": "Aşgabat",
       "homeLogo": "https://media.api-sports.io/football/teams/13157.png",
       "awayLogo": "https://media.api-sports.io/football/teams/13159.png",
       "utcDate": "2026-06-07T12:30:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "12:30",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 3,
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1398951,
       "competition": "Regionalliga - West",
+      "competitionFlag": "⚽",
       "competitionCode": 223,
       "home": "Rheindorf Altach II",
       "away": "Kitzbühel",
       "homeLogo": "https://media.api-sports.io/football/teams/8256.png",
       "awayLogo": "https://media.api-sports.io/football/teams/4947.png",
       "utcDate": "2026-06-07T13:00:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
-      "homeScore": 0,
-      "awayScore": 4
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 2,
+      "awayScore": 5,
+      "channels": []
     },
     {
       "id": 1406075,
       "competition": "Oberliga - Niederrhein",
+      "competitionFlag": "⚽",
       "competitionCode": 751,
       "home": "SW Essen",
       "away": "Meerbusch",
       "homeLogo": "https://media.api-sports.io/football/teams/14523.png",
       "awayLogo": "https://media.api-sports.io/football/teams/14553.png",
       "utcDate": "2026-06-07T13:00:00+00:00",
-      "status": "halftime",
-      "statusLabel": "HT",
-      "homeScore": 0,
-      "awayScore": 0
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 3,
+      "awayScore": 4,
+      "channels": []
     },
     {
       "id": 1425147,
       "competition": "Oberliga - Mittelrhein",
+      "competitionFlag": "⚽",
       "competitionCode": 746,
       "home": "SSV Merten",
       "away": "Siegburger SV",
       "homeLogo": "https://media.api-sports.io/football/teams/14770.png",
       "awayLogo": "https://media.api-sports.io/football/teams/12853.png",
       "utcDate": "2026-06-07T13:00:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
-      "homeScore": 2,
-      "awayScore": 1
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 5,
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1425148,
       "competition": "Oberliga - Mittelrhein",
+      "competitionFlag": "⚽",
       "competitionCode": 746,
       "home": "Düren Merzenich",
       "away": "Fortuna Köln II",
       "homeLogo": "https://media.api-sports.io/football/teams/12754.png",
       "awayLogo": "https://media.api-sports.io/football/teams/14681.png",
       "utcDate": "2026-06-07T13:00:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
+      "status": "finished",
+      "statusLabel": "FT",
       "homeScore": 2,
-      "awayScore": 3
+      "awayScore": 5,
+      "channels": []
     },
     {
       "id": 1425149,
       "competition": "Oberliga - Mittelrhein",
+      "competitionFlag": "⚽",
       "competitionCode": 746,
       "home": "Bergisch Gladbach",
       "away": "Porz",
       "homeLogo": "https://media.api-sports.io/football/teams/9366.png",
       "awayLogo": "https://media.api-sports.io/football/teams/14751.png",
       "utcDate": "2026-06-07T13:00:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
-      "homeScore": 5,
-      "awayScore": 0
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 10,
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1425150,
       "competition": "Oberliga - Mittelrhein",
+      "competitionFlag": "⚽",
       "competitionCode": 746,
       "home": "Hennef 05",
       "away": "Bornheim",
       "homeLogo": "https://media.api-sports.io/football/teams/12784.png",
       "awayLogo": "https://media.api-sports.io/football/teams/26275.png",
       "utcDate": "2026-06-07T13:00:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
-      "homeScore": 0,
-      "awayScore": 3
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 1,
+      "awayScore": 3,
+      "channels": []
     },
     {
       "id": 1425151,
       "competition": "Oberliga - Mittelrhein",
+      "competitionFlag": "⚽",
       "competitionCode": 746,
       "home": "SF Düren",
       "away": "Wegberg-Beeck",
       "homeLogo": "https://media.api-sports.io/football/teams/21033.png",
       "awayLogo": "https://media.api-sports.io/football/teams/14148.png",
       "utcDate": "2026-06-07T13:00:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
+      "status": "finished",
+      "statusLabel": "FT",
       "homeScore": 0,
-      "awayScore": 2
+      "awayScore": 3,
+      "channels": []
     },
     {
       "id": 1489983,
       "competition": "4. liga - Divizie C",
+      "competitionFlag": "⚽",
       "competitionCode": 352,
       "home": "Slovan Hrádek nad Nisou",
       "away": "Trutnov",
       "homeLogo": "https://media.api-sports.io/football/teams/24192.png",
       "awayLogo": "https://media.api-sports.io/football/teams/7367.png",
       "utcDate": "2026-06-07T13:00:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
+      "status": "finished",
+      "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 2
+      "awayScore": 2,
+      "channels": []
     },
     {
       "id": 1495283,
       "competition": "Premier Soccer League",
+      "competitionFlag": "⚽",
       "competitionCode": 401,
       "home": "CAPS United",
       "away": "Kariba",
       "homeLogo": "https://media.api-sports.io/football/teams/5218.png",
       "awayLogo": "https://media.api-sports.io/football/teams/5226.png",
       "utcDate": "2026-06-07T13:00:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
-      "homeScore": 2,
-      "awayScore": 2
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 3,
+      "awayScore": 2,
+      "channels": []
     },
     {
       "id": 1495284,
       "competition": "Premier Soccer League",
+      "competitionFlag": "⚽",
       "competitionCode": 401,
       "home": "Hardrock",
       "away": "Simba Bhora",
       "homeLogo": "https://media.api-sports.io/football/teams/27274.png",
       "awayLogo": "https://media.api-sports.io/football/teams/21055.png",
       "utcDate": "2026-06-07T13:00:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
-      "homeScore": 2,
-      "awayScore": 0
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 3,
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1495287,
       "competition": "Premier Soccer League",
+      "competitionFlag": "⚽",
       "competitionCode": 401,
       "home": "Manica Diamonds",
       "away": "Dynamos",
       "homeLogo": "https://media.api-sports.io/football/teams/5227.png",
       "awayLogo": "https://media.api-sports.io/football/teams/5221.png",
       "utcDate": "2026-06-07T13:00:00+00:00",
-      "status": "halftime",
-      "statusLabel": "HT",
-      "homeScore": 1,
-      "awayScore": 0
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 2,
+      "awayScore": 2,
+      "channels": []
     },
     {
       "id": 1495290,
       "competition": "Premier Soccer League",
+      "competitionFlag": "⚽",
       "competitionCode": 401,
       "home": "Triangle United",
       "away": "Platinum",
       "homeLogo": "https://media.api-sports.io/football/teams/5232.png",
       "awayLogo": "https://media.api-sports.io/football/teams/5230.png",
       "utcDate": "2026-06-07T13:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "13:00",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 0,
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1505177,
       "competition": "Ettan - Norra",
+      "competitionFlag": "⚽",
       "competitionCode": 563,
       "home": "Sollentuna",
       "away": "Umeå FC",
       "homeLogo": "https://media.api-sports.io/football/teams/6699.png",
       "awayLogo": "https://media.api-sports.io/football/teams/6705.png",
       "utcDate": "2026-06-07T13:00:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
+      "status": "finished",
+      "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1511053,
       "competition": "Division 2 - Södra Götaland",
+      "competitionFlag": "⚽",
       "competitionCode": 597,
       "home": "Karlshamn",
       "away": "Lilla Torg W",
       "homeLogo": "https://media.api-sports.io/football/teams/12615.png",
       "awayLogo": "https://media.api-sports.io/football/teams/24079.png",
       "utcDate": "2026-06-07T13:00:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
-      "homeScore": 1,
-      "awayScore": 0
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 2,
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1512934,
       "competition": "Elite One",
+      "competitionFlag": "⚽",
       "competitionCode": 411,
       "home": "Fortuna Mfou",
       "away": "PWD Bamenda",
       "homeLogo": "https://media.api-sports.io/football/teams/5405.png",
       "awayLogo": "https://media.api-sports.io/football/teams/5409.png",
       "utcDate": "2026-06-07T13:00:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
+      "status": "finished",
+      "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 0
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1527842,
       "competition": "Second League A - Division A Gold",
+      "competitionFlag": "⚽",
       "competitionCode": 1025,
       "home": "Leningradets",
       "away": "Torpedo Miass",
       "homeLogo": "https://media.api-sports.io/football/teams/6811.png",
       "awayLogo": "https://media.api-sports.io/football/teams/16864.png",
       "utcDate": "2026-06-07T13:00:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
+      "status": "finished",
+      "statusLabel": "FT",
       "homeScore": 3,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1527843,
       "competition": "Second League A - Division A Gold",
+      "competitionFlag": "⚽",
       "competitionCode": 1025,
       "home": "Mashuk-KMV",
       "away": "Veles",
       "homeLogo": "https://media.api-sports.io/football/teams/6814.png",
       "awayLogo": "https://media.api-sports.io/football/teams/6833.png",
       "utcDate": "2026-06-07T13:00:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
+      "status": "finished",
+      "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 0
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1532515,
       "competition": "Ýokary Liga",
+      "competitionFlag": "⚽",
       "competitionCode": 636,
       "home": "Ahal",
       "away": "Şagadam",
       "homeLogo": "https://media.api-sports.io/football/teams/8020.png",
       "awayLogo": "https://media.api-sports.io/football/teams/12903.png",
       "utcDate": "2026-06-07T13:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "13:00",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 0,
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1532518,
       "competition": "Ýokary Liga",
+      "competitionFlag": "⚽",
       "competitionCode": 636,
       "home": "Merw",
       "away": "Altyn Asyr",
       "homeLogo": "https://media.api-sports.io/football/teams/13158.png",
       "awayLogo": "https://media.api-sports.io/football/teams/8023.png",
       "utcDate": "2026-06-07T13:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "13:00",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 0,
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1534328,
       "competition": "1. Division",
+      "competitionFlag": "⚽",
       "competitionCode": 117,
       "home": "FC Energetik-Bgu Minsk",
       "away": "Gomel II",
       "homeLogo": "https://media.api-sports.io/football/teams/2433.png",
       "awayLogo": "https://media.api-sports.io/football/teams/23433.png",
       "utcDate": "2026-06-07T13:00:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
+      "status": "finished",
+      "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1536159,
       "competition": "Mineiro U20",
+      "competitionFlag": "⚽",
       "competitionCode": 1107,
       "home": "Sao Joao del Rei U20",
       "away": "Betim U20",
       "homeLogo": "https://media.api-sports.io/football/teams/27642.png",
       "awayLogo": "https://media.api-sports.io/football/teams/23644.png",
       "utcDate": "2026-06-07T13:00:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
-      "homeScore": 0,
-      "awayScore": 0
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 1,
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1536218,
       "competition": "Second League - Group 1",
+      "competitionFlag": "⚽",
       "competitionCode": 651,
       "home": "Dynamo Makhachkala II",
       "away": "Lugansk",
       "homeLogo": "https://media.api-sports.io/football/teams/21853.png",
       "awayLogo": "https://media.api-sports.io/football/teams/27647.png",
       "utcDate": "2026-06-07T13:00:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
+      "status": "finished",
+      "statusLabel": "FT",
       "homeScore": 2,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1536376,
       "competition": "Second League - Group 2",
+      "competitionFlag": "⚽",
       "competitionCode": 652,
       "home": "Luki-Energiya",
       "away": "Murom",
       "homeLogo": "https://media.api-sports.io/football/teams/6812.png",
       "awayLogo": "https://media.api-sports.io/football/teams/6817.png",
       "utcDate": "2026-06-07T13:00:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
-      "homeScore": 1,
-      "awayScore": 1
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 2,
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1536815,
       "competition": "Second League - Group 4",
+      "competitionFlag": "⚽",
       "competitionCode": 653,
       "home": "Nosta",
       "away": "Ural II",
       "homeLogo": "https://media.api-sports.io/football/teams/6818.png",
       "awayLogo": "https://media.api-sports.io/football/teams/12887.png",
       "utcDate": "2026-06-07T13:00:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
+      "status": "finished",
+      "statusLabel": "FT",
       "homeScore": 0,
-      "awayScore": 1
+      "awayScore": 2,
+      "channels": []
     },
     {
       "id": 1536817,
       "competition": "Second League - Group 4",
+      "competitionFlag": "⚽",
       "competitionCode": 653,
       "home": "Rubin Kazan 2",
       "away": "Chelyabinsk II",
       "homeLogo": "https://media.api-sports.io/football/teams/21032.png",
       "awayLogo": "https://media.api-sports.io/football/teams/25866.png",
       "utcDate": "2026-06-07T13:00:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
-      "homeScore": 0,
-      "awayScore": 2
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 1,
+      "awayScore": 2,
+      "channels": []
     },
     {
       "id": 1541209,
       "competition": "Paulista Série B",
+      "competitionFlag": "⚽",
       "competitionCode": 1098,
       "home": "Matonense",
       "away": "Sao Carlos",
       "homeLogo": "https://media.api-sports.io/football/teams/18303.png",
       "awayLogo": "https://media.api-sports.io/football/teams/23580.png",
       "utcDate": "2026-06-07T13:00:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
+      "status": "finished",
+      "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1541210,
       "competition": "Paulista Série B",
+      "competitionFlag": "⚽",
       "competitionCode": 1098,
       "home": "Independente SP",
       "away": "Santacruzense",
       "homeLogo": "https://media.api-sports.io/football/teams/22948.png",
       "awayLogo": "https://media.api-sports.io/football/teams/25772.png",
       "utcDate": "2026-06-07T13:00:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
+      "status": "finished",
+      "statusLabel": "FT",
       "homeScore": 0,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1541268,
       "competition": "Paulista Série B",
+      "competitionFlag": "⚽",
       "competitionCode": 1098,
       "home": "Grêmio Catanduvense",
       "away": "Mogi Mirim",
       "homeLogo": "https://media.api-sports.io/football/teams/27685.png",
       "awayLogo": "https://media.api-sports.io/football/teams/7816.png",
       "utcDate": "2026-06-07T13:00:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
+      "status": "finished",
+      "statusLabel": "FT",
       "homeScore": 0,
-      "awayScore": 2
+      "awayScore": 6,
+      "channels": []
     },
     {
       "id": 1541269,
       "competition": "Paulista Série B",
+      "competitionFlag": "⚽",
       "competitionCode": 1098,
       "home": "Gremio Osasco Audax",
       "away": "Votoraty",
       "homeLogo": "https://media.api-sports.io/football/teams/1217.png",
       "awayLogo": "https://media.api-sports.io/football/teams/27689.png",
       "utcDate": "2026-06-07T13:00:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
+      "status": "finished",
+      "statusLabel": "FT",
       "homeScore": 2,
-      "awayScore": 0
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1544362,
       "competition": "Friendlies",
+      "competitionFlag": "⚽",
       "competitionCode": 10,
       "home": "Liechtenstein",
       "away": "Cyprus",
       "homeLogo": "https://media.api-sports.io/football/teams/1107.png",
       "awayLogo": "https://media.api-sports.io/football/teams/1106.png",
       "utcDate": "2026-06-07T13:00:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
+      "status": "finished",
+      "statusLabel": "FT",
       "homeScore": 0,
-      "awayScore": 2
+      "awayScore": 2,
+      "channels": []
     },
     {
       "id": 1545465,
       "competition": "Tournoi Maurice Revello",
+      "competitionFlag": "⚽",
       "competitionCode": 914,
       "home": "Congo DR U20",
       "away": "Colombia U19",
       "homeLogo": "https://media.api-sports.io/football/teams/11024.png",
       "awayLogo": "https://media.api-sports.io/football/teams/18981.png",
       "utcDate": "2026-06-07T13:00:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
+      "status": "finished",
+      "statusLabel": "FT",
       "homeScore": 2,
-      "awayScore": 0
+      "awayScore": 2,
+      "channels": []
     },
     {
       "id": 1546773,
       "competition": "Ligue 1",
+      "competitionFlag": "⚽",
       "competitionCode": 424,
       "home": "Maniema Union",
       "away": "TP Mazembe",
       "homeLogo": "https://media.api-sports.io/football/teams/8064.png",
       "awayLogo": "https://media.api-sports.io/football/teams/6435.png",
       "utcDate": "2026-06-07T13:00:00+00:00",
-      "status": "halftime",
-      "statusLabel": "HT",
-      "homeScore": 0,
-      "awayScore": 0
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 2,
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1546809,
       "competition": "Primera División - Apertura",
+      "competitionFlag": "⚽",
       "competitionCode": 268,
       "home": "Progreso",
       "away": "Albion FC",
       "homeLogo": "https://media.api-sports.io/football/teams/2363.png",
       "awayLogo": "https://media.api-sports.io/football/teams/2378.png",
       "utcDate": "2026-06-07T13:00:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
+      "status": "finished",
+      "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 2
+      "awayScore": 2,
+      "channels": []
     },
     {
       "id": 1547216,
       "competition": "ASEAN Championship U19",
+      "competitionFlag": "⚽",
       "competitionCode": 928,
       "home": "Indonesia U19",
       "away": "Vietnam U19",
       "homeLogo": "https://media.api-sports.io/football/teams/19149.png",
       "awayLogo": "https://media.api-sports.io/football/teams/19157.png",
       "utcDate": "2026-06-07T13:00:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
-      "homeScore": 1,
-      "awayScore": 0
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 2,
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1547217,
       "competition": "ASEAN Championship U19",
+      "competitionFlag": "⚽",
       "competitionCode": 928,
       "home": "Timor-Leste U19",
       "away": "Myanmar U19",
       "homeLogo": "https://media.api-sports.io/football/teams/19156.png",
       "awayLogo": "https://media.api-sports.io/football/teams/19152.png",
       "utcDate": "2026-06-07T13:00:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
+      "status": "finished",
+      "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 2
+      "awayScore": 3,
+      "channels": []
     },
     {
       "id": 1547670,
       "competition": "Mineiro - 2",
+      "competitionFlag": "⚽",
       "competitionCode": 619,
       "home": "Caldense",
       "away": "BOA",
       "homeLogo": "https://media.api-sports.io/football/teams/7769.png",
       "awayLogo": "https://media.api-sports.io/football/teams/153.png",
       "utcDate": "2026-06-07T13:00:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
+      "status": "finished",
+      "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 0
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1547671,
       "competition": "Mineiro - 2",
+      "competitionFlag": "⚽",
       "competitionCode": 619,
       "home": "Valeriodoce",
       "away": "Coimbra",
       "homeLogo": "https://media.api-sports.io/football/teams/23247.png",
       "awayLogo": "https://media.api-sports.io/football/teams/13129.png",
       "utcDate": "2026-06-07T13:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "13:00",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 0,
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1548288,
       "competition": "Oberliga - Hessen",
+      "competitionFlag": "⚽",
       "competitionCode": 750,
       "home": "Bad Soden",
       "away": "SG Bornheim",
@@ -2241,179 +2560,205 @@
       "status": "scheduled",
       "statusLabel": "13:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1548289,
       "competition": "Oberliga - Hessen",
+      "competitionFlag": "⚽",
       "competitionCode": 750,
       "home": "Kassel",
       "away": "Hornau",
       "homeLogo": "https://media.api-sports.io/football/teams/26172.png",
       "awayLogo": "https://media.api-sports.io/football/teams/22917.png",
       "utcDate": "2026-06-07T13:00:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
-      "homeScore": 2,
-      "awayScore": 1
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 3,
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1548445,
       "competition": "Friendlies",
+      "competitionFlag": "⚽",
       "competitionCode": 10,
       "home": "Kenya",
       "away": "Lesotho",
       "homeLogo": "https://media.api-sports.io/football/teams/1511.png",
       "awayLogo": "https://media.api-sports.io/football/teams/1518.png",
       "utcDate": "2026-06-07T13:00:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
-      "homeScore": 2,
-      "awayScore": 0
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 4,
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1548446,
       "competition": "Friendlies",
+      "competitionFlag": "⚽",
       "competitionCode": 10,
       "home": "Oman",
       "away": "Mozambique",
       "homeLogo": "https://media.api-sports.io/football/teams/1552.png",
       "awayLogo": "https://media.api-sports.io/football/teams/1512.png",
       "utcDate": "2026-06-07T13:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "13:00",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 4,
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1406072,
       "competition": "Oberliga - Niederrhein",
+      "competitionFlag": "⚽",
       "competitionCode": 751,
       "home": "KFC Uerdingen 05",
       "away": "Viktoria Jüchen-Garz.",
       "homeLogo": "https://media.api-sports.io/football/teams/1322.png",
       "awayLogo": "https://media.api-sports.io/football/teams/23678.png",
       "utcDate": "2026-06-07T13:30:00+00:00",
-      "status": "halftime",
-      "statusLabel": "HT",
-      "homeScore": 0,
-      "awayScore": 0
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 1,
+      "awayScore": 2,
+      "channels": []
     },
     {
       "id": 1406073,
       "competition": "Oberliga - Niederrhein",
+      "competitionFlag": "⚽",
       "competitionCode": 751,
       "home": "Homberg",
       "away": "Kleve",
       "homeLogo": "https://media.api-sports.io/football/teams/9370.png",
       "awayLogo": "https://media.api-sports.io/football/teams/16105.png",
       "utcDate": "2026-06-07T13:30:00+00:00",
-      "status": "halftime",
-      "statusLabel": "HT",
+      "status": "finished",
+      "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 0
+      "awayScore": 2,
+      "channels": []
     },
     {
       "id": 1406074,
       "competition": "Oberliga - Niederrhein",
+      "competitionFlag": "⚽",
       "competitionCode": 751,
       "home": "Monheim",
       "away": "Germania Ratingen",
       "homeLogo": "https://media.api-sports.io/football/teams/12818.png",
       "awayLogo": "https://media.api-sports.io/football/teams/14689.png",
       "utcDate": "2026-06-07T13:30:00+00:00",
-      "status": "halftime",
-      "statusLabel": "HT",
+      "status": "finished",
+      "statusLabel": "FT",
       "homeScore": 2,
-      "awayScore": 0
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1406076,
       "competition": "Oberliga - Niederrhein",
+      "competitionFlag": "⚽",
       "competitionCode": 751,
       "home": "Union Frintrop",
       "away": "BW Dingden",
       "homeLogo": "https://media.api-sports.io/football/teams/17564.png",
       "awayLogo": "https://media.api-sports.io/football/teams/26165.png",
       "utcDate": "2026-06-07T13:30:00+00:00",
-      "status": "halftime",
-      "statusLabel": "HT",
+      "status": "finished",
+      "statusLabel": "FT",
       "homeScore": 3,
-      "awayScore": 0
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1406078,
       "competition": "Oberliga - Niederrhein",
+      "competitionFlag": "⚽",
       "competitionCode": 751,
       "home": "Holzheimer SG",
       "away": "Schonnebeck",
       "homeLogo": "https://media.api-sports.io/football/teams/14706.png",
       "awayLogo": "https://media.api-sports.io/football/teams/12848.png",
       "utcDate": "2026-06-07T13:30:00+00:00",
-      "status": "halftime",
-      "statusLabel": "HT",
+      "status": "finished",
+      "statusLabel": "FT",
       "homeScore": 3,
-      "awayScore": 2
+      "awayScore": 4,
+      "channels": []
     },
     {
       "id": 1406079,
       "competition": "Oberliga - Niederrhein",
+      "competitionFlag": "⚽",
       "competitionCode": 751,
       "home": "SC St. Tönis",
       "away": "Hilden",
       "homeLogo": "https://media.api-sports.io/football/teams/19466.png",
       "awayLogo": "https://media.api-sports.io/football/teams/12790.png",
       "utcDate": "2026-06-07T13:30:00+00:00",
-      "status": "halftime",
-      "statusLabel": "HT",
-      "homeScore": 0,
-      "awayScore": 0
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 1,
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1412928,
       "competition": "Oberliga - Niederrhein",
+      "competitionFlag": "⚽",
       "competitionCode": 751,
       "home": "Büderich",
       "away": "SF Baumberg",
       "homeLogo": "https://media.api-sports.io/football/teams/19657.png",
       "awayLogo": "https://media.api-sports.io/football/teams/12844.png",
       "utcDate": "2026-06-07T13:30:00+00:00",
-      "status": "halftime",
-      "statusLabel": "HT",
-      "homeScore": 2,
-      "awayScore": 1
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 3,
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1425152,
       "competition": "Oberliga - Mittelrhein",
+      "competitionFlag": "⚽",
       "competitionCode": 746,
       "home": "VfL Vichttal",
       "away": "TuS BW Königsdorf",
       "homeLogo": "https://media.api-sports.io/football/teams/14813.png",
       "awayLogo": "https://media.api-sports.io/football/teams/14800.png",
       "utcDate": "2026-06-07T13:30:00+00:00",
-      "status": "halftime",
-      "statusLabel": "HT",
+      "status": "finished",
+      "statusLabel": "FT",
       "homeScore": 0,
-      "awayScore": 2
+      "awayScore": 2,
+      "channels": []
     },
     {
       "id": 1425153,
       "competition": "Oberliga - Mittelrhein",
+      "competitionFlag": "⚽",
       "competitionCode": 746,
       "home": "Frechen",
       "away": "Teutonia Weiden",
       "homeLogo": "https://media.api-sports.io/football/teams/12768.png",
       "awayLogo": "https://media.api-sports.io/football/teams/24531.png",
       "utcDate": "2026-06-07T13:30:00+00:00",
-      "status": "halftime",
-      "statusLabel": "HT",
-      "homeScore": 5,
-      "awayScore": 0
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 7,
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1425154,
       "competition": "Oberliga - Mittelrhein",
+      "competitionFlag": "⚽",
       "competitionCode": 746,
       "home": "Pesch",
       "away": "Eintracht Hohkeppel",
@@ -2422,12 +2767,14 @@
       "utcDate": "2026-06-07T13:45:00+00:00",
       "status": "unknown",
       "statusLabel": "AWD",
-      "homeScore": 0,
-      "awayScore": 0
+      "homeScore": null,
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1489981,
       "competition": "4. liga - Divizie C",
+      "competitionFlag": "⚽",
       "competitionCode": 352,
       "home": "Chrudim II",
       "away": "Náchod",
@@ -2436,12 +2783,14 @@
       "utcDate": "2026-06-07T14:00:00+00:00",
       "status": "live",
       "statusLabel": "LIVE",
-      "homeScore": 1,
-      "awayScore": 0
+      "homeScore": 0,
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1504453,
       "competition": "Ettan - Södra",
+      "competitionFlag": "⚽",
       "competitionCode": 564,
       "home": "Atvidabergs FF",
       "away": "Tvååker",
@@ -2450,12 +2799,14 @@
       "utcDate": "2026-06-07T14:00:00+00:00",
       "status": "live",
       "statusLabel": "LIVE",
-      "homeScore": 1,
-      "awayScore": 0
+      "homeScore": 2,
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1504457,
       "competition": "Ettan - Södra",
+      "competitionFlag": "⚽",
       "competitionCode": 564,
       "home": "Trelleborg",
       "away": "Skövde AIK",
@@ -2464,12 +2815,14 @@
       "utcDate": "2026-06-07T14:00:00+00:00",
       "status": "live",
       "statusLabel": "LIVE",
-      "homeScore": 1,
-      "awayScore": 0
+      "homeScore": 4,
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1505172,
       "competition": "Ettan - Norra",
+      "competitionFlag": "⚽",
       "competitionCode": 563,
       "home": "Arlanda",
       "away": "Assyriska FF",
@@ -2479,11 +2832,13 @@
       "status": "live",
       "statusLabel": "LIVE",
       "homeScore": 1,
-      "awayScore": 0
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1510597,
       "competition": "Division 2 - Norra Götaland",
+      "competitionFlag": "⚽",
       "competitionCode": 592,
       "home": "IF Karlstad II",
       "away": "IFK Skövde",
@@ -2493,11 +2848,13 @@
       "status": "live",
       "statusLabel": "LIVE",
       "homeScore": 0,
-      "awayScore": 1
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1510952,
       "competition": "Division 2 - Södra Götaland",
+      "competitionFlag": "⚽",
       "competitionCode": 597,
       "home": "Staffanstorp United",
       "away": "Växjö Norra",
@@ -2507,11 +2864,13 @@
       "status": "live",
       "statusLabel": "LIVE",
       "homeScore": 1,
-      "awayScore": 0
+      "awayScore": 2,
+      "channels": []
     },
     {
       "id": 1511144,
       "competition": "Division 2 - Södra Svealand",
+      "competitionFlag": "⚽",
       "competitionCode": 595,
       "home": "Örebro Syrianska",
       "away": "Smedby",
@@ -2520,12 +2879,14 @@
       "utcDate": "2026-06-07T14:00:00+00:00",
       "status": "live",
       "statusLabel": "LIVE",
-      "homeScore": 0,
-      "awayScore": 1
+      "homeScore": 2,
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1515747,
       "competition": "Division 2 - Norrland",
+      "competitionFlag": "⚽",
       "competitionCode": 594,
       "home": "Umea FF",
       "away": "Kubikenborg",
@@ -2534,12 +2895,14 @@
       "utcDate": "2026-06-07T14:00:00+00:00",
       "status": "live",
       "statusLabel": "LIVE",
-      "homeScore": 0,
-      "awayScore": 1
+      "homeScore": 2,
+      "awayScore": 3,
+      "channels": []
     },
     {
       "id": 1527845,
       "competition": "Second League A - Division A Gold",
+      "competitionFlag": "⚽",
       "competitionCode": 1025,
       "home": "Rodina Moskva II",
       "away": "Tekstilshchik",
@@ -2549,11 +2912,13 @@
       "status": "live",
       "statusLabel": "LIVE",
       "homeScore": 0,
-      "awayScore": 1
+      "awayScore": 2,
+      "channels": []
     },
     {
       "id": 1534531,
       "competition": "1. Division",
+      "competitionFlag": "⚽",
       "competitionCode": 117,
       "home": "Shakhter Soligorsk",
       "away": "Slonim",
@@ -2563,11 +2928,13 @@
       "status": "live",
       "statusLabel": "LIVE",
       "homeScore": 0,
-      "awayScore": 0
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1536373,
       "competition": "Second League - Group 2",
+      "competitionFlag": "⚽",
       "competitionCode": 652,
       "home": "Baltika II",
       "away": "Dinamo St. Petersburg",
@@ -2577,11 +2944,13 @@
       "status": "live",
       "statusLabel": "LIVE",
       "homeScore": 0,
-      "awayScore": 0
+      "awayScore": 3,
+      "channels": []
     },
     {
       "id": 1536374,
       "competition": "Second League - Group 2",
+      "competitionFlag": "⚽",
       "competitionCode": 652,
       "home": "Dinamo Vologda",
       "away": "Cherepovets",
@@ -2590,12 +2959,14 @@
       "utcDate": "2026-06-07T14:00:00+00:00",
       "status": "live",
       "statusLabel": "LIVE",
-      "homeScore": 0,
-      "awayScore": 0
+      "homeScore": 2,
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1547202,
       "competition": "Copa Sul-Sudeste",
+      "competitionFlag": "⚽",
       "competitionCode": 1224,
       "home": "Chapecoense-sc",
       "away": "Avai",
@@ -2605,25 +2976,29 @@
       "status": "live",
       "statusLabel": "LIVE",
       "homeScore": 1,
-      "awayScore": 0
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1532516,
       "competition": "Ýokary Liga",
+      "competitionFlag": "⚽",
       "competitionCode": 636,
       "home": "Arkadag",
       "away": "Nebitci",
       "homeLogo": "https://media.api-sports.io/football/teams/21232.png",
       "awayLogo": "https://media.api-sports.io/football/teams/8039.png",
       "utcDate": "2026-06-07T14:15:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "14:15",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 0,
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1547736,
       "competition": "Primera División RFEF - Play Offs",
+      "competitionFlag": "⚽",
       "competitionCode": 1006,
       "home": "Celta de Vigo II",
       "away": "Europa Fc",
@@ -2632,12 +3007,14 @@
       "utcDate": "2026-06-07T14:15:00+00:00",
       "status": "live",
       "statusLabel": "LIVE",
-      "homeScore": 0,
-      "awayScore": 0
+      "homeScore": 1,
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1548496,
       "competition": "Championnat D1",
+      "competitionFlag": "⚽",
       "competitionCode": 968,
       "home": "Bitam",
       "away": "FC 105",
@@ -2647,11 +3024,13 @@
       "status": "scheduled",
       "statusLabel": "14:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1398955,
       "competition": "Regionalliga - West",
+      "competitionFlag": "⚽",
       "competitionCode": 223,
       "home": "SVG Reichenau",
       "away": "Pinzgau Saalfelden",
@@ -2661,11 +3040,13 @@
       "status": "scheduled",
       "statusLabel": "15:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1398958,
       "competition": "Regionalliga - West",
+      "competitionFlag": "⚽",
       "competitionCode": 223,
       "home": "TSV St. Johann",
       "away": "Wacker Innsbruck",
@@ -2675,11 +3056,13 @@
       "status": "scheduled",
       "statusLabel": "15:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1464183,
       "competition": "Landesliga - Karnten",
+      "competitionFlag": "⚽",
       "competitionCode": 225,
       "home": "Lendorf",
       "away": "Wolfsberg",
@@ -2689,11 +3072,13 @@
       "status": "scheduled",
       "statusLabel": "15:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1464184,
       "competition": "Landesliga - Karnten",
+      "competitionFlag": "⚽",
       "competitionCode": 225,
       "home": "Austria Klagenfurt II",
       "away": "Ferlach",
@@ -2703,11 +3088,13 @@
       "status": "scheduled",
       "statusLabel": "15:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1464185,
       "competition": "Landesliga - Karnten",
+      "competitionFlag": "⚽",
       "competitionCode": 225,
       "home": "Nußdorf",
       "away": "Köttmannsdorf",
@@ -2717,11 +3104,13 @@
       "status": "scheduled",
       "statusLabel": "15:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1464186,
       "competition": "Landesliga - Karnten",
+      "competitionFlag": "⚽",
       "competitionCode": 225,
       "home": "SAK Klagenfurt",
       "away": "TSU Matrei",
@@ -2731,11 +3120,13 @@
       "status": "scheduled",
       "statusLabel": "15:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1464187,
       "competition": "Landesliga - Karnten",
+      "competitionFlag": "⚽",
       "competitionCode": 225,
       "home": "Grafenstein",
       "away": "Dellach im Gailtal",
@@ -2745,11 +3136,13 @@
       "status": "scheduled",
       "statusLabel": "15:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1464188,
       "competition": "Landesliga - Karnten",
+      "competitionFlag": "⚽",
       "competitionCode": 225,
       "home": "Bleiburg",
       "away": "Donau Klagenfurt",
@@ -2759,11 +3152,13 @@
       "status": "scheduled",
       "statusLabel": "15:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1464189,
       "competition": "Landesliga - Karnten",
+      "competitionFlag": "⚽",
       "competitionCode": 225,
       "home": "Spittal",
       "away": "KAC",
@@ -2773,11 +3168,13 @@
       "status": "scheduled",
       "statusLabel": "15:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1464190,
       "competition": "Landesliga - Karnten",
+      "competitionFlag": "⚽",
       "competitionCode": 225,
       "home": "St. Veit / Glan",
       "away": "Völkermarkt",
@@ -2787,95 +3184,109 @@
       "status": "scheduled",
       "statusLabel": "15:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1465739,
       "competition": "Landesliga - Wien",
+      "competitionFlag": "⚽",
       "competitionCode": 232,
       "home": "Vorwärts Brigittenau",
       "away": "First Vienna II",
       "homeLogo": "https://media.api-sports.io/football/teams/8373.png",
       "awayLogo": "https://media.api-sports.io/football/teams/24459.png",
       "utcDate": "2026-06-07T15:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "15:00",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 1,
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1465740,
       "competition": "Landesliga - Wien",
+      "competitionFlag": "⚽",
       "competitionCode": 232,
       "home": "Dinamo Helfort",
       "away": "1980 Wien",
       "homeLogo": "https://media.api-sports.io/football/teams/17304.png",
       "awayLogo": "https://media.api-sports.io/football/teams/17001.png",
       "utcDate": "2026-06-07T15:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "15:00",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 2,
+      "awayScore": 2,
+      "channels": []
     },
     {
       "id": 1465741,
       "competition": "Landesliga - Wien",
+      "competitionFlag": "⚽",
       "competitionCode": 232,
       "home": "LAC-Inter",
       "away": "Stadlau",
       "homeLogo": "https://media.api-sports.io/football/teams/24460.png",
       "awayLogo": "https://media.api-sports.io/football/teams/4984.png",
       "utcDate": "2026-06-07T15:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "15:00",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 2,
+      "awayScore": 2,
+      "channels": []
     },
     {
       "id": 1465742,
       "competition": "Landesliga - Wien",
+      "competitionFlag": "⚽",
       "competitionCode": 232,
       "home": "Simmeringer SC",
       "away": "Schwechat",
       "homeLogo": "https://media.api-sports.io/football/teams/11229.png",
       "awayLogo": "https://media.api-sports.io/football/teams/8248.png",
       "utcDate": "2026-06-07T15:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "15:00",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 1,
+      "awayScore": 2,
+      "channels": []
     },
     {
       "id": 1465743,
       "competition": "Landesliga - Wien",
+      "competitionFlag": "⚽",
       "competitionCode": 232,
       "home": "Austria XIII",
       "away": "Red Star Penzing",
       "homeLogo": "https://media.api-sports.io/football/teams/4971.png",
       "awayLogo": "https://media.api-sports.io/football/teams/11201.png",
       "utcDate": "2026-06-07T15:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "15:00",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 3,
+      "awayScore": 4,
+      "channels": []
     },
     {
       "id": 1465744,
       "competition": "Landesliga - Wien",
+      "competitionFlag": "⚽",
       "competitionCode": 232,
       "home": "Wienerberg",
       "away": "Hellas Kagran",
       "homeLogo": "https://media.api-sports.io/football/teams/5008.png",
       "awayLogo": "https://media.api-sports.io/football/teams/11223.png",
       "utcDate": "2026-06-07T15:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "15:00",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 5,
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1465745,
       "competition": "Landesliga - Wien",
+      "competitionFlag": "⚽",
       "competitionCode": 232,
       "home": "Mauerwerk",
       "away": "Gerasdorf Stammersdorf",
@@ -2885,11 +3296,13 @@
       "status": "scheduled",
       "statusLabel": "15:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1465746,
       "competition": "Landesliga - Wien",
+      "competitionFlag": "⚽",
       "competitionCode": 232,
       "home": "FAC Wien",
       "away": "Slovan HAC",
@@ -2899,11 +3312,13 @@
       "status": "scheduled",
       "statusLabel": "15:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1487605,
       "competition": "4. liga - Divizie D",
+      "competitionFlag": "⚽",
       "competitionCode": 353,
       "home": "Havlíčkův Brod",
       "away": "FS Třebíč",
@@ -2913,95 +3328,109 @@
       "status": "scheduled",
       "statusLabel": "15:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1487607,
       "competition": "4. liga - Divizie D",
+      "competitionFlag": "⚽",
       "competitionCode": 353,
       "home": "Sokol Tasovice",
       "away": "Dálnice Speřice",
       "homeLogo": "https://media.api-sports.io/football/teams/7355.png",
       "awayLogo": "https://media.api-sports.io/football/teams/19424.png",
       "utcDate": "2026-06-07T15:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "15:00",
-      "homeScore": null,
-      "awayScore": null
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 0,
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1487608,
       "competition": "4. liga - Divizie D",
+      "competitionFlag": "⚽",
       "competitionCode": 353,
       "home": "Velká Bíteš",
       "away": "Ždírec nad Doubravou",
       "homeLogo": "https://media.api-sports.io/football/teams/7371.png",
       "awayLogo": "https://media.api-sports.io/football/teams/7388.png",
       "utcDate": "2026-06-07T15:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "15:00",
-      "homeScore": null,
-      "awayScore": null
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 0,
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1487712,
       "competition": "4. liga - Divizie E",
+      "competitionFlag": "⚽",
       "competitionCode": 354,
       "home": "Sokol Lanžhot",
       "away": "Strání",
       "homeLogo": "https://media.api-sports.io/football/teams/7351.png",
       "awayLogo": "https://media.api-sports.io/football/teams/7363.png",
       "utcDate": "2026-06-07T15:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "15:00",
-      "homeScore": null,
-      "awayScore": null
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 0,
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1487713,
       "competition": "4. liga - Divizie E",
+      "competitionFlag": "⚽",
       "competitionCode": 354,
       "home": "Skaštice",
       "away": "Kozlovice",
       "homeLogo": "https://media.api-sports.io/football/teams/7341.png",
       "awayLogo": "https://media.api-sports.io/football/teams/7311.png",
       "utcDate": "2026-06-07T15:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "15:00",
-      "homeScore": null,
-      "awayScore": null
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 0,
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1487828,
       "competition": "4. liga - Divizie F",
+      "competitionFlag": "⚽",
       "competitionCode": 686,
       "home": "Bílovec",
       "away": "Opava II",
       "homeLogo": "https://media.api-sports.io/football/teams/16875.png",
       "awayLogo": "https://media.api-sports.io/football/teams/15135.png",
       "utcDate": "2026-06-07T15:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "15:00",
-      "homeScore": null,
-      "awayScore": null
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 0,
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1487833,
       "competition": "4. liga - Divizie F",
+      "competitionFlag": "⚽",
       "competitionCode": 686,
       "home": "Pustá Polom",
       "away": "Cesky Tesin",
       "homeLogo": "https://media.api-sports.io/football/teams/24188.png",
       "awayLogo": "https://media.api-sports.io/football/teams/21903.png",
       "utcDate": "2026-06-07T15:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "15:00",
-      "homeScore": null,
-      "awayScore": null
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 0,
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1487834,
       "competition": "4. liga - Divizie F",
+      "competitionFlag": "⚽",
       "competitionCode": 686,
       "home": "Šumperk",
       "away": "Bospor Bohumín",
@@ -3011,207 +3440,237 @@
       "status": "scheduled",
       "statusLabel": "15:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1489593,
       "competition": "3. liga - CFL B",
+      "competitionFlag": "⚽",
       "competitionCode": 685,
       "home": "Varnsdorf",
       "away": "Hradec Králové II",
       "homeLogo": "https://media.api-sports.io/football/teams/3728.png",
       "awayLogo": "https://media.api-sports.io/football/teams/14495.png",
       "utcDate": "2026-06-07T15:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "15:00",
-      "homeScore": null,
-      "awayScore": null
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 3,
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1489863,
       "competition": "4. liga - Divizie A",
+      "competitionFlag": "⚽",
       "competitionCode": 350,
       "home": "Hluboka nad Vltavou",
       "away": "Povltava FA",
       "homeLogo": "https://media.api-sports.io/football/teams/21982.png",
       "awayLogo": "https://media.api-sports.io/football/teams/14005.png",
       "utcDate": "2026-06-07T15:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "15:00",
-      "homeScore": null,
-      "awayScore": null
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 0,
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1489865,
       "competition": "4. liga - Divizie A",
+      "competitionFlag": "⚽",
       "competitionCode": 350,
       "home": "Milevsko",
       "away": "TJ Přeštice",
       "homeLogo": "https://media.api-sports.io/football/teams/26127.png",
       "awayLogo": "https://media.api-sports.io/football/teams/24197.png",
       "utcDate": "2026-06-07T15:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "15:00",
-      "homeScore": null,
-      "awayScore": null
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 0,
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1489984,
       "competition": "4. liga - Divizie C",
+      "competitionFlag": "⚽",
       "competitionCode": 352,
       "home": "Spartak Police n/Metují",
       "away": "Svitavy",
       "homeLogo": "https://media.api-sports.io/football/teams/24193.png",
       "awayLogo": "https://media.api-sports.io/football/teams/26128.png",
       "utcDate": "2026-06-07T15:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "15:00",
-      "homeScore": null,
-      "awayScore": null
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 0,
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1489986,
       "competition": "4. liga - Divizie C",
+      "competitionFlag": "⚽",
       "competitionCode": 352,
       "home": "Turnov",
       "away": "Kosmonosy",
       "homeLogo": "https://media.api-sports.io/football/teams/19437.png",
       "awayLogo": "https://media.api-sports.io/football/teams/14004.png",
       "utcDate": "2026-06-07T15:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "15:00",
-      "homeScore": null,
-      "awayScore": null
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 0,
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1490105,
       "competition": "4. liga - Divizie B",
+      "competitionFlag": "⚽",
       "competitionCode": 351,
       "home": "Tempo Praha",
       "away": "Baník Sokolov",
       "homeLogo": "https://media.api-sports.io/football/teams/21985.png",
       "awayLogo": "https://media.api-sports.io/football/teams/3721.png",
       "utcDate": "2026-06-07T15:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "15:00",
-      "homeScore": null,
-      "awayScore": null
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 0,
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1495781,
       "competition": "1. Division",
+      "competitionFlag": "⚽",
       "competitionCode": 104,
       "home": "Ranheim",
       "away": "Strommen",
       "homeLogo": "https://media.api-sports.io/football/teams/322.png",
       "awayLogo": "https://media.api-sports.io/football/teams/2147.png",
       "utcDate": "2026-06-07T15:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "15:00",
-      "homeScore": null,
-      "awayScore": null
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 1,
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1512931,
       "competition": "Elite One",
+      "competitionFlag": "⚽",
       "competitionCode": 411,
       "home": "Canon",
       "away": "Colombe",
       "homeLogo": "https://media.api-sports.io/football/teams/5560.png",
       "awayLogo": "https://media.api-sports.io/football/teams/5400.png",
       "utcDate": "2026-06-07T15:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "15:00",
-      "homeScore": null,
-      "awayScore": null
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 0,
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1522987,
       "competition": "Championnat National",
+      "competitionFlag": "⚽",
       "competitionCode": 415,
       "home": "Dragons",
       "away": "Ayema",
       "homeLogo": "https://media.api-sports.io/football/teams/5459.png",
       "awayLogo": "https://media.api-sports.io/football/teams/5456.png",
       "utcDate": "2026-06-07T15:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "15:00",
-      "homeScore": null,
-      "awayScore": null
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 0,
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1530594,
       "competition": "1 Lyga",
+      "competitionFlag": "⚽",
       "competitionCode": 361,
       "home": "Jonava",
       "away": "Minija",
       "homeLogo": "https://media.api-sports.io/football/teams/3862.png",
       "awayLogo": "https://media.api-sports.io/football/teams/3864.png",
       "utcDate": "2026-06-07T15:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "15:00",
-      "homeScore": null,
-      "awayScore": null
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 0,
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1536377,
       "competition": "Second League - Group 2",
+      "competitionFlag": "⚽",
       "competitionCode": 652,
       "home": "Torpedo Vladimir",
       "away": "Tver",
       "homeLogo": "https://media.api-sports.io/football/teams/6830.png",
       "awayLogo": "https://media.api-sports.io/football/teams/14120.png",
       "utcDate": "2026-06-07T15:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "15:00",
-      "homeScore": null,
-      "awayScore": null
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 0,
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1536816,
       "competition": "Second League - Group 4",
+      "competitionFlag": "⚽",
       "competitionCode": 653,
       "home": "Orenburg II",
       "away": "Khimik Dzerzhinsk",
       "homeLogo": "https://media.api-sports.io/football/teams/14141.png",
       "awayLogo": "https://media.api-sports.io/football/teams/16858.png",
       "utcDate": "2026-06-07T15:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "15:00",
-      "homeScore": null,
-      "awayScore": null
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 1,
+      "awayScore": 1,
+      "channels": []
     },
     {
       "id": 1547795,
       "competition": "NB III - Promotion Play-offs",
+      "competitionFlag": "⚽",
       "competitionCode": 1111,
       "home": "Cigand SE",
       "away": "Nagykanizsai ULE",
       "homeLogo": "https://media.api-sports.io/football/teams/2419.png",
       "awayLogo": "https://media.api-sports.io/football/teams/5123.png",
       "utcDate": "2026-06-07T15:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "15:00",
-      "homeScore": null,
-      "awayScore": null
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 0,
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1547796,
       "competition": "NB III - Promotion Play-offs",
+      "competitionFlag": "⚽",
       "competitionCode": 1111,
       "home": "Monori Se",
       "away": "Gyirmot SE",
       "homeLogo": "https://media.api-sports.io/football/teams/2411.png",
       "awayLogo": "https://media.api-sports.io/football/teams/2398.png",
       "utcDate": "2026-06-07T15:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "15:00",
-      "homeScore": null,
-      "awayScore": null
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 0,
+      "awayScore": 2,
+      "channels": []
     },
     {
       "id": 1445312,
       "competition": "Srpska Liga - West",
+      "competitionFlag": "⚽",
       "competitionCode": 575,
       "home": "Sloboda Uzice",
       "away": "Jedinstvo Putevi",
@@ -3221,11 +3680,13 @@
       "status": "scheduled",
       "statusLabel": "15:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1445314,
       "competition": "Srpska Liga - West",
+      "competitionFlag": "⚽",
       "competitionCode": 575,
       "home": "Omladinac Zablaće",
       "away": "FK Zlatibor",
@@ -3235,11 +3696,13 @@
       "status": "scheduled",
       "statusLabel": "15:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1445315,
       "competition": "Srpska Liga - West",
+      "competitionFlag": "⚽",
       "competitionCode": 575,
       "home": "Budučnost Krušik",
       "away": "Takovo",
@@ -3249,11 +3712,13 @@
       "status": "scheduled",
       "statusLabel": "15:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1445316,
       "competition": "Srpska Liga - West",
+      "competitionFlag": "⚽",
       "competitionCode": 575,
       "home": "Jošanica",
       "away": "Sloga Požega",
@@ -3263,11 +3728,13 @@
       "status": "scheduled",
       "statusLabel": "15:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1445318,
       "competition": "Srpska Liga - West",
+      "competitionFlag": "⚽",
       "competitionCode": 575,
       "home": "Železničar Lajkovac",
       "away": "FK Polimlje Prijepolje",
@@ -3277,39 +3744,45 @@
       "status": "scheduled",
       "statusLabel": "15:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1449469,
       "competition": "1st League - FBiH",
+      "competitionFlag": "⚽",
       "competitionCode": 316,
       "home": "Sloboda Tuzla",
       "away": "TOŠK Tešanj",
       "homeLogo": "https://media.api-sports.io/football/teams/3360.png",
       "awayLogo": "https://media.api-sports.io/football/teams/3380.png",
       "utcDate": "2026-06-07T15:30:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "15:30",
-      "homeScore": null,
-      "awayScore": null
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 0,
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1449470,
       "competition": "1st League - FBiH",
+      "competitionFlag": "⚽",
       "competitionCode": 316,
       "home": "Bratstvo Gračanica",
       "away": "Jedinstvo Bihać",
       "homeLogo": "https://media.api-sports.io/football/teams/4278.png",
       "awayLogo": "https://media.api-sports.io/football/teams/7529.png",
       "utcDate": "2026-06-07T15:30:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "15:30",
-      "homeScore": null,
-      "awayScore": null
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 0,
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1449471,
       "competition": "1st League - FBiH",
+      "competitionFlag": "⚽",
       "competitionCode": 316,
       "home": "Travnik",
       "away": "Radnik Hadžići",
@@ -3319,53 +3792,61 @@
       "status": "scheduled",
       "statusLabel": "15:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1449472,
       "competition": "1st League - FBiH",
+      "competitionFlag": "⚽",
       "competitionCode": 316,
       "home": "Budućnost Banovići",
       "away": "Vitez",
       "homeLogo": "https://media.api-sports.io/football/teams/7528.png",
       "awayLogo": "https://media.api-sports.io/football/teams/4288.png",
       "utcDate": "2026-06-07T15:30:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "15:30",
-      "homeScore": null,
-      "awayScore": null
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 0,
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1449473,
       "competition": "1st League - FBiH",
+      "competitionFlag": "⚽",
       "competitionCode": 316,
       "home": "Igman Konjic",
       "away": "Stupčanica Olovo",
       "homeLogo": "https://media.api-sports.io/football/teams/3367.png",
       "awayLogo": "https://media.api-sports.io/football/teams/17901.png",
       "utcDate": "2026-06-07T15:30:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "15:30",
-      "homeScore": null,
-      "awayScore": null
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 0,
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1449474,
       "competition": "1st League - FBiH",
+      "competitionFlag": "⚽",
       "competitionCode": 316,
       "home": "Tomislav",
       "away": "Tuzla City",
       "homeLogo": "https://media.api-sports.io/football/teams/17372.png",
       "awayLogo": "https://media.api-sports.io/football/teams/3361.png",
       "utcDate": "2026-06-07T15:30:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "15:30",
-      "homeScore": null,
-      "awayScore": null
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 1,
+      "awayScore": 0,
+      "channels": []
     },
     {
       "id": 1464415,
       "competition": "Landesliga - Niederosterreich",
+      "competitionFlag": "⚽",
       "competitionCode": 226,
       "home": "Schrems",
       "away": "Ardagger",
@@ -3375,25 +3856,29 @@
       "status": "scheduled",
       "statusLabel": "15:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1464416,
       "competition": "Landesliga - Niederosterreich",
+      "competitionFlag": "⚽",
       "competitionCode": 226,
       "home": "Ortmann",
       "away": "Ybbs",
       "homeLogo": "https://media.api-sports.io/football/teams/8287.png",
       "awayLogo": "https://media.api-sports.io/football/teams/24461.png",
       "utcDate": "2026-06-07T15:30:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "15:30",
-      "homeScore": null,
-      "awayScore": null
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 1,
+      "awayScore": 2,
+      "channels": []
     },
     {
       "id": 1464417,
       "competition": "Landesliga - Niederosterreich",
+      "competitionFlag": "⚽",
       "competitionCode": 226,
       "home": "SC Wiener Neustadt",
       "away": "St. Peter",
@@ -3403,11 +3888,13 @@
       "status": "scheduled",
       "statusLabel": "15:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1464418,
       "competition": "Landesliga - Niederosterreich",
+      "competitionFlag": "⚽",
       "competitionCode": 226,
       "home": "St. Pölten II",
       "away": "Korneuburg",
@@ -3417,11 +3904,13 @@
       "status": "scheduled",
       "statusLabel": "15:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1464419,
       "competition": "Landesliga - Niederosterreich",
+      "competitionFlag": "⚽",
       "competitionCode": 226,
       "home": "Stockerau",
       "away": "Wieselburg",
@@ -3431,11 +3920,13 @@
       "status": "scheduled",
       "statusLabel": "15:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1464420,
       "competition": "Landesliga - Niederosterreich",
+      "competitionFlag": "⚽",
       "competitionCode": 226,
       "home": "Langenrohr",
       "away": "Scheiblingkirchen",
@@ -3445,11 +3936,13 @@
       "status": "scheduled",
       "statusLabel": "15:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1464421,
       "competition": "Landesliga - Niederosterreich",
+      "competitionFlag": "⚽",
       "competitionCode": 226,
       "home": "Admira II",
       "away": "Kilb",
@@ -3459,11 +3952,13 @@
       "status": "scheduled",
       "statusLabel": "15:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1464422,
       "competition": "Landesliga - Niederosterreich",
+      "competitionFlag": "⚽",
       "competitionCode": 226,
       "home": "Ebreichsdorf",
       "away": "Zwettl",
@@ -3473,11 +3968,13 @@
       "status": "scheduled",
       "statusLabel": "15:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1472553,
       "competition": "Srpska Liga - West",
+      "competitionFlag": "⚽",
       "competitionCode": 575,
       "home": "Real Podunavci",
       "away": "FK Mladi Radnik 1940 Radinac",
@@ -3487,11 +3984,13 @@
       "status": "scheduled",
       "statusLabel": "15:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1472609,
       "competition": "Srpska Liga - West",
+      "competitionFlag": "⚽",
       "competitionCode": 575,
       "home": "FK Šumadija 1903 Kragujevac",
       "away": "Napredak Markovac",
@@ -3501,11 +4000,13 @@
       "status": "scheduled",
       "statusLabel": "15:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1472610,
       "competition": "Srpska Liga - West",
+      "competitionFlag": "⚽",
       "competitionCode": 575,
       "home": "Metalac GM",
       "away": "FK Radnički Valjevo",
@@ -3515,11 +4016,13 @@
       "status": "scheduled",
       "statusLabel": "15:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1549890,
       "competition": "Srpska Liga - East",
+      "competitionFlag": "⚽",
       "competitionCode": 574,
       "home": "Radnicki Pirot",
       "away": "Jedinstvo Kruševac",
@@ -3529,11 +4032,13 @@
       "status": "scheduled",
       "statusLabel": "15:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1549891,
       "competition": "Srpska Liga - East",
+      "competitionFlag": "⚽",
       "competitionCode": 574,
       "home": "Sloga Leskovac",
       "away": "Timok Zaječar",
@@ -3543,11 +4048,13 @@
       "status": "scheduled",
       "statusLabel": "15:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1549892,
       "competition": "Srpska Liga - East",
+      "competitionFlag": "⚽",
       "competitionCode": 574,
       "home": "Vlasina",
       "away": "Brzi Brod",
@@ -3557,11 +4064,13 @@
       "status": "scheduled",
       "statusLabel": "15:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1549893,
       "competition": "Srpska Liga - East",
+      "competitionFlag": "⚽",
       "competitionCode": 574,
       "home": "Jedinstvo Paraćin",
       "away": "Sinđelić",
@@ -3571,11 +4080,13 @@
       "status": "scheduled",
       "statusLabel": "15:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1549894,
       "competition": "Srpska Liga - East",
+      "competitionFlag": "⚽",
       "competitionCode": 574,
       "home": "Dunav Prahovo",
       "away": "Jagodina",
@@ -3585,11 +4096,13 @@
       "status": "scheduled",
       "statusLabel": "15:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1549895,
       "competition": "Srpska Liga - East",
+      "competitionFlag": "⚽",
       "competitionCode": 574,
       "home": "FK Rudar 2016 Aleksinački Rudnik",
       "away": "Morava Ćuprija",
@@ -3599,11 +4112,13 @@
       "status": "scheduled",
       "statusLabel": "15:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1549896,
       "competition": "Srpska Liga - East",
+      "competitionFlag": "⚽",
       "competitionCode": 574,
       "home": "Rembas",
       "away": "Trstenik PPT",
@@ -3613,11 +4128,13 @@
       "status": "scheduled",
       "statusLabel": "15:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1546449,
       "competition": "Tercera División RFEF - Group 8",
+      "competitionFlag": "⚽",
       "competitionCode": 446,
       "home": "Guijuelo",
       "away": "Palencia CF",
@@ -3627,11 +4144,13 @@
       "status": "scheduled",
       "statusLabel": "16:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1547200,
       "competition": "Serie C - Promotion - Play-offs",
+      "competitionFlag": "⚽",
       "competitionCode": 976,
       "home": "Ascoli",
       "away": "Union Brescia",
@@ -3641,11 +4160,13 @@
       "status": "scheduled",
       "statusLabel": "16:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1548200,
       "competition": "Segunda División",
+      "competitionFlag": "⚽",
       "competitionCode": 269,
       "home": "Cerrito",
       "away": "Atenas",
@@ -3655,11 +4176,13 @@
       "status": "scheduled",
       "statusLabel": "16:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1548315,
       "competition": "Botola 2",
+      "competitionFlag": "⚽",
       "competitionCode": 201,
       "home": "El Massira",
       "away": "Amal Tiznit",
@@ -3669,11 +4192,13 @@
       "status": "scheduled",
       "statusLabel": "16:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1548316,
       "competition": "Botola 2",
+      "competitionFlag": "⚽",
       "competitionCode": 201,
       "home": "Racing de Casablanca",
       "away": "Chabab Ben Guerir",
@@ -3683,11 +4208,13 @@
       "status": "scheduled",
       "statusLabel": "16:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1548317,
       "competition": "Botola 2",
+      "competitionFlag": "⚽",
       "competitionCode": 201,
       "home": "Widad Témara",
       "away": "KAC Kenitra",
@@ -3697,11 +4224,13 @@
       "status": "scheduled",
       "statusLabel": "16:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1548447,
       "competition": "Friendlies",
+      "competitionFlag": "⚽",
       "competitionCode": 10,
       "home": "Maldives",
       "away": "Bangladesh U23",
@@ -3711,11 +4240,13 @@
       "status": "scheduled",
       "statusLabel": "16:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1548480,
       "competition": "Friendlies Women",
+      "competitionFlag": "⚽",
       "competitionCode": 666,
       "home": "Burkina Faso W",
       "away": "Mali W",
@@ -3725,11 +4256,13 @@
       "status": "scheduled",
       "statusLabel": "16:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1546553,
       "competition": "Tercera División RFEF - Group 5",
+      "competitionFlag": "⚽",
       "competitionCode": 443,
       "home": "Badalona",
       "away": "Cornellà",
@@ -3739,11 +4272,13 @@
       "status": "scheduled",
       "statusLabel": "16:15",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1540362,
       "competition": "Copa De La Liga",
+      "competitionFlag": "⚽",
       "competitionCode": 1220,
       "home": "D. La Serena",
       "away": "Union La Calera",
@@ -3753,11 +4288,13 @@
       "status": "scheduled",
       "statusLabel": "16:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1540363,
       "competition": "Copa De La Liga",
+      "competitionFlag": "⚽",
       "competitionCode": 1220,
       "home": "Universidad de Chile",
       "away": "A. Italiano",
@@ -3767,11 +4304,13 @@
       "status": "scheduled",
       "statusLabel": "16:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1543830,
       "competition": "Friendlies",
+      "competitionFlag": "⚽",
       "competitionCode": 10,
       "home": "Denmark",
       "away": "Ukraine",
@@ -3781,11 +4320,13 @@
       "status": "scheduled",
       "statusLabel": "16:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1545466,
       "competition": "Tournoi Maurice Revello",
+      "competitionFlag": "⚽",
       "competitionCode": 914,
       "home": "China PR U20",
       "away": "Tunisia U23",
@@ -3795,11 +4336,13 @@
       "status": "scheduled",
       "statusLabel": "16:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1546320,
       "competition": "Tercera División RFEF - Group 1",
+      "competitionFlag": "⚽",
       "competitionCode": 439,
       "home": "Compostela",
       "away": "Atlético Arteixo",
@@ -3809,11 +4352,13 @@
       "status": "scheduled",
       "statusLabel": "16:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1547737,
       "competition": "Primera División RFEF - Play Offs",
+      "competitionFlag": "⚽",
       "competitionCode": 1006,
       "home": "Zamora",
       "away": "Villarreal II",
@@ -3823,11 +4368,13 @@
       "status": "scheduled",
       "statusLabel": "16:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1546435,
       "competition": "Tercera División RFEF - Group 16",
+      "competitionFlag": "⚽",
       "competitionCode": 454,
       "home": "Arnedo",
       "away": "Oyonesa",
@@ -3837,11 +4384,13 @@
       "status": "scheduled",
       "statusLabel": "17:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1546447,
       "competition": "Tercera División RFEF - Group 9",
+      "competitionFlag": "⚽",
       "competitionCode": 447,
       "home": "Motril",
       "away": "Arenas Armilla",
@@ -3851,11 +4400,13 @@
       "status": "scheduled",
       "statusLabel": "17:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1549404,
       "competition": "UEFA U17 Championship",
+      "competitionFlag": "⚽",
       "competitionCode": 921,
       "home": "Belgium U17",
       "away": "Italy U17",
@@ -3865,11 +4416,13 @@
       "status": "scheduled",
       "statusLabel": "17:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1499459,
       "competition": "Primera B Metropolitana",
+      "competitionFlag": "⚽",
       "competitionCode": 131,
       "home": "Deportivo Laferrere",
       "away": "Dock Sud",
@@ -3879,11 +4432,13 @@
       "status": "scheduled",
       "statusLabel": "17:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1499939,
       "competition": "Primera C",
+      "competitionFlag": "⚽",
       "competitionCode": 132,
       "home": "Victoriano Arenas",
       "away": "Defensores de Cambaceres",
@@ -3893,11 +4448,13 @@
       "status": "scheduled",
       "statusLabel": "17:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1546439,
       "competition": "Tercera División RFEF - Group 14",
+      "competitionFlag": "⚽",
       "competitionCode": 452,
       "home": "Badajoz",
       "away": "Moralo",
@@ -3907,11 +4464,13 @@
       "status": "scheduled",
       "statusLabel": "17:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1498586,
       "competition": "Primera Nacional",
+      "competitionFlag": "⚽",
       "competitionCode": 129,
       "home": "Deportivo Moron",
       "away": "Almirante Brown",
@@ -3921,11 +4480,13 @@
       "status": "scheduled",
       "statusLabel": "18:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1498593,
       "competition": "Primera Nacional",
+      "competitionFlag": "⚽",
       "competitionCode": 129,
       "home": "San Telmo",
       "away": "Deportivo Madryn",
@@ -3935,11 +4496,13 @@
       "status": "scheduled",
       "statusLabel": "18:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1517296,
       "competition": "Canadian Premier League",
+      "competitionFlag": "⚽",
       "competitionCode": 479,
       "home": "York United",
       "away": "Forge",
@@ -3949,11 +4512,13 @@
       "status": "scheduled",
       "statusLabel": "18:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1530368,
       "competition": "Torneo Federal A",
+      "competitionFlag": "⚽",
       "competitionCode": 134,
       "home": "Alvarado",
       "away": "Sol de Mayo",
@@ -3963,11 +4528,13 @@
       "status": "scheduled",
       "statusLabel": "18:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1530379,
       "competition": "Torneo Federal A",
+      "competitionFlag": "⚽",
       "competitionCode": 134,
       "home": "Juventud Unida Univ.",
       "away": "Costa Brava",
@@ -3977,11 +4544,13 @@
       "status": "scheduled",
       "statusLabel": "18:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1530380,
       "competition": "Torneo Federal A",
+      "competitionFlag": "⚽",
       "competitionCode": 134,
       "home": "Olimpo Bahia Blanca",
       "away": "Guillermo Brown",
@@ -3991,11 +4560,13 @@
       "status": "scheduled",
       "statusLabel": "18:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1538035,
       "competition": "Serie D",
+      "competitionFlag": "⚽",
       "competitionCode": 76,
       "home": "Azuriz",
       "away": "Brasil DE Pelotas",
@@ -4005,11 +4576,13 @@
       "status": "scheduled",
       "statusLabel": "18:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1538037,
       "competition": "Serie D",
+      "competitionFlag": "⚽",
       "competitionCode": 76,
       "home": "Blumenau",
       "away": "Sao Jose",
@@ -4019,11 +4592,13 @@
       "status": "scheduled",
       "statusLabel": "18:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1538069,
       "competition": "Serie D",
+      "competitionFlag": "⚽",
       "competitionCode": 76,
       "home": "Independiente FSJ",
       "away": "Marcílio Dias",
@@ -4033,11 +4608,13 @@
       "status": "scheduled",
       "statusLabel": "18:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1540192,
       "competition": "Cearense U20",
+      "competitionFlag": "⚽",
       "competitionCode": 1112,
       "home": "Quixadá U20",
       "away": "Anjos do Céu U20",
@@ -4047,11 +4624,13 @@
       "status": "scheduled",
       "statusLabel": "18:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1541270,
       "competition": "Paulista Série B",
+      "competitionFlag": "⚽",
       "competitionCode": 1098,
       "home": "José Bonifácio",
       "away": "Riopretano",
@@ -4061,11 +4640,13 @@
       "status": "scheduled",
       "statusLabel": "18:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1541271,
       "competition": "Paulista Série B",
+      "competitionFlag": "⚽",
       "competitionCode": 1098,
       "home": "Sporting Paulinense",
       "away": "Flamengo SP",
@@ -4075,11 +4656,13 @@
       "status": "scheduled",
       "statusLabel": "18:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1541977,
       "competition": "Catarinense - 2",
+      "competitionFlag": "⚽",
       "competitionCode": 936,
       "home": "Hercílio Luz",
       "away": "Nação",
@@ -4089,11 +4672,13 @@
       "status": "scheduled",
       "statusLabel": "18:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1541978,
       "competition": "Catarinense - 2",
+      "competitionFlag": "⚽",
       "competitionCode": 936,
       "home": "Guarani de Palhoça",
       "away": "Tubarao",
@@ -4103,11 +4688,13 @@
       "status": "scheduled",
       "statusLabel": "18:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1541979,
       "competition": "Catarinense - 2",
+      "competitionFlag": "⚽",
       "competitionCode": 936,
       "home": "Juventus SC",
       "away": "Caravaggio",
@@ -4117,11 +4704,13 @@
       "status": "scheduled",
       "statusLabel": "18:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1543620,
       "competition": "Baiano - 2",
+      "competitionFlag": "⚽",
       "competitionCode": 613,
       "home": "Fluminense De Feira",
       "away": "Leonico",
@@ -4131,11 +4720,13 @@
       "status": "scheduled",
       "statusLabel": "18:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1543645,
       "competition": "Baiano - 2",
+      "competitionFlag": "⚽",
       "competitionCode": 613,
       "home": "Redenção FC",
       "away": "Grapiuna Itabuna",
@@ -4145,11 +4736,13 @@
       "status": "scheduled",
       "statusLabel": "18:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1544580,
       "competition": "Copa Gaúcha",
+      "competitionFlag": "⚽",
       "competitionCode": 1158,
       "home": "Brasil Farroupilha",
       "away": "Gramadense",
@@ -4159,11 +4752,13 @@
       "status": "scheduled",
       "statusLabel": "18:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1545036,
       "competition": "Friendlies",
+      "competitionFlag": "⚽",
       "competitionCode": 10,
       "home": "Kosovo",
       "away": "Andorra",
@@ -4173,11 +4768,13 @@
       "status": "scheduled",
       "statusLabel": "18:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1546322,
       "competition": "Tercera División RFEF - Group 10",
+      "competitionFlag": "⚽",
       "competitionCode": 448,
       "home": "Dos Hermanas",
       "away": "Atlético Central",
@@ -4187,11 +4784,13 @@
       "status": "scheduled",
       "statusLabel": "18:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1546350,
       "competition": "Estadual Junior U20",
+      "competitionFlag": "⚽",
       "competitionCode": 1143,
       "home": "Internacional U20",
       "away": "Sao Luiz U20",
@@ -4201,11 +4800,13 @@
       "status": "scheduled",
       "statusLabel": "18:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1546351,
       "competition": "Estadual Junior U20",
+      "competitionFlag": "⚽",
       "competitionCode": 1143,
       "home": "Juventude U20",
       "away": "Caxias U20",
@@ -4215,11 +4816,13 @@
       "status": "scheduled",
       "statusLabel": "18:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1546433,
       "competition": "Tercera División RFEF - Group 17",
+      "competitionFlag": "⚽",
       "competitionCode": 455,
       "home": "Cuarte",
       "away": "Atlético Monzón",
@@ -4229,11 +4832,13 @@
       "status": "scheduled",
       "statusLabel": "18:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1546810,
       "competition": "Primera División - Apertura",
+      "competitionFlag": "⚽",
       "competitionCode": 268,
       "home": "Cerro",
       "away": "Penarol",
@@ -4243,11 +4848,13 @@
       "status": "scheduled",
       "statusLabel": "18:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1548318,
       "competition": "Botola 2",
+      "competitionFlag": "⚽",
       "competitionCode": 201,
       "home": "Chabab Atl. Khenifra",
       "away": "Chabab Mohammédia",
@@ -4257,11 +4864,13 @@
       "status": "scheduled",
       "statusLabel": "18:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1549394,
       "competition": "Baiano U20",
+      "competitionFlag": "⚽",
       "competitionCode": 1073,
       "home": "Barcelona BA U20",
       "away": "Porto BA U20",
@@ -4271,11 +4880,13 @@
       "status": "scheduled",
       "statusLabel": "18:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1498579,
       "competition": "Primera Nacional",
+      "competitionFlag": "⚽",
       "competitionCode": 129,
       "home": "All Boys",
       "away": "Racing Cordoba",
@@ -4285,11 +4896,13 @@
       "status": "scheduled",
       "statusLabel": "18:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1498582,
       "competition": "Primera Nacional",
+      "competitionFlag": "⚽",
       "competitionCode": 129,
       "home": "Chacarita Juniors",
       "away": "Temperley",
@@ -4299,11 +4912,13 @@
       "status": "scheduled",
       "statusLabel": "18:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1499931,
       "competition": "Primera C",
+      "competitionFlag": "⚽",
       "competitionCode": 132,
       "home": "Canuelas",
       "away": "El Porvenir",
@@ -4313,11 +4928,13 @@
       "status": "scheduled",
       "statusLabel": "18:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1499934,
       "competition": "Primera C",
+      "competitionFlag": "⚽",
       "competitionCode": 132,
       "home": "Deportivo Muñiz",
       "away": "Central Ballester",
@@ -4327,11 +4944,13 @@
       "status": "scheduled",
       "statusLabel": "18:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1499936,
       "competition": "Primera C",
+      "competitionFlag": "⚽",
       "competitionCode": 132,
       "home": "General Lamadrid",
       "away": "Lujan",
@@ -4341,11 +4960,13 @@
       "status": "scheduled",
       "statusLabel": "18:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1530367,
       "competition": "Torneo Federal A",
+      "competitionFlag": "⚽",
       "competitionCode": 134,
       "home": "9 de Julio Rafaela",
       "away": "Sportivo Las Parejas",
@@ -4355,11 +4976,13 @@
       "status": "scheduled",
       "statusLabel": "18:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1530369,
       "competition": "Torneo Federal A",
+      "competitionFlag": "⚽",
       "competitionCode": 134,
       "home": "Argentino Monte Maíz",
       "away": "Deportivo Rincon",
@@ -4369,11 +4992,13 @@
       "status": "scheduled",
       "statusLabel": "18:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1530370,
       "competition": "Torneo Federal A",
+      "competitionFlag": "⚽",
       "competitionCode": 134,
       "home": "Atletico Escobar",
       "away": "El Linqueño",
@@ -4383,11 +5008,13 @@
       "status": "scheduled",
       "statusLabel": "18:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1530372,
       "competition": "Torneo Federal A",
+      "competitionFlag": "⚽",
       "competitionCode": 134,
       "home": "Atenas",
       "away": "San Martín Mendoza",
@@ -4397,11 +5024,13 @@
       "status": "scheduled",
       "statusLabel": "18:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1530373,
       "competition": "Torneo Federal A",
+      "competitionFlag": "⚽",
       "competitionCode": 134,
       "home": "Gimnasia Chivilcoy",
       "away": "Independiente De Chivilcoy",
@@ -4411,11 +5040,13 @@
       "status": "scheduled",
       "statusLabel": "18:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1530374,
       "competition": "Torneo Federal A",
+      "competitionFlag": "⚽",
       "competitionCode": 134,
       "home": "Cipolletti",
       "away": "Huracan Las Heras",
@@ -4425,11 +5056,13 @@
       "status": "scheduled",
       "statusLabel": "18:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1530375,
       "competition": "Torneo Federal A",
+      "competitionFlag": "⚽",
       "competitionCode": 134,
       "home": "Defensores de Belgrano VR",
       "away": "Douglas Haig",
@@ -4439,11 +5072,13 @@
       "status": "scheduled",
       "statusLabel": "18:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1530377,
       "competition": "Torneo Federal A",
+      "competitionFlag": "⚽",
       "competitionCode": 134,
       "home": "Germinal de Rawson",
       "away": "Circulo Deportivo",
@@ -4453,11 +5088,13 @@
       "status": "scheduled",
       "statusLabel": "18:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1530378,
       "competition": "Torneo Federal A",
+      "competitionFlag": "⚽",
       "competitionCode": 134,
       "home": "Gimnasia Concepción",
       "away": "Sportivo Belgrano",
@@ -4467,11 +5104,13 @@
       "status": "scheduled",
       "statusLabel": "18:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1530382,
       "competition": "Torneo Federal A",
+      "competitionFlag": "⚽",
       "competitionCode": 134,
       "home": "Santamarina",
       "away": "Kimberley Mar del Plata",
@@ -4481,11 +5120,13 @@
       "status": "scheduled",
       "statusLabel": "18:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1532135,
       "competition": "USL W League",
+      "competitionFlag": "⚽",
       "competitionCode": 1117,
       "home": "Toledo Villa W",
       "away": "Racing Louisville W",
@@ -4495,11 +5136,13 @@
       "status": "scheduled",
       "statusLabel": "18:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1538054,
       "competition": "Serie D",
+      "competitionFlag": "⚽",
       "competitionCode": 76,
       "home": "Maracanã",
       "away": "IAPE",
@@ -4509,11 +5152,13 @@
       "status": "scheduled",
       "statusLabel": "18:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1538059,
       "competition": "Serie D",
+      "competitionFlag": "⚽",
       "competitionCode": 76,
       "home": "Parnahyba",
       "away": "Moto Club",
@@ -4523,11 +5168,13 @@
       "status": "scheduled",
       "statusLabel": "18:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1538067,
       "competition": "Serie D",
+      "competitionFlag": "⚽",
       "competitionCode": 76,
       "home": "Sampaio Correa",
       "away": "Iguatu",
@@ -4537,11 +5184,13 @@
       "status": "scheduled",
       "statusLabel": "18:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1546244,
       "competition": "Brasiliense U20",
+      "competitionFlag": "⚽",
       "competitionCode": 1100,
       "home": "Brazlândia FC SAF U20",
       "away": "CFZ Brasilia U20",
@@ -4551,11 +5200,13 @@
       "status": "scheduled",
       "statusLabel": "18:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1548693,
       "competition": "Torneo Promocional Amateur",
+      "competitionFlag": "⚽",
       "competitionCode": 1067,
       "home": "Deportivo Metalurgico",
       "away": "Provincial",
@@ -4565,11 +5216,13 @@
       "status": "scheduled",
       "statusLabel": "18:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1549879,
       "competition": "Brasiliense U20",
+      "competitionFlag": "⚽",
       "competitionCode": 1100,
       "home": "ARUC U20",
       "away": "Legiao U20",
@@ -4579,11 +5232,13 @@
       "status": "scheduled",
       "statusLabel": "18:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1549880,
       "competition": "Brasiliense U20",
+      "competitionFlag": "⚽",
       "competitionCode": 1100,
       "home": "Ceilandense U20",
       "away": "Paranoa U20",
@@ -4593,11 +5248,13 @@
       "status": "scheduled",
       "statusLabel": "18:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1549881,
       "competition": "Brasiliense U20",
+      "competitionFlag": "⚽",
       "competitionCode": 1100,
       "home": "Luziânia U20",
       "away": "Canaã U20",
@@ -4607,11 +5264,13 @@
       "status": "scheduled",
       "statusLabel": "18:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1512768,
       "competition": "Friendlies",
+      "competitionFlag": "⚽",
       "competitionCode": 10,
       "home": "Croatia",
       "away": "Slovenia",
@@ -4621,11 +5280,13 @@
       "status": "scheduled",
       "statusLabel": "18:45",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1498578,
       "competition": "Primera Nacional",
+      "competitionFlag": "⚽",
       "competitionCode": 129,
       "home": "Agropecuario",
       "away": "Patronato",
@@ -4635,11 +5296,13 @@
       "status": "scheduled",
       "statusLabel": "19:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1498583,
       "competition": "Primera Nacional",
+      "competitionFlag": "⚽",
       "competitionCode": 129,
       "home": "Chaco For Ever",
       "away": "Ferro Carril Oeste",
@@ -4649,11 +5312,13 @@
       "status": "scheduled",
       "statusLabel": "19:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1498584,
       "competition": "Primera Nacional",
+      "competitionFlag": "⚽",
       "competitionCode": 129,
       "home": "Club Atlético Güemes",
       "away": "Deportivo Maipu",
@@ -4663,11 +5328,13 @@
       "status": "scheduled",
       "statusLabel": "19:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1520712,
       "competition": "Serie B",
+      "competitionFlag": "⚽",
       "competitionCode": 72,
       "home": "CRB",
       "away": "São Bernardo",
@@ -4677,11 +5344,13 @@
       "status": "scheduled",
       "statusLabel": "19:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1525396,
       "competition": "USL League Two",
+      "competitionFlag": "⚽",
       "competitionCode": 256,
       "home": "Eagle FC",
       "away": "Real Central New Jersey",
@@ -4691,11 +5360,13 @@
       "status": "scheduled",
       "statusLabel": "19:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1529110,
       "competition": "Segunda División",
+      "competitionFlag": "⚽",
       "competitionCode": 711,
       "home": "Real San Joaquín",
       "away": "Concón National",
@@ -4705,11 +5376,13 @@
       "status": "scheduled",
       "statusLabel": "19:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1529112,
       "competition": "Segunda División",
+      "competitionFlag": "⚽",
       "competitionCode": 711,
       "home": "Santiago Morning",
       "away": "General Velásquez",
@@ -4719,11 +5392,13 @@
       "status": "scheduled",
       "statusLabel": "19:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1531207,
       "competition": "USL League One Cup",
+      "competitionFlag": "⚽",
       "competitionCode": 1095,
       "home": "Brooklyn",
       "away": "Portland Hearts of Pine",
@@ -4733,11 +5408,13 @@
       "status": "scheduled",
       "statusLabel": "19:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1532134,
       "competition": "USL W League",
+      "competitionFlag": "⚽",
       "competitionCode": 1117,
       "home": "Union Macomb W",
       "away": "Kalamazoo FC W",
@@ -4747,11 +5424,13 @@
       "status": "scheduled",
       "statusLabel": "19:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1532136,
       "competition": "USL W League",
+      "competitionFlag": "⚽",
       "competitionCode": 1117,
       "home": "Long Island Rough Riders W",
       "away": "Morris Elite W",
@@ -4761,11 +5440,13 @@
       "status": "scheduled",
       "statusLabel": "19:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1532137,
       "competition": "USL W League",
+      "competitionFlag": "⚽",
       "competitionCode": 1117,
       "home": "Tacoma Galaxy W",
       "away": "Bigfoot W",
@@ -4775,11 +5456,13 @@
       "status": "scheduled",
       "statusLabel": "19:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1538046,
       "competition": "Serie D",
+      "competitionFlag": "⚽",
       "competitionCode": 76,
       "home": "Guarany de Bagé",
       "away": "Cianorte",
@@ -4789,11 +5472,13 @@
       "status": "scheduled",
       "statusLabel": "19:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1538068,
       "competition": "Serie D",
+      "competitionFlag": "⚽",
       "competitionCode": 76,
       "home": "Santa Catarina",
       "away": "Cascavel",
@@ -4803,11 +5488,13 @@
       "status": "scheduled",
       "statusLabel": "19:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1538070,
       "competition": "Serie D",
+      "competitionFlag": "⚽",
       "competitionCode": 76,
       "home": "São Luiz",
       "away": "Joinville",
@@ -4817,11 +5504,13 @@
       "status": "scheduled",
       "statusLabel": "19:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1538388,
       "competition": "Primera División",
+      "competitionFlag": "⚽",
       "competitionCode": 344,
       "home": "Real Potosí",
       "away": "San Antonio Bulo Bulo",
@@ -4831,11 +5520,13 @@
       "status": "postponed",
       "statusLabel": "PPD",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1540364,
       "competition": "Copa De La Liga",
+      "competitionFlag": "⚽",
       "competitionCode": 1220,
       "home": "Huachipato",
       "away": "Colo Colo",
@@ -4845,11 +5536,13 @@
       "status": "scheduled",
       "statusLabel": "19:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1540590,
       "competition": "Friendlies",
+      "competitionFlag": "⚽",
       "competitionCode": 10,
       "home": "Greece",
       "away": "Italy",
@@ -4859,11 +5552,13 @@
       "status": "scheduled",
       "statusLabel": "19:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1540950,
       "competition": "Friendlies",
+      "competitionFlag": "⚽",
       "competitionCode": 10,
       "home": "Morocco",
       "away": "Norway",
@@ -4873,11 +5568,13 @@
       "status": "scheduled",
       "statusLabel": "19:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1543643,
       "competition": "Baiano - 2",
+      "competitionFlag": "⚽",
       "competitionCode": 613,
       "home": "Barreiras FC",
       "away": "Jacobina",
@@ -4887,11 +5584,13 @@
       "status": "scheduled",
       "statusLabel": "19:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1543644,
       "competition": "Baiano - 2",
+      "competitionFlag": "⚽",
       "competitionCode": 613,
       "home": "Feira FC",
       "away": "SSA",
@@ -4901,11 +5600,13 @@
       "status": "scheduled",
       "statusLabel": "19:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1544781,
       "competition": "Maranhense - 2",
+      "competitionFlag": "⚽",
       "competitionCode": 1148,
       "home": "Viana",
       "away": "Pinheiro",
@@ -4915,11 +5616,13 @@
       "status": "scheduled",
       "statusLabel": "19:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1548053,
       "competition": "Segunda División",
+      "competitionFlag": "⚽",
       "competitionCode": 141,
       "home": "Las Palmas",
       "away": "Malaga",
@@ -4929,11 +5632,13 @@
       "status": "scheduled",
       "statusLabel": "19:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1548390,
       "competition": "Segunda División",
+      "competitionFlag": "⚽",
       "competitionCode": 300,
       "home": "Atletico Avila FC",
       "away": "Mineros de Guyana",
@@ -4943,11 +5648,13 @@
       "status": "scheduled",
       "statusLabel": "19:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1498588,
       "competition": "Primera Nacional",
+      "competitionFlag": "⚽",
       "competitionCode": 129,
       "home": "Godoy Cruz",
       "away": "Atletico Mitre",
@@ -4957,11 +5664,13 @@
       "status": "scheduled",
       "statusLabel": "19:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1511601,
       "competition": "Primera B",
+      "competitionFlag": "⚽",
       "competitionCode": 266,
       "home": "Antofagasta",
       "away": "Magallanes",
@@ -4971,11 +5680,13 @@
       "status": "scheduled",
       "statusLabel": "19:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1530381,
       "competition": "Torneo Federal A",
+      "competitionFlag": "⚽",
       "competitionCode": 134,
       "home": "San Martin Formosa",
       "away": "Tucuman Central",
@@ -4985,11 +5696,13 @@
       "status": "scheduled",
       "statusLabel": "19:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1530383,
       "competition": "Torneo Federal A",
+      "competitionFlag": "⚽",
       "competitionCode": 134,
       "home": "Sarmiento de La Banda",
       "away": "Sol de América",
@@ -4999,11 +5712,13 @@
       "status": "scheduled",
       "statusLabel": "19:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1498585,
       "competition": "Primera Nacional",
+      "competitionFlag": "⚽",
       "competitionCode": 129,
       "home": "Colon Santa Fe",
       "away": "Ciudad de Bolívar",
@@ -5013,11 +5728,13 @@
       "status": "scheduled",
       "statusLabel": "20:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1524808,
       "competition": "USL League Two",
+      "competitionFlag": "⚽",
       "competitionCode": 256,
       "home": "Lakeland United",
       "away": "Weston",
@@ -5027,11 +5744,13 @@
       "status": "scheduled",
       "statusLabel": "20:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1529108,
       "competition": "Segunda División",
+      "competitionFlag": "⚽",
       "competitionCode": 711,
       "home": "Provincial Osorno",
       "away": "Deportes Rengo",
@@ -5041,11 +5760,13 @@
       "status": "scheduled",
       "statusLabel": "20:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1538038,
       "competition": "Serie D",
+      "competitionFlag": "⚽",
       "competitionCode": 76,
       "home": "Capital Brasilia",
       "away": "União Rondonópolis",
@@ -5055,11 +5776,13 @@
       "status": "scheduled",
       "statusLabel": "20:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1538043,
       "competition": "Serie D",
+      "competitionFlag": "⚽",
       "competitionCode": 76,
       "home": "Gama",
       "away": "Aparecidense",
@@ -5069,11 +5792,13 @@
       "status": "scheduled",
       "statusLabel": "20:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1538045,
       "competition": "Serie D",
+      "competitionFlag": "⚽",
       "competitionCode": 76,
       "home": "Goiatuba EC",
       "away": "CEOV Operário",
@@ -5083,11 +5808,13 @@
       "status": "scheduled",
       "statusLabel": "20:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1538051,
       "competition": "Serie D",
+      "competitionFlag": "⚽",
       "competitionCode": 76,
       "home": "Luverdense",
       "away": "Inhumas",
@@ -5097,11 +5824,13 @@
       "status": "scheduled",
       "statusLabel": "20:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1538055,
       "competition": "Serie D",
+      "competitionFlag": "⚽",
       "competitionCode": 76,
       "home": "Mixto",
       "away": "Ceilândia",
@@ -5111,11 +5840,13 @@
       "status": "scheduled",
       "statusLabel": "20:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1538057,
       "competition": "Serie D",
+      "competitionFlag": "⚽",
       "competitionCode": 76,
       "home": "Noroeste",
       "away": "Sampaio Corrêa RJ",
@@ -5125,11 +5856,13 @@
       "status": "scheduled",
       "statusLabel": "20:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1538058,
       "competition": "Serie D",
+      "competitionFlag": "⚽",
       "competitionCode": 76,
       "home": "Nova Iguaçu",
       "away": "XV de Piracicaba",
@@ -5139,11 +5872,13 @@
       "status": "scheduled",
       "statusLabel": "20:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1538063,
       "competition": "Serie D",
+      "competitionFlag": "⚽",
       "competitionCode": 76,
       "home": "Primavera MG",
       "away": "Brasiliense",
@@ -5153,11 +5888,13 @@
       "status": "scheduled",
       "statusLabel": "20:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1538077,
       "competition": "Serie D",
+      "competitionFlag": "⚽",
       "competitionCode": 76,
       "home": "Velo Clube",
       "away": "CFRJ / Maricá",
@@ -5167,11 +5904,13 @@
       "status": "scheduled",
       "statusLabel": "20:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1540056,
       "competition": "Copa Argentina",
+      "competitionFlag": "⚽",
       "competitionCode": 130,
       "home": "Independ. Rivadavia",
       "away": "Tigre",
@@ -5181,11 +5920,13 @@
       "status": "postponed",
       "statusLabel": "PPD",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1540060,
       "competition": "Copa Argentina",
+      "competitionFlag": "⚽",
       "competitionCode": 130,
       "home": "River Plate",
       "away": "Aldosivi",
@@ -5195,11 +5936,13 @@
       "status": "postponed",
       "statusLabel": "PPD",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1540103,
       "competition": "Copa Argentina",
+      "competitionFlag": "⚽",
       "competitionCode": 130,
       "home": "Sarmiento Junin",
       "away": "Boca Juniors",
@@ -5209,11 +5952,13 @@
       "status": "postponed",
       "statusLabel": "PPD",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1542182,
       "competition": "Friendlies",
+      "competitionFlag": "⚽",
       "competitionCode": 10,
       "home": "Ecuador",
       "away": "Guatemala",
@@ -5223,11 +5968,13 @@
       "status": "scheduled",
       "statusLabel": "20:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1498591,
       "competition": "Primera Nacional",
+      "competitionFlag": "⚽",
       "competitionCode": 129,
       "home": "San Martin Tucuman",
       "away": "Quilmes",
@@ -5237,11 +5984,13 @@
       "status": "scheduled",
       "statusLabel": "20:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1526548,
       "competition": "Liga Pro Serie B",
+      "competitionFlag": "⚽",
       "competitionCode": 243,
       "home": "Deportivo Cuenca Juniors",
       "away": "El Nacional",
@@ -5251,11 +6000,13 @@
       "status": "scheduled",
       "statusLabel": "20:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1524805,
       "competition": "USL League Two",
+      "competitionFlag": "⚽",
       "competitionCode": 256,
       "home": "West Seattle Junction",
       "away": "Midlakes United",
@@ -5265,11 +6016,13 @@
       "status": "scheduled",
       "statusLabel": "21:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1524810,
       "competition": "USL League Two",
+      "competitionFlag": "⚽",
       "competitionCode": 256,
       "home": "Toledo Villa",
       "away": "Louisville City II",
@@ -5279,11 +6032,13 @@
       "status": "scheduled",
       "statusLabel": "21:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1532138,
       "competition": "USL W League",
+      "competitionFlag": "⚽",
       "competitionCode": 1117,
       "home": "Fort Lauderdale Utd II W",
       "away": "TLH Reckoning W",
@@ -5293,11 +6048,13 @@
       "status": "scheduled",
       "statusLabel": "21:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1532387,
       "competition": "USL W League",
+      "competitionFlag": "⚽",
       "competitionCode": 1117,
       "home": "Loudoun United FC W",
       "away": "Eagle FC W",
@@ -5307,11 +6064,13 @@
       "status": "scheduled",
       "statusLabel": "21:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1548201,
       "competition": "Segunda División",
+      "competitionFlag": "⚽",
       "competitionCode": 269,
       "home": "Tacuarembo",
       "away": "Uruguay Montevideo",
@@ -5321,11 +6080,13 @@
       "status": "scheduled",
       "statusLabel": "21:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1538386,
       "competition": "Primera División",
+      "competitionFlag": "⚽",
       "competitionCode": 344,
       "home": "The Strongest",
       "away": "Oriente Petrolero",
@@ -5335,11 +6096,13 @@
       "status": "postponed",
       "statusLabel": "PPD",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1524811,
       "competition": "USL League Two",
+      "competitionFlag": "⚽",
       "competitionCode": 256,
       "home": "Union Macomb",
       "away": "Kalamazoo FC",
@@ -5349,11 +6112,13 @@
       "status": "scheduled",
       "statusLabel": "21:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1546811,
       "competition": "Primera División - Apertura",
+      "competitionFlag": "⚽",
       "competitionCode": 268,
       "home": "Defensor Sporting",
       "away": "Boston River",
@@ -5363,11 +6128,13 @@
       "status": "scheduled",
       "statusLabel": "21:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1513146,
       "competition": "MLS Next Pro",
+      "competitionFlag": "⚽",
       "competitionCode": 909,
       "home": "FC Cincinnati II",
       "away": "New England II",
@@ -5377,11 +6144,13 @@
       "status": "scheduled",
       "statusLabel": "22:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1524806,
       "competition": "USL League Two",
+      "competitionFlag": "⚽",
       "competitionCode": 256,
       "home": "San Francisco City",
       "away": "SF Glens",
@@ -5391,11 +6160,13 @@
       "status": "scheduled",
       "statusLabel": "22:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1524807,
       "competition": "USL League Two",
+      "competitionFlag": "⚽",
       "competitionCode": 256,
       "home": "Snohomish United",
       "away": "Oly Town",
@@ -5405,11 +6176,13 @@
       "status": "scheduled",
       "statusLabel": "22:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1524812,
       "competition": "USL League Two",
+      "competitionFlag": "⚽",
       "competitionCode": 256,
       "home": "Long Island Rough Riders",
       "away": "Morris Elite",
@@ -5419,11 +6192,13 @@
       "status": "scheduled",
       "statusLabel": "22:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1532139,
       "competition": "USL W League",
+      "competitionFlag": "⚽",
       "competitionCode": 1117,
       "home": "Oakland Soul W",
       "away": "Pleasanton Rage W",
@@ -5433,11 +6208,13 @@
       "status": "scheduled",
       "statusLabel": "22:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1532140,
       "competition": "USL W League",
+      "competitionFlag": "⚽",
       "competitionCode": 1117,
       "home": "Lancaster Inferno W",
       "away": "Patuxent W",
@@ -5447,11 +6224,13 @@
       "status": "scheduled",
       "statusLabel": "22:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1532141,
       "competition": "USL W League",
+      "competitionFlag": "⚽",
       "competitionCode": 1117,
       "home": "Indy Eleven W",
       "away": "Dayton Dutch Lions W",
@@ -5461,11 +6240,13 @@
       "status": "scheduled",
       "statusLabel": "22:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1532142,
       "competition": "USL W League",
+      "competitionFlag": "⚽",
       "competitionCode": 1117,
       "home": "Brevard Riptide W",
       "away": "Brooke House W",
@@ -5475,11 +6256,13 @@
       "status": "scheduled",
       "statusLabel": "22:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1532143,
       "competition": "USL W League",
+      "competitionFlag": "⚽",
       "competitionCode": 1117,
       "home": "OC Sporting W",
       "away": "AMSG W",
@@ -5489,11 +6272,13 @@
       "status": "scheduled",
       "statusLabel": "22:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1532435,
       "competition": "USL W League",
+      "competitionFlag": "⚽",
       "competitionCode": 1117,
       "home": "Albion Colorado W",
       "away": "Real Colorado W",
@@ -5503,11 +6288,13 @@
       "status": "scheduled",
       "statusLabel": "22:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1540365,
       "competition": "Copa De La Liga",
+      "competitionFlag": "⚽",
       "competitionCode": 1220,
       "home": "Deportes Limache",
       "away": "Everton de Vina",
@@ -5517,11 +6304,13 @@
       "status": "scheduled",
       "statusLabel": "22:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1540366,
       "competition": "Copa De La Liga",
+      "competitionFlag": "⚽",
       "competitionCode": 1220,
       "home": "O'Higgins",
       "away": "Palestino",
@@ -5531,11 +6320,13 @@
       "status": "scheduled",
       "statusLabel": "22:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1546558,
       "competition": "Friendlies Women",
+      "competitionFlag": "⚽",
       "competitionCode": 666,
       "home": "Bermuda W",
       "away": "Belize W",
@@ -5545,11 +6336,13 @@
       "status": "scheduled",
       "statusLabel": "22:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1548295,
       "competition": "Matogrossense 2",
+      "competitionFlag": "⚽",
       "competitionCode": 1096,
       "home": "Sinop Fc",
       "away": "Cacerense",
@@ -5559,11 +6352,13 @@
       "status": "scheduled",
       "statusLabel": "22:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1548335,
       "competition": "Primera División",
+      "competitionFlag": "⚽",
       "competitionCode": 299,
       "home": "Carabobo FC",
       "away": "Puerto Cabello",
@@ -5573,11 +6368,13 @@
       "status": "scheduled",
       "statusLabel": "22:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1524814,
       "competition": "USL League Two",
+      "competitionFlag": "⚽",
       "competitionCode": 256,
       "home": "Asheville City",
       "away": "Wake",
@@ -5587,11 +6384,13 @@
       "status": "scheduled",
       "statusLabel": "22:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1513147,
       "competition": "MLS Next Pro",
+      "competitionFlag": "⚽",
       "competitionCode": 909,
       "home": "Orlando City II",
       "away": "Carolina Core",
@@ -5601,11 +6400,13 @@
       "status": "scheduled",
       "statusLabel": "23:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1524809,
       "competition": "USL League Two",
+      "competitionFlag": "⚽",
       "competitionCode": 256,
       "home": "Tacoma Stars",
       "away": "Bigfoot",
@@ -5615,11 +6416,13 @@
       "status": "scheduled",
       "statusLabel": "23:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1524813,
       "competition": "USL League Two",
+      "competitionFlag": "⚽",
       "competitionCode": 256,
       "home": "RKC",
       "away": "St. Croix",
@@ -5629,11 +6432,13 @@
       "status": "scheduled",
       "statusLabel": "23:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1528288,
       "competition": "Friendlies",
+      "competitionFlag": "⚽",
       "competitionCode": 10,
       "home": "Colombia",
       "away": "Jordan",
@@ -5643,11 +6448,13 @@
       "status": "scheduled",
       "statusLabel": "23:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1532388,
       "competition": "USL W League",
+      "competitionFlag": "⚽",
       "competitionCode": 1117,
       "home": "Hill Country Linces W",
       "away": "Challenge W",
@@ -5657,11 +6464,13 @@
       "status": "scheduled",
       "statusLabel": "23:00",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1524804,
       "competition": "USL League Two",
+      "competitionFlag": "⚽",
       "competitionCode": 256,
       "home": "Virginia Marauders",
       "away": "Christos",
@@ -5671,11 +6480,13 @@
       "status": "scheduled",
       "statusLabel": "23:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1524815,
       "competition": "USL League Two",
+      "competitionFlag": "⚽",
       "competitionCode": 256,
       "home": "Loudoun 2",
       "away": "Lionsbridge",
@@ -5685,11 +6496,13 @@
       "status": "scheduled",
       "statusLabel": "23:30",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     },
     {
       "id": 1538384,
       "competition": "Primera División",
+      "competitionFlag": "⚽",
       "competitionCode": 344,
       "home": "Blooming",
       "away": "Gualberto Villarroel SJ",
@@ -5699,7 +6512,8 @@
       "status": "postponed",
       "statusLabel": "PPD",
       "homeScore": null,
-      "awayScore": null
+      "awayScore": null,
+      "channels": []
     }
   ]
 }
