@@ -1,7 +1,7 @@
 {
   "date": "2026-06-08",
-  "fetchedAt": "2026-06-08T05:08:10.161Z",
-  "total": 80,
+  "fetchedAt": "2026-06-08T10:00:15.278Z",
+  "total": 83,
   "matches": [
     {
       "id": 1513145,
@@ -472,10 +472,10 @@
       "competition": "Friendlies Women",
       "competitionFlag": "⚽",
       "competitionCode": 666,
-      "home": "Senegal W",
-      "away": "Nigeria W",
-      "homeLogo": "https://media.api-sports.io/football/teams/18262.png",
-      "awayLogo": "https://media.api-sports.io/football/teams/1730.png",
+      "home": "Nigeria W",
+      "away": "Senegal W",
+      "homeLogo": "https://media.api-sports.io/football/teams/1730.png",
+      "awayLogo": "https://media.api-sports.io/football/teams/18262.png",
       "utcDate": "2026-06-08T15:00:00+00:00",
       "status": "scheduled",
       "statusLabel": "15:00",
@@ -788,6 +788,22 @@
       "channels": []
     },
     {
+      "id": 1550759,
+      "competition": "Carioca C",
+      "competitionFlag": "⚽",
+      "competitionCode": 1106,
+      "home": "Búzios",
+      "away": "Cardoso Moreira",
+      "homeLogo": "https://media.api-sports.io/football/teams/25962.png",
+      "awayLogo": "https://media.api-sports.io/football/teams/27826.png",
+      "utcDate": "2026-06-08T17:45:00+00:00",
+      "status": "scheduled",
+      "statusLabel": "17:45",
+      "homeScore": null,
+      "awayScore": null,
+      "channels": []
+    },
+    {
       "id": 1512457,
       "competition": "Reserve League",
       "competitionFlag": "⚽",
@@ -916,6 +932,22 @@
       "channels": []
     },
     {
+      "id": 1550760,
+      "competition": "Carioca C",
+      "competitionFlag": "⚽",
+      "competitionCode": 1106,
+      "home": "Uni Souza",
+      "away": "Barcelona RJ",
+      "homeLogo": "https://media.api-sports.io/football/teams/23641.png",
+      "awayLogo": "https://media.api-sports.io/football/teams/25961.png",
+      "utcDate": "2026-06-08T18:00:00+00:00",
+      "status": "scheduled",
+      "statusLabel": "18:00",
+      "homeScore": null,
+      "awayScore": null,
+      "channels": []
+    },
+    {
       "id": 1533350,
       "competition": "Friendlies Women",
       "competitionFlag": "⚽",
@@ -1036,6 +1068,22 @@
       "away": "Cape Verde W",
       "homeLogo": "https://media.api-sports.io/football/teams/1734.png",
       "awayLogo": "https://media.api-sports.io/football/teams/26919.png",
+      "utcDate": "2026-06-08T19:00:00+00:00",
+      "status": "scheduled",
+      "statusLabel": "19:00",
+      "homeScore": null,
+      "awayScore": null,
+      "channels": []
+    },
+    {
+      "id": 1550761,
+      "competition": "Carioca C",
+      "competitionFlag": "⚽",
+      "competitionCode": 1106,
+      "home": "Ceres",
+      "away": "Tigres do Brasil",
+      "homeLogo": "https://media.api-sports.io/football/teams/27824.png",
+      "awayLogo": "https://media.api-sports.io/football/teams/13119.png",
       "utcDate": "2026-06-08T19:00:00+00:00",
       "status": "scheduled",
       "statusLabel": "19:00",
