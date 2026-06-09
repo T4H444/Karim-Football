@@ -3,9 +3,14 @@ const fs = require('fs');
 const path = require('path');
 
 // ─── CONFIG ───────────────────────────────────────────────
-const API_KEY  = process.env.FOOTBALL_API_KEY;
-const BASE_URL = 'https://v3.football.api-sports.io';
-const today    = new Date().toISOString().split('T')[0];
+const API_KEY    = process.env.FOOTBALL_API_KEY;
+const BASE_URL   = 'https://v3.football.api-sports.io';
+const today      = new Date().toISOString().split('T')[0];
+
+// Max parallel livesoccertv requests (be polite, but not glacial)
+const TV_CONCURRENCY = 8;
+// Timeout per TV lookup — was 8000, now tighter
+const TV_TIMEOUT_MS  = 3000;
 
 // ─── CHANNEL WHITELIST ────────────────────────────────────
 // Only show channels relevant to Morocco / North Africa / Arab world / France
@@ -39,23 +44,37 @@ function slugify(name) {
     .trim();
 }
 
+// ─── PARALLEL POOL ────────────────────────────────────────
+// Runs `tasks` (array of async functions) with at most `limit` concurrent.
+async function poolAll(tasks, limit) {
+  const results = new Array(tasks.length);
+  let index = 0;
+
+  async function worker() {
+    while (index < tasks.length) {
+      const i = index++;
+      results[i] = await tasks[i]();
+    }
+  }
+
+  const workers = Array.from({ length: Math.min(limit, tasks.length) }, worker);
+  await Promise.all(workers);
+  return results;
+}
+
 // ─── FETCH TV CHANNELS from livesoccertv-parser ───────────
 async function getTvChannels(home, away) {
   try {
     const { getMatches } = require('livesoccertv-parser');
-    // Try home team first
     const homeSlug = slugify(home);
-    // We need country — try a few common ones based on competition
-    // livesoccertv-parser needs (country, team-slug)
-    // For international teams we use 'international'
+
     const results = await Promise.race([
       getMatches('international', homeSlug, { timezone: 'Africa/Casablanca' }),
-      new Promise((_, reject) => setTimeout(() => reject(new Error('timeout')), 8000))
+      new Promise((_, reject) => setTimeout(() => reject(new Error('timeout')), TV_TIMEOUT_MS))
     ]);
 
     if (!results || results.length === 0) return [];
 
-    // Find today's match between these two teams
     const match = results.find(r => {
       const game = (r.game || '').toLowerCase();
       return game.includes(slugify(away).replace(/-/g, ' ')) ||
@@ -64,10 +83,8 @@ async function getTvChannels(home, away) {
 
     if (!match || !match.tvs) return [];
 
-    // Filter to relevant channels only
     return match.tvs.filter(isRelevantChannel);
-  } catch (err) {
-    // Silently fail — TV info is optional
+  } catch {
     return [];
   }
 }
@@ -143,47 +160,49 @@ async function fetchMatches() {
         statusLabel:     status.label,
         homeScore:       status.homeScore,
         awayScore:       status.awayScore,
-        channels:        [], // filled below
+        channels:        [],
       };
     })
     .sort((a, b) => new Date(a.utcDate) - new Date(b.utcDate));
 
   // ── Fetch TV channels for each match ─────────────────
-  // Only run once per day (not on every 20min refresh) to avoid hammering livesoccertv
-  // We detect "first run of the day" by checking if channels are already populated
+  // FIX: track whether channels were *attempted* today (not just found),
+  // so we don't re-run on every 20min refresh even when all channels are empty.
   const outPath = path.join(__dirname, '..', 'data', 'matches.json');
   let existingChannels = {};
+  let channelsAlreadyFetchedToday = false;
 
   if (fs.existsSync(outPath)) {
     try {
       const existing = JSON.parse(fs.readFileSync(outPath, 'utf8'));
-      if (existing.date === today) {
-        // Reuse existing channel data — only re-fetch scores
+      if (existing.date === today && existing.channelsFetchedAt) {
+        // Channels were fetched at some point today — reuse regardless of whether any matched
+        channelsAlreadyFetchedToday = true;
         existing.matches.forEach(m => {
-          if (m.channels && m.channels.length > 0) {
-            existingChannels[m.id] = m.channels;
-          }
+          existingChannels[m.id] = m.channels || [];
         });
-        console.log(`📺  Reusing channel data from earlier today (${Object.keys(existingChannels).length} matches)`);
+        console.log(`📺  Reusing channel data from ${existing.channelsFetchedAt} (${Object.keys(existingChannels).length} matches cached)`);
       }
     } catch (e) {}
   }
 
-  const needChannelFetch = Object.keys(existingChannels).length === 0;
+  if (!channelsAlreadyFetchedToday) {
+    console.log(`📺  Fetching TV channels in parallel (concurrency=${TV_CONCURRENCY}, timeout=${TV_TIMEOUT_MS}ms)…`);
+    const start = Date.now();
 
-  if (needChannelFetch) {
-    console.log(`📺  Fetching TV channels from livesoccertv (first run of the day)…`);
-    for (const match of matches) {
-      const channels = await getTvChannels(match.home, match.away);
-      match.channels = channels;
-      if (channels.length > 0) {
-        console.log(`  ✅  ${match.home} vs ${match.away}: ${channels.join(', ')}`);
+    // FIX: parallel pool instead of sequential loop — no per-item delay
+    const tasks = matches.map(match => async () => {
+      match.channels = await getTvChannels(match.home, match.away);
+      if (match.channels.length > 0) {
+        console.log(`  ✅  ${match.home} vs ${match.away}: ${match.channels.join(', ')}`);
       }
-      // Small delay to be polite
-      await new Promise(r => setTimeout(r, 1500));
-    }
+    });
+
+    await poolAll(tasks, TV_CONCURRENCY);
+
+    const elapsed = ((Date.now() - start) / 1000).toFixed(1);
+    console.log(`📺  TV channel fetch done in ${elapsed}s`);
   } else {
-    // Reuse channels, just update scores
     matches.forEach(m => {
       m.channels = existingChannels[m.id] || [];
     });
@@ -191,9 +210,13 @@ async function fetchMatches() {
 
   // ── Write output ──────────────────────────────────────
   const output = {
-    date:      today,
-    fetchedAt: new Date().toISOString(),
-    total:     matches.length,
+    date:               today,
+    fetchedAt:          new Date().toISOString(),
+    // FIX: stamp when channels were fetched so subsequent runs know to skip
+    channelsFetchedAt:  channelsAlreadyFetchedToday
+      ? (JSON.parse(fs.readFileSync(outPath, 'utf8')).channelsFetchedAt)
+      : new Date().toISOString(),
+    total:              matches.length,
     matches,
   };
 
