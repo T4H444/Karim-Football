@@ -1,6 +1,6 @@
 {
   "date": "2026-06-11",
-  "fetchedAt": "2026-06-11T21:37:39.611Z",
+  "fetchedAt": "2026-06-11T23:10:10.616Z",
   "channelsFetchedAt": "2026-06-11T04:03:52.447Z",
   "total": 98,
   "matches": [
@@ -1454,9 +1454,9 @@
       "homeLogo": "https://media.api-sports.io/football/teams/22469.png",
       "awayLogo": "https://media.api-sports.io/football/teams/2558.png",
       "utcDate": "2026-06-11T20:00:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
-      "homeScore": 1,
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 2,
       "awayScore": 0,
       "channels": []
     },
@@ -1470,10 +1470,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/12968.png",
       "awayLogo": "https://media.api-sports.io/football/teams/13055.png",
       "utcDate": "2026-06-11T22:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "22:00",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 1,
+      "awayScore": 1,
       "channels": []
     },
     {
@@ -1502,10 +1502,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/13034.png",
       "awayLogo": "https://media.api-sports.io/football/teams/13054.png",
       "utcDate": "2026-06-11T22:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "22:00",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 1,
+      "awayScore": 0,
       "channels": []
     },
     {
@@ -1518,10 +1518,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/23127.png",
       "awayLogo": "https://media.api-sports.io/football/teams/18895.png",
       "utcDate": "2026-06-11T23:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "23:00",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 0,
+      "awayScore": 0,
       "channels": []
     },
     {
