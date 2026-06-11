@@ -63,7 +63,7 @@ const CHANNEL_WHITELIST = [
 // These are injected automatically so cards always have data.
 const COMPETITION_CHANNELS = {
   // World Cup 2026 — MENA confirmed rights
-  'world cup':         ['beIN Sports', 'Arryadia', 'Al Aoula', 'TOD'],
+  'WORLD CUP':         ['beIN Sports', 'Arryadia', 'Al Aoula', 'TOD'],
   'fifa world cup':    ['beIN Sports', 'Arryadia', 'Al Aoula', 'TOD'],
   // Africa Cup of Nations
   'africa cup':        ['beIN Sports', 'Arryadia', 'Al Aoula'],
