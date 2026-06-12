@@ -63,7 +63,7 @@ const CHANNEL_WHITELIST = [
 // These are injected automatically so cards always have data.
 const COMPETITION_CHANNELS = {
   // World Cup 2026 — MENA confirmed rights
-  'WORLD CUP':         ['beIN Sports', 'Arryadia', 'Al Aoula', 'TOD'],
+  'world cup':         ['beIN Sports', 'Arryadia', 'Al Aoula', 'TOD'],
   'fifa world cup':    ['beIN Sports', 'Arryadia', 'Al Aoula', 'TOD'],
   // Africa Cup of Nations
   'africa cup':        ['beIN Sports', 'Arryadia', 'Al Aoula'],
@@ -292,11 +292,20 @@ async function fetchMatches() {
     try {
       const existing = JSON.parse(fs.readFileSync(outPath, 'utf8'));
       if (existing.date === today && existing.channelsFetchedAt) {
-        channelsAlreadyFetchedToday = true;
-        existing.matches.forEach(m => {
-          existingChannels[m.id] = m.channels || [];
-        });
-        console.log(`📺  Reusing channel data from ${existing.channelsFetchedAt}`);
+        // Only reuse if at least some matches actually have channel data.
+        // If all channels are empty (e.g. old broken scraper run), re-fetch.
+        const matchesWithChannels = (existing.matches || [])
+          .filter(m => m.channels && m.channels.length > 0).length;
+
+        if (matchesWithChannels > 0) {
+          channelsAlreadyFetchedToday = true;
+          existing.matches.forEach(m => {
+            existingChannels[m.id] = m.channels || [];
+          });
+          console.log(`📺  Reusing channel data from ${existing.channelsFetchedAt} (${matchesWithChannels} matches with channels)`);
+        } else {
+          console.log(`📺  Previous channel fetch had 0 results — re-fetching channels now`);
+        }
       }
     } catch (e) {}
   }
@@ -337,6 +346,7 @@ async function fetchMatches() {
   const output = {
     date:              today,
     fetchedAt:         new Date().toISOString(),
+    // Only keep old timestamp when we truly reused data; otherwise stamp now
     channelsFetchedAt: channelsAlreadyFetchedToday
       ? JSON.parse(fs.readFileSync(outPath, 'utf8')).channelsFetchedAt
       : new Date().toISOString(),
