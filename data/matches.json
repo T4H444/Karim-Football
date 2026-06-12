@@ -1,6 +1,6 @@
 {
   "date": "2026-06-12",
-  "fetchedAt": "2026-06-12T11:47:27.742Z",
+  "fetchedAt": "2026-06-12T12:00:41.074Z",
   "total": 165,
   "matches": [
     {
@@ -263,8 +263,8 @@
       "homeLogo": "https://media.api-sports.io/football/teams/3768.png",
       "awayLogo": "https://media.api-sports.io/football/teams/3773.png",
       "utcDate": "2026-06-12T10:00:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
+      "status": "finished",
+      "statusLabel": "FT",
       "homeScore": 0,
       "awayScore": 0,
       "channels": []
@@ -282,7 +282,7 @@
       "status": "live",
       "statusLabel": "LIVE",
       "homeScore": 1,
-      "awayScore": 0,
+      "awayScore": 2,
       "channels": []
     },
     {
@@ -295,9 +295,9 @@
       "homeLogo": "https://media.api-sports.io/football/teams/14379.png",
       "awayLogo": "https://media.api-sports.io/football/teams/14374.png",
       "utcDate": "2026-06-12T10:00:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
-      "homeScore": 5,
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 6,
       "awayScore": 0,
       "channels": []
     },
@@ -330,7 +330,7 @@
       "status": "live",
       "statusLabel": "LIVE",
       "homeScore": 1,
-      "awayScore": 0,
+      "awayScore": 1,
       "channels": []
     },
     {
@@ -377,8 +377,8 @@
       "utcDate": "2026-06-12T10:30:00+00:00",
       "status": "live",
       "statusLabel": "LIVE",
-      "homeScore": 1,
-      "awayScore": 1,
+      "homeScore": 2,
+      "awayScore": 2,
       "channels": [
         "beIN Sports",
         "TOD"
@@ -396,7 +396,7 @@
       "utcDate": "2026-06-12T10:30:00+00:00",
       "status": "live",
       "statusLabel": "LIVE",
-      "homeScore": 1,
+      "homeScore": 2,
       "awayScore": 0,
       "channels": [
         "beIN Sports",
@@ -413,8 +413,8 @@
       "homeLogo": "https://media.api-sports.io/football/teams/3786.png",
       "awayLogo": "https://media.api-sports.io/football/teams/3796.png",
       "utcDate": "2026-06-12T11:00:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
+      "status": "halftime",
+      "statusLabel": "HT",
       "homeScore": 1,
       "awayScore": 0,
       "channels": []
@@ -429,8 +429,8 @@
       "homeLogo": "https://media.api-sports.io/football/teams/9166.png",
       "awayLogo": "https://media.api-sports.io/football/teams/26601.png",
       "utcDate": "2026-06-12T11:00:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
+      "status": "halftime",
+      "statusLabel": "HT",
       "homeScore": 0,
       "awayScore": 1,
       "channels": []
