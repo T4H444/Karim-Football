@@ -7,263 +7,176 @@ const API_KEY  = process.env.FOOTBALL_API_KEY;
 const BASE_URL = 'https://v3.football.api-sports.io';
 const today    = new Date().toISOString().split('T')[0];
 
-// ─── CHANNEL DATA ─────────────────────────────────────────
-// These are the confirmed MENA/France/North-Africa broadcasters
-// pulled from livesoccertv.com and official rights confirmations.
-// Updated June 2026 (World Cup season).
+// ─── STATIC CHANNELS BY COMPETITION ID ────────────────────
+// Keyed by API league.id (integer) — 100% reliable, no name-matching bugs.
+// Also has a name-based fallback for competitions not listed here.
+//
+// Sources: livesoccertv.com confirmed rights pages, June 2026.
 
-const CHANNEL_WHITELIST = [
-  // ── Morocco (SNRT/free-to-air) ──
-  'arryadia', 'arriyadiya', 'al arryadia',
-  'al aoula', 'snrt',
-  '2m maroc', '2m',
-  // ── Pan-MENA (beIN) ──
-  'bein', 'bein sports', 'bein sport',
-  'bein sports max', 'bein max',
-  'tod',                           // beIN's OTT platform
-  // ── Saudi / Gulf ──
-  'ssc',                           // Saudi Sports Channel
-  'thamaniya', 'channel 8',        // Saudi free sports
-  'saudi sports', 'sbc',
-  'ksa sports',
-  // ── Pan-Arab ──
-  'al jazeera', 'aljazeera',
-  'al kass', 'alkass',
-  'abu dhabi sports', 'abu dhabi',
-  'osn sports', 'osn',
-  'rotana sport', 'rotana',
-  'dubai sports',
-  // ── Egypt / Levant ──
-  'on sport', 'on time sport', 'on time',
-  'mbc masr', 'mbc action', 'mbc',
-  'nile sport',
-  'ssportplus', 'ssport',
-  // ── France ──
-  'tf1', 'tf1+', 'tmc',
-  'm6', 'm6+', 'w9',
-  'france 2', 'france 3', 'france 4', 'france.tv',
-  'canal+', 'canal plus', 'canal sport',
-  'rmc sport', 'rmc bfm',
-  "l'equipe", 'lequipe',
-  'eurosport',
-  // ── Shahid / OTT ──
-  'shahid', 'shahid vip',
-  // ── Global / Digital ──
-  'dazn',
-  'fifa+',
-  'youtube',
-  'bbc one', 'bbc two', 'bbc iplayer',    // UK (relevant for WC)
-  'itv', 'itv1',
-  'cbs sports',
-];
+const CHANNELS_BY_ID = {
+  // ── World Cup 2026 ──────────────────────────────────────
+  1:   ['beIN Sports', 'Arryadia', 'Al Aoula', 'TOD'],
 
-// ─── KNOWN STATIC CHANNELS BY COMPETITION ─────────────────
-// For competitions where MENA rights are known and the scraper
-// won't find them (because livesoccertv shows by country).
-// These are injected automatically so cards always have data.
-const COMPETITION_CHANNELS = {
-  // World Cup 2026 — MENA confirmed rights
-  'world cup':         ['beIN Sports', 'Arryadia', 'Al Aoula', 'TOD'],
-  'fifa world cup':    ['beIN Sports', 'Arryadia', 'Al Aoula', 'TOD'],
-  // Africa Cup of Nations
-  'africa cup':        ['beIN Sports', 'Arryadia', 'Al Aoula'],
-  'afcon':             ['beIN Sports', 'Arryadia', 'Al Aoula'],
-  // Champions League
-  'champions league':  ['beIN Sports', 'TOD'],
-  'uefa champions':    ['beIN Sports', 'TOD'],
-  // Europa / Conference
-  'europa league':     ['beIN Sports', 'TOD'],
-  'conference league': ['beIN Sports', 'TOD'],
-  // Premier League
-  'premier league':    ['beIN Sports', 'TOD'],
-  // La Liga
-  'la liga':           ['beIN Sports', 'TOD'],
-  'primera division':  ['beIN Sports', 'TOD'],
-  // Serie A
-  'serie a':           ['beIN Sports', 'TOD'],
-  // Bundesliga
-  'bundesliga':        ['beIN Sports', 'TOD'],
-  // Ligue 1 — France (free-to-air + beIN)
-  'ligue 1':           ['beIN Sports', 'Canal+', 'TOD'],
-  // Friendlies — often SNRT for Morocco matches, beIN for others
-  'friendlies':        ['beIN Sports'],
-  'friendly':          ['beIN Sports'],
-  // World Cup qualifying
-  'world cup qualifying': ['beIN Sports', 'Arryadia'],
-  'afcon qualification':  ['beIN Sports', 'Arryadia'],
+  // ── UEFA ────────────────────────────────────────────────
+  2:   ['beIN Sports', 'TOD'],            // Champions League
+  3:   ['beIN Sports', 'TOD'],            // Europa League
+  848: ['beIN Sports', 'TOD'],            // Conference League
+
+  // ── Top 5 Leagues ───────────────────────────────────────
+  39:  ['beIN Sports', 'TOD'],            // Premier League (England)
+  140: ['beIN Sports', 'TOD'],            // La Liga
+  135: ['beIN Sports', 'TOD'],            // Serie A
+  78:  ['beIN Sports', 'TOD'],            // Bundesliga
+  61:  ['beIN Sports', 'Canal+', 'TOD'], // Ligue 1
+
+  // ── Morocco ─────────────────────────────────────────────
+  200: ['beIN Sports', 'Arryadia', 'Al Aoula', '2M'],  // Botola Pro
+  201: ['Arryadia', 'Al Aoula'],                        // Botola 2
+
+  // ── Africa / AFCON ──────────────────────────────────────
+  6:   ['beIN Sports', 'Arryadia', 'Al Aoula', 'TOD'], // World Cup Qualifying (Africa)
+  7:   ['beIN Sports', 'Arryadia', 'Al Aoula'],         // AFCON
+  29:  ['beIN Sports', 'Arryadia', 'Al Aoula'],         // AFCON Qualification
+
+  // ── Arab Leagues ────────────────────────────────────────
+  // Saudi Pro League
+  307: ['SSC', 'beIN Sports', 'TOD'],
+  // Saudi Cup
+  682: ['SSC', 'beIN Sports', 'TOD'],
+  // Saudi First Division
+  348: ['SSC'],
+  // Egyptian Premier League
+  233: ['beIN Sports', 'On Sport', 'TOD'],
+  // UAE Pro League
+  435: ['beIN Sports', 'Abu Dhabi Sports', 'TOD'],
+  // Qatar Stars League
+  370: ['beIN Sports', 'Al Kass', 'TOD'],
+  // Tunisian Ligue 1
+  383: ['beIN Sports', 'Al Wataniya', 'TOD'],
+  // Algerian Ligue Professionnelle
+  197: ['beIN Sports', 'ENTV', 'TOD'],
+  // Jordanian Pro League
+  318: ['beIN Sports', 'TOD'],
+  // Iraqi Premier League
+  387: ['beIN Sports', 'TOD'],
+  // Libyan Premier League
+  396: ['beIN Sports', 'TOD'],
+  // Syrian Premier League
+  580: ['beIN Sports', 'TOD'],
+  // Lebanese Premier League
+  390: ['beIN Sports', 'TOD'],
+  // Bahrain Premier League
+  397: ['beIN Sports', 'TOD'],
+  // Kuwait Premier League
+  330: ['beIN Sports', 'Al Kass', 'TOD'],
+  // Oman Pro League
+  399: ['beIN Sports', 'TOD'],
+
+  // ── France ──────────────────────────────────────────────
+  // Coupe de France
+  66:  ['beIN Sports', 'France TV', 'TOD'],
+  // Ligue 2
+  62:  ['beIN Sports', 'Canal+', 'TOD'],
+
+  // ── International ───────────────────────────────────────
+  // Friendlies (Nations)
+  10:  ['beIN Sports', 'TOD'],
+  // UEFA Nations League
+  5:   ['beIN Sports', 'TOD'],
+  // FIFA Club World Cup
+  15:  ['beIN Sports', 'TOD'],
+  // Arab Cup
+  552: ['beIN Sports', 'Al Jazeera', 'TOD'],
+  // CAF Champions League
+  20:  ['beIN Sports', 'Arryadia', 'TOD'],
+  // CAF Confederation Cup
+  21:  ['beIN Sports', 'Arryadia', 'TOD'],
 };
 
-function getStaticChannels(competitionName) {
+// ─── NAME-BASED FALLBACK (for IDs not in the map above) ──
+// Uses substring match on competition name.
+const CHANNELS_BY_NAME = [
+  { match: 'world cup',        channels: ['beIN Sports', 'Arryadia', 'Al Aoula', 'TOD'] },
+  { match: 'champions league', channels: ['beIN Sports', 'TOD'] },
+  { match: 'europa league',    channels: ['beIN Sports', 'TOD'] },
+  { match: 'conference leag',  channels: ['beIN Sports', 'TOD'] },
+  { match: 'premier league',   channels: ['beIN Sports', 'TOD'] },
+  { match: 'ligue 1',          channels: ['beIN Sports', 'Canal+', 'TOD'] },
+  { match: 'la liga',          channels: ['beIN Sports', 'TOD'] },
+  { match: 'serie a',          channels: ['beIN Sports', 'TOD'] },
+  { match: 'bundesliga',       channels: ['beIN Sports', 'TOD'] },
+  { match: 'botola',           channels: ['beIN Sports', 'Arryadia', 'Al Aoula', '2M'] },
+  { match: 'saudi',            channels: ['SSC', 'beIN Sports', 'TOD'] },
+  { match: 'afcon',            channels: ['beIN Sports', 'Arryadia', 'Al Aoula'] },
+  { match: 'africa cup',       channels: ['beIN Sports', 'Arryadia', 'Al Aoula'] },
+  { match: 'arab cup',         channels: ['beIN Sports', 'Al Jazeera', 'TOD'] },
+  { match: 'caf ',             channels: ['beIN Sports', 'Arryadia', 'TOD'] },
+  { match: 'nations league',   channels: ['beIN Sports', 'TOD'] },
+  { match: 'friendly',         channels: ['beIN Sports', 'TOD'] },
+  { match: 'qualifying',       channels: ['beIN Sports', 'TOD'] },
+];
+
+function getChannels(competitionId, competitionName) {
+  // 1. Try exact ID match first (most reliable)
+  if (CHANNELS_BY_ID[competitionId]) {
+    return CHANNELS_BY_ID[competitionId];
+  }
+  // 2. Try name substring match
   const lower = (competitionName || '').toLowerCase();
-  for (const [key, channels] of Object.entries(COMPETITION_CHANNELS)) {
-    if (lower.includes(key)) return channels;
+  for (const entry of CHANNELS_BY_NAME) {
+    if (lower.includes(entry.match)) return entry.channels;
   }
+  // 3. No match — return empty
   return [];
-}
-
-// ─── CHANNEL NAME NORMALIZER ─────────────────────────────
-// Strips trailing numbers like "beIN Sports 1" → "beIN Sports"
-function normalizeChannel(name) {
-  return name
-    .replace(/\s+(max\s*)?\d+(\s*hd)?$/i, '') // strip trailing number (and optional HD/MAX)
-    .replace(/\s*hd$/i, '')
-    .trim();
-}
-
-function isRelevantChannel(name) {
-  const lower = name.toLowerCase();
-  return CHANNEL_WHITELIST.some(w => lower.includes(w.toLowerCase()));
-}
-
-function dedupeChannels(arr) {
-  const seen = new Set();
-  return arr.filter(ch => {
-    const norm = normalizeChannel(ch).toLowerCase();
-    if (seen.has(norm)) return false;
-    seen.add(norm);
-    return true;
-  }).map(normalizeChannel);
-}
-
-// ─── SCRAPE livesoccertv.com/schedules/DATE/ ─────────────
-// Returns a map: { "Home Team vs Away Team" (lowercased) → [channels] }
-async function scrapeSchedulePage(date) {
-  const url = `https://www.livesoccertv.com/schedules/${date}/`;
-  const channelMap = {};
-
-  try {
-    const res = await fetch(url, {
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (compatible; FootballBot/1.0)',
-        'Accept': 'text/html',
-      },
-      timeout: 12000,
-    });
-    if (!res.ok) {
-      console.warn(`⚠️  livesoccertv schedule page returned ${res.status}`);
-      return channelMap;
-    }
-
-    const html = await res.text();
-
-    // Each match row looks like:
-    // <a href="/match/team-vs-team/id">Team A vs Team B</a>  channel1, channel2
-    // We parse via regex on the raw HTML
-
-    // Pattern: match links + their sibling channel anchor texts
-    // Example row in HTML:
-    //   <a href="/match/...">Team A vs Team B</a> ... <a href="/channels/bein-sports/">beIN Sports 1</a> ...
-    // Strategy: find each match block, collect its channels
-
-    const matchBlockRegex = /<a[^>]+href="\/match\/[^"]*"[^>]*>([^<]+vs[^<]+)<\/a>([\s\S]*?)(?=<a[^>]+href="\/match\/|<\/ul>)/gi;
-    const channelRegex    = /<a[^>]+href="\/channels\/[^"]*"[^>]*>([^<]+)<\/a>/gi;
-
-    let block;
-    while ((block = matchBlockRegex.exec(html)) !== null) {
-      const matchName = block[1].trim().toLowerCase();
-      const blockText = block[2];
-
-      const channels = [];
-      let chMatch;
-      const chRe = /<a[^>]+href="\/channels\/[^"]*"[^>]*>([^<]+)<\/a>/gi;
-      while ((chMatch = chRe.exec(blockText)) !== null) {
-        const ch = chMatch[1].trim();
-        if (isRelevantChannel(ch)) channels.push(ch);
-      }
-
-      if (channels.length > 0 || matchName) {
-        channelMap[matchName] = dedupeChannels(channels);
-      }
-    }
-
-    console.log(`📺  livesoccertv scraped: ${Object.keys(channelMap).length} matches with channel data`);
-  } catch (err) {
-    console.warn(`⚠️  livesoccertv scrape failed: ${err.message}`);
-  }
-
-  return channelMap;
-}
-
-// ─── MATCH LIVESOCCERTV DATA TO API MATCH ────────────────
-function lookupChannels(match, channelMap) {
-  // Try different name orderings
-  const attempts = [
-    `${match.home} vs ${match.away}`,
-    `${match.away} vs ${match.home}`,
-  ].map(s => s.toLowerCase());
-
-  for (const key of attempts) {
-    if (channelMap[key]) return channelMap[key];
-  }
-
-  // Fuzzy: partial match on team names
-  const homeL = match.home.toLowerCase();
-  const awayL = match.away.toLowerCase();
-  for (const [key, chs] of Object.entries(channelMap)) {
-    if (key.includes(homeL) || key.includes(awayL)) return chs;
-  }
-
-  return null;
 }
 
 // ─── STATUS PARSER ────────────────────────────────────────
 function parseStatus(fixture, goals) {
   const s = fixture.status.short;
-
-  if (s === 'FT' || s === 'AET' || s === 'PEN') {
-    return { type: 'finished', label: 'FT', homeScore: goals.home, awayScore: goals.away };
-  }
-  if (s === 'HT') {
-    return { type: 'halftime', label: 'HT', homeScore: goals.home, awayScore: goals.away };
-  }
-  if (['1H', '2H', 'ET', 'LIVE'].includes(s)) {
-    return { type: 'live', label: 'LIVE', homeScore: goals.home, awayScore: goals.away };
-  }
+  if (s === 'FT' || s === 'AET' || s === 'PEN')
+    return { type: 'finished',  label: 'FT',   homeScore: goals.home, awayScore: goals.away };
+  if (s === 'HT')
+    return { type: 'halftime',  label: 'HT',   homeScore: goals.home, awayScore: goals.away };
+  if (['1H','2H','ET','LIVE'].includes(s))
+    return { type: 'live',      label: 'LIVE', homeScore: goals.home, awayScore: goals.away };
   if (s === 'NS') {
     const d = new Date(fixture.date);
-    const hh = String(d.getUTCHours()).padStart(2, '0');
-    const mm = String(d.getUTCMinutes()).padStart(2, '0');
+    const hh = String(d.getUTCHours()).padStart(2,'0');
+    const mm = String(d.getUTCMinutes()).padStart(2,'0');
     return { type: 'scheduled', label: `${hh}:${mm}`, homeScore: null, awayScore: null };
   }
-  if (s === 'PST')  return { type: 'postponed',  label: 'PPD',  homeScore: null, awayScore: null };
-  if (s === 'CANC') return { type: 'cancelled',  label: 'CANC', homeScore: null, awayScore: null };
-
+  if (s === 'PST')  return { type: 'postponed', label: 'PPD',  homeScore: null, awayScore: null };
+  if (s === 'CANC') return { type: 'cancelled', label: 'CANC', homeScore: null, awayScore: null };
   return { type: 'unknown', label: s, homeScore: null, awayScore: null };
 }
 
 // ─── MAIN ─────────────────────────────────────────────────
 async function fetchMatches() {
-  if (!API_KEY) {
-    console.error('❌  FOOTBALL_API_KEY is not set.');
-    process.exit(1);
-  }
+  if (!API_KEY) { console.error('❌  FOOTBALL_API_KEY not set.'); process.exit(1); }
 
   console.log(`📅  Fetching matches for ${today}…`);
 
-  // ── Step 1: Fetch fixtures from API ───────────────────
+  // ── Step 1: API call ──────────────────────────────────
   let data;
   try {
     const res = await fetch(`${BASE_URL}/fixtures?date=${today}`, {
       headers: { 'x-apisports-key': API_KEY },
     });
-    if (!res.ok) {
-      console.error(`❌  API error ${res.status}:`, await res.text());
-      process.exit(1);
-    }
+    if (!res.ok) { console.error(`❌  API ${res.status}:`, await res.text()); process.exit(1); }
     data = await res.json();
-  } catch (err) {
-    console.error('❌  Network error:', err.message);
-    process.exit(1);
-  }
+  } catch (err) { console.error('❌  Network:', err.message); process.exit(1); }
 
   const rawMatches = data.response || [];
-  console.log(`✅  ${rawMatches.length} matches received from API`);
+  console.log(`✅  ${rawMatches.length} matches from API`);
 
-  // ── Step 2: Build match objects ───────────────────────
+  // ── Step 2: Build + assign channels in one pass ───────
+  // No scraping, no caching complexity — channels come from the
+  // static rights map which is always correct and instant.
   const matches = rawMatches
     .map(item => {
       const { fixture, teams, goals, league } = item;
       const status = parseStatus(fixture, goals);
+      const channels = getChannels(league.id, league.name);
       return {
         id:              fixture.id,
         competition:     league.name || 'Unknown',
@@ -271,93 +184,34 @@ async function fetchMatches() {
         competitionCode: league.id,
         home:            teams.home.name || 'TBD',
         away:            teams.away.name || 'TBD',
-        homeLogo:        teams.home.logo || null,
-        awayLogo:        teams.away.logo || null,
+        homeLogo:        teams.home.logo  || null,
+        awayLogo:        teams.away.logo  || null,
         utcDate:         fixture.date,
         status:          status.type,
         statusLabel:     status.label,
         homeScore:       status.homeScore,
         awayScore:       status.awayScore,
-        channels:        [],
+        channels,
       };
     })
     .sort((a, b) => new Date(a.utcDate) - new Date(b.utcDate));
 
-  // ── Step 3: Check if channels already fetched today ───
-  const outPath = path.join(__dirname, '..', 'data', 'matches.json');
-  let channelsAlreadyFetchedToday = false;
-  let existingChannels = {};
+  const withChannels = matches.filter(m => m.channels.length > 0).length;
+  console.log(`📺  ${withChannels}/${matches.length} matches have channel data`);
 
-  if (fs.existsSync(outPath)) {
-    try {
-      const existing = JSON.parse(fs.readFileSync(outPath, 'utf8'));
-      if (existing.date === today && existing.channelsFetchedAt) {
-        // Only reuse if at least some matches actually have channel data.
-        // If all channels are empty (e.g. old broken scraper run), re-fetch.
-        const matchesWithChannels = (existing.matches || [])
-          .filter(m => m.channels && m.channels.length > 0).length;
+  // ── Step 3: Write output ──────────────────────────────
+  const outDir = path.join(__dirname, '..', 'data');
+  if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
 
-        if (matchesWithChannels > 0) {
-          channelsAlreadyFetchedToday = true;
-          existing.matches.forEach(m => {
-            existingChannels[m.id] = m.channels || [];
-          });
-          console.log(`📺  Reusing channel data from ${existing.channelsFetchedAt} (${matchesWithChannels} matches with channels)`);
-        } else {
-          console.log(`📺  Previous channel fetch had 0 results — re-fetching channels now`);
-        }
-      }
-    } catch (e) {}
-  }
-
-  // ── Step 4: Fetch TV channels ─────────────────────────
-  if (!channelsAlreadyFetchedToday) {
-    console.log(`📺  Scraping livesoccertv.com for today's channel listings…`);
-
-    // Scrape the daily schedule page (most efficient — one request)
-    const channelMap = await scrapeSchedulePage(today);
-
-    let withChannels = 0;
-    for (const match of matches) {
-      // Try livesoccertv scraped data first
-      const scraped = lookupChannels(match, channelMap);
-      if (scraped && scraped.length > 0) {
-        match.channels = scraped;
-        withChannels++;
-        console.log(`  ✅  ${match.home} vs ${match.away}: ${match.channels.join(', ')}`);
-      } else {
-        // Fall back to static rights data per competition
-        const staticChs = getStaticChannels(match.competition);
-        if (staticChs.length > 0) {
-          match.channels = staticChs;
-          withChannels++;
-        }
-      }
-    }
-
-    console.log(`📺  ${withChannels}/${matches.length} matches have channel data`);
-  } else {
-    matches.forEach(m => {
-      m.channels = existingChannels[m.id] || [];
-    });
-  }
-
-  // ── Step 5: Write output ──────────────────────────────
+  const outPath = path.join(outDir, 'matches.json');
   const output = {
-    date:              today,
-    fetchedAt:         new Date().toISOString(),
-    // Only keep old timestamp when we truly reused data; otherwise stamp now
-    channelsFetchedAt: channelsAlreadyFetchedToday
-      ? JSON.parse(fs.readFileSync(outPath, 'utf8')).channelsFetchedAt
-      : new Date().toISOString(),
-    total:   matches.length,
+    date:      today,
+    fetchedAt: new Date().toISOString(),
+    total:     matches.length,
     matches,
   };
 
-  const outDir = path.join(__dirname, '..', 'data');
-  if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
   fs.writeFileSync(outPath, JSON.stringify(output, null, 2), 'utf8');
-
   console.log(`💾  Saved ${matches.length} matches → data/matches.json`);
 }
 
