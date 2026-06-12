@@ -1,6 +1,6 @@
 {
   "date": "2026-06-12",
-  "fetchedAt": "2026-06-12T15:48:43.867Z",
+  "fetchedAt": "2026-06-12T17:36:57.503Z",
   "total": 165,
   "matches": [
     {
@@ -595,10 +595,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/9114.png",
       "awayLogo": "https://media.api-sports.io/football/teams/9111.png",
       "utcDate": "2026-06-12T13:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "13:00",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 2,
+      "awayScore": 4,
       "channels": [
         "beIN Sports",
         "TOD"
@@ -630,8 +630,8 @@
       "homeLogo": "https://media.api-sports.io/football/teams/391.png",
       "awayLogo": "https://media.api-sports.io/football/teams/750.png",
       "utcDate": "2026-06-12T14:00:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
+      "status": "finished",
+      "statusLabel": "FT",
       "homeScore": 3,
       "awayScore": 1,
       "channels": [
@@ -649,8 +649,8 @@
       "homeLogo": "https://media.api-sports.io/football/teams/18805.png",
       "awayLogo": "https://media.api-sports.io/football/teams/4566.png",
       "utcDate": "2026-06-12T14:00:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
+      "status": "finished",
+      "statusLabel": "FT",
       "homeScore": 0,
       "awayScore": 2,
       "channels": []
@@ -681,10 +681,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/8633.png",
       "awayLogo": "https://media.api-sports.io/football/teams/7300.png",
       "utcDate": "2026-06-12T14:30:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
-      "homeScore": 2,
-      "awayScore": 0,
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 3,
+      "awayScore": 1,
       "channels": []
     },
     {
@@ -697,8 +697,8 @@
       "homeLogo": "https://media.api-sports.io/football/teams/25429.png",
       "awayLogo": "https://media.api-sports.io/football/teams/5407.png",
       "utcDate": "2026-06-12T14:30:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
+      "status": "finished",
+      "statusLabel": "FT",
       "homeScore": 2,
       "awayScore": 1,
       "channels": []
@@ -713,10 +713,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/7339.png",
       "awayLogo": "https://media.api-sports.io/football/teams/7360.png",
       "utcDate": "2026-06-12T15:00:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
-      "homeScore": 0,
-      "awayScore": 2,
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 2,
+      "awayScore": 3,
       "channels": []
     },
     {
@@ -729,10 +729,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/3502.png",
       "awayLogo": "https://media.api-sports.io/football/teams/14864.png",
       "utcDate": "2026-06-12T15:00:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
+      "status": "finished",
+      "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 0,
+      "awayScore": 1,
       "channels": []
     },
     {
@@ -745,10 +745,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/4144.png",
       "awayLogo": "https://media.api-sports.io/football/teams/4149.png",
       "utcDate": "2026-06-12T15:00:00+00:00",
-      "status": "halftime",
-      "statusLabel": "HT",
-      "homeScore": 0,
-      "awayScore": 0,
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 1,
+      "awayScore": 1,
       "channels": []
     },
     {
@@ -761,10 +761,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/25766.png",
       "awayLogo": "https://media.api-sports.io/football/teams/27432.png",
       "utcDate": "2026-06-12T15:00:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
-      "homeScore": 1,
-      "awayScore": 2,
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 2,
+      "awayScore": 3,
       "channels": [
         "beIN Sports",
         "TOD"
@@ -780,9 +780,9 @@
       "homeLogo": "https://media.api-sports.io/football/teams/18731.png",
       "awayLogo": "https://media.api-sports.io/football/teams/8022.png",
       "utcDate": "2026-06-12T15:00:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
-      "homeScore": 0,
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 1,
       "awayScore": 2,
       "channels": [
         "beIN Sports",
@@ -799,9 +799,9 @@
       "homeLogo": "https://media.api-sports.io/football/teams/21502.png",
       "awayLogo": "https://media.api-sports.io/football/teams/27633.png",
       "utcDate": "2026-06-12T15:00:00+00:00",
-      "status": "halftime",
-      "statusLabel": "HT",
-      "homeScore": 2,
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 3,
       "awayScore": 0,
       "channels": []
     },
@@ -815,10 +815,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/977.png",
       "awayLogo": "https://media.api-sports.io/football/teams/3453.png",
       "utcDate": "2026-06-12T15:00:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
+      "status": "finished",
+      "statusLabel": "FT",
       "homeScore": 1,
-      "awayScore": 0,
+      "awayScore": 1,
       "channels": [
         "Arryadia"
       ]
@@ -833,8 +833,8 @@
       "homeLogo": "https://media.api-sports.io/football/teams/975.png",
       "awayLogo": "https://media.api-sports.io/football/teams/971.png",
       "utcDate": "2026-06-12T15:00:00+00:00",
-      "status": "halftime",
-      "statusLabel": "HT",
+      "status": "finished",
+      "statusLabel": "FT",
       "homeScore": 1,
       "awayScore": 0,
       "channels": [
@@ -851,10 +851,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/7288.png",
       "awayLogo": "https://media.api-sports.io/football/teams/7368.png",
       "utcDate": "2026-06-12T15:30:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
-      "homeScore": 0,
-      "awayScore": 0,
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 2,
+      "awayScore": 2,
       "channels": []
     },
     {
@@ -867,8 +867,8 @@
       "homeLogo": "https://media.api-sports.io/football/teams/19436.png",
       "awayLogo": "https://media.api-sports.io/football/teams/21650.png",
       "utcDate": "2026-06-12T15:30:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
+      "status": "finished",
+      "statusLabel": "FT",
       "homeScore": 0,
       "awayScore": 0,
       "channels": []
@@ -883,10 +883,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/7280.png",
       "awayLogo": "https://media.api-sports.io/football/teams/8624.png",
       "utcDate": "2026-06-12T15:30:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
-      "homeScore": 0,
-      "awayScore": 0,
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 1,
+      "awayScore": 1,
       "channels": []
     },
     {
@@ -899,10 +899,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/7277.png",
       "awayLogo": "https://media.api-sports.io/football/teams/7370.png",
       "utcDate": "2026-06-12T15:30:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
-      "homeScore": 0,
-      "awayScore": 0,
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 5,
+      "awayScore": 3,
       "channels": []
     },
     {
@@ -915,10 +915,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/26231.png",
       "awayLogo": "https://media.api-sports.io/football/teams/7293.png",
       "utcDate": "2026-06-12T15:30:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
-      "homeScore": 0,
-      "awayScore": 0,
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 4,
+      "awayScore": 2,
       "channels": []
     },
     {
@@ -931,10 +931,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/9173.png",
       "awayLogo": "https://media.api-sports.io/football/teams/10669.png",
       "utcDate": "2026-06-12T15:30:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
+      "status": "finished",
+      "statusLabel": "FT",
       "homeScore": 0,
-      "awayScore": 1,
+      "awayScore": 5,
       "channels": []
     },
     {
@@ -947,10 +947,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/2076.png",
       "awayLogo": "https://media.api-sports.io/football/teams/2078.png",
       "utcDate": "2026-06-12T15:30:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
-      "homeScore": 1,
-      "awayScore": 0,
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 5,
+      "awayScore": 1,
       "channels": []
     },
     {
@@ -963,10 +963,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/18518.png",
       "awayLogo": "https://media.api-sports.io/football/teams/2074.png",
       "utcDate": "2026-06-12T15:30:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
-      "homeScore": 0,
-      "awayScore": 0,
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 1,
+      "awayScore": 1,
       "channels": []
     },
     {
@@ -979,10 +979,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/9189.png",
       "awayLogo": "https://media.api-sports.io/football/teams/18758.png",
       "utcDate": "2026-06-12T15:30:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
-      "homeScore": 1,
-      "awayScore": 0,
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 4,
+      "awayScore": 3,
       "channels": []
     },
     {
@@ -995,10 +995,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/3874.png",
       "awayLogo": "https://media.api-sports.io/football/teams/18878.png",
       "utcDate": "2026-06-12T15:30:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
-      "homeScore": 0,
-      "awayScore": 1,
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 1,
+      "awayScore": 2,
       "channels": []
     },
     {
@@ -1011,9 +1011,9 @@
       "homeLogo": "https://media.api-sports.io/football/teams/16747.png",
       "awayLogo": "https://media.api-sports.io/football/teams/11885.png",
       "utcDate": "2026-06-12T15:30:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
-      "homeScore": 0,
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 1,
       "awayScore": 0,
       "channels": []
     },
@@ -1027,10 +1027,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/23156.png",
       "awayLogo": "https://media.api-sports.io/football/teams/14382.png",
       "utcDate": "2026-06-12T15:30:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
+      "status": "finished",
+      "statusLabel": "FT",
       "homeScore": 0,
-      "awayScore": 0,
+      "awayScore": 1,
       "channels": []
     },
     {
@@ -1059,10 +1059,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/2079.png",
       "awayLogo": "https://media.api-sports.io/football/teams/9209.png",
       "utcDate": "2026-06-12T15:30:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
-      "homeScore": 0,
-      "awayScore": 1,
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 2,
+      "awayScore": 2,
       "channels": []
     },
     {
@@ -1075,9 +1075,9 @@
       "homeLogo": "https://media.api-sports.io/football/teams/9192.png",
       "awayLogo": "https://media.api-sports.io/football/teams/18609.png",
       "utcDate": "2026-06-12T15:30:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
-      "homeScore": 0,
+      "status": "finished",
+      "statusLabel": "FT",
+      "homeScore": 3,
       "awayScore": 0,
       "channels": []
     },
@@ -1091,10 +1091,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/7376.png",
       "awayLogo": "https://media.api-sports.io/football/teams/7296.png",
       "utcDate": "2026-06-12T16:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "16:00",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 1,
+      "awayScore": 2,
       "channels": []
     },
     {
@@ -1107,10 +1107,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/21651.png",
       "awayLogo": "https://media.api-sports.io/football/teams/7355.png",
       "utcDate": "2026-06-12T16:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "16:00",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 1,
+      "awayScore": 2,
       "channels": []
     },
     {
@@ -1123,10 +1123,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/19420.png",
       "awayLogo": "https://media.api-sports.io/football/teams/7343.png",
       "utcDate": "2026-06-12T16:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "16:00",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 3,
+      "awayScore": 1,
       "channels": []
     },
     {
@@ -1139,10 +1139,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/7363.png",
       "awayLogo": "https://media.api-sports.io/football/teams/16876.png",
       "utcDate": "2026-06-12T16:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "16:00",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 2,
+      "awayScore": 1,
       "channels": []
     },
     {
@@ -1155,10 +1155,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/6985.png",
       "awayLogo": "https://media.api-sports.io/football/teams/7001.png",
       "utcDate": "2026-06-12T16:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "16:00",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 1,
+      "awayScore": 3,
       "channels": []
     },
     {
@@ -1171,10 +1171,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/661.png",
       "awayLogo": "https://media.api-sports.io/football/teams/4143.png",
       "utcDate": "2026-06-12T16:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "16:00",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 2,
+      "awayScore": 1,
       "channels": []
     },
     {
@@ -1187,10 +1187,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/3860.png",
       "awayLogo": "https://media.api-sports.io/football/teams/3870.png",
       "utcDate": "2026-06-12T16:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "16:00",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 3,
+      "awayScore": 2,
       "channels": []
     },
     {
@@ -1203,10 +1203,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/3384.png",
       "awayLogo": "https://media.api-sports.io/football/teams/388.png",
       "utcDate": "2026-06-12T16:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "16:00",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 1,
+      "awayScore": 1,
       "channels": [
         "beIN Sports",
         "TOD"
@@ -1222,10 +1222,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/3862.png",
       "awayLogo": "https://media.api-sports.io/football/teams/3856.png",
       "utcDate": "2026-06-12T16:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "16:00",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 1,
+      "awayScore": 1,
       "channels": []
     },
     {
@@ -1238,10 +1238,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/13971.png",
       "awayLogo": "https://media.api-sports.io/football/teams/3859.png",
       "utcDate": "2026-06-12T16:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "16:00",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 0,
+      "awayScore": 2,
       "channels": []
     },
     {
@@ -1270,10 +1270,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/13517.png",
       "awayLogo": "https://media.api-sports.io/football/teams/9174.png",
       "utcDate": "2026-06-12T16:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "16:00",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 1,
+      "awayScore": 2,
       "channels": []
     },
     {
@@ -1302,10 +1302,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/6965.png",
       "awayLogo": "https://media.api-sports.io/football/teams/16232.png",
       "utcDate": "2026-06-12T16:30:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "16:30",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 2,
+      "awayScore": 1,
       "channels": []
     },
     {
@@ -1318,10 +1318,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/22707.png",
       "awayLogo": "https://media.api-sports.io/football/teams/27264.png",
       "utcDate": "2026-06-12T16:30:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "16:30",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 0,
+      "awayScore": 0,
       "channels": []
     },
     {
@@ -1334,10 +1334,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/13552.png",
       "awayLogo": "https://media.api-sports.io/football/teams/2245.png",
       "utcDate": "2026-06-12T16:30:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "16:30",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 0,
+      "awayScore": 2,
       "channels": []
     },
     {
@@ -1350,10 +1350,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/8061.png",
       "awayLogo": "https://media.api-sports.io/football/teams/22175.png",
       "utcDate": "2026-06-12T17:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "17:00",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 0,
+      "awayScore": 1,
       "channels": []
     },
     {
@@ -1494,10 +1494,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/11083.png",
       "awayLogo": "https://media.api-sports.io/football/teams/11079.png",
       "utcDate": "2026-06-12T17:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "17:00",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 1,
+      "awayScore": 0,
       "channels": []
     },
     {
@@ -1510,10 +1510,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/23424.png",
       "awayLogo": "https://media.api-sports.io/football/teams/12891.png",
       "utcDate": "2026-06-12T17:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "17:00",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 0,
+      "awayScore": 0,
       "channels": []
     },
     {
@@ -1526,10 +1526,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/6687.png",
       "awayLogo": "https://media.api-sports.io/football/teams/27669.png",
       "utcDate": "2026-06-12T17:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "17:00",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 0,
+      "awayScore": 1,
       "channels": []
     },
     {
@@ -1542,10 +1542,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/6705.png",
       "awayLogo": "https://media.api-sports.io/football/teams/11671.png",
       "utcDate": "2026-06-12T17:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "17:00",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 2,
+      "awayScore": 0,
       "channels": []
     },
     {
@@ -1558,10 +1558,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/705.png",
       "awayLogo": "https://media.api-sports.io/football/teams/3499.png",
       "utcDate": "2026-06-12T17:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "17:00",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 2,
+      "awayScore": 0,
       "channels": []
     },
     {
@@ -1574,10 +1574,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/12575.png",
       "awayLogo": "https://media.api-sports.io/football/teams/12570.png",
       "utcDate": "2026-06-12T17:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "17:00",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 0,
+      "awayScore": 2,
       "channels": []
     },
     {
@@ -1590,10 +1590,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/12615.png",
       "awayLogo": "https://media.api-sports.io/football/teams/12660.png",
       "utcDate": "2026-06-12T17:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "17:00",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 0,
+      "awayScore": 0,
       "channels": []
     },
     {
@@ -1606,10 +1606,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/12619.png",
       "awayLogo": "https://media.api-sports.io/football/teams/12616.png",
       "utcDate": "2026-06-12T17:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "17:00",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 1,
+      "awayScore": 0,
       "channels": []
     },
     {
@@ -1622,10 +1622,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/12617.png",
       "awayLogo": "https://media.api-sports.io/football/teams/6692.png",
       "utcDate": "2026-06-12T17:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "17:00",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 0,
+      "awayScore": 0,
       "channels": []
     },
     {
@@ -1638,10 +1638,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/24079.png",
       "awayLogo": "https://media.api-sports.io/football/teams/26891.png",
       "utcDate": "2026-06-12T17:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "17:00",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 0,
+      "awayScore": 0,
       "channels": []
     },
     {
@@ -1654,10 +1654,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/586.png",
       "awayLogo": "https://media.api-sports.io/football/teams/638.png",
       "utcDate": "2026-06-12T17:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "17:00",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 3,
+      "awayScore": 0,
       "channels": []
     },
     {
@@ -1670,10 +1670,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/22218.png",
       "awayLogo": "https://media.api-sports.io/football/teams/3449.png",
       "utcDate": "2026-06-12T17:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "17:00",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 0,
+      "awayScore": 0,
       "channels": [
         "Arryadia"
       ]
@@ -1688,10 +1688,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/964.png",
       "awayLogo": "https://media.api-sports.io/football/teams/3454.png",
       "utcDate": "2026-06-12T17:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "17:00",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 0,
+      "awayScore": 1,
       "channels": [
         "Arryadia"
       ]
@@ -1706,10 +1706,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/14709.png",
       "awayLogo": "https://media.api-sports.io/football/teams/14714.png",
       "utcDate": "2026-06-12T17:30:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "17:30",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 1,
+      "awayScore": 0,
       "channels": []
     },
     {
@@ -1722,10 +1722,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/4176.png",
       "awayLogo": "https://media.api-sports.io/football/teams/4183.png",
       "utcDate": "2026-06-12T17:30:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "17:30",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 0,
+      "awayScore": 0,
       "channels": []
     },
     {
@@ -1738,10 +1738,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/16605.png",
       "awayLogo": "https://media.api-sports.io/football/teams/6670.png",
       "utcDate": "2026-06-12T17:30:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "17:30",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 0,
+      "awayScore": 0,
       "channels": []
     },
     {
