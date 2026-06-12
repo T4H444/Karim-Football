@@ -8,95 +8,78 @@ const BASE_URL = 'https://v3.football.api-sports.io';
 const today    = new Date().toISOString().split('T')[0];
 
 // ─── STATIC CHANNELS BY COMPETITION ID ────────────────────
-// Keyed by API league.id (integer) — 100% reliable, no name-matching bugs.
-// Also has a name-based fallback for competitions not listed here.
+// Keyed by API league.id — sources verified June 2026:
 //
-// Sources: livesoccertv.com confirmed rights pages, June 2026.
+// • Botola Pro       → Arryadia ONLY (beIN has zero rights)
+// • World Cup 2026   → beIN (all 104) + Arryadia/Al Aoula (Morocco matches only,
+//                      shown here combined since we can't filter per-match)
+// • Saudi Pro League → Thmanyah + Shahid (SSC closed Oct 2025, rights gone June 2025)
+// • Premier League   → beIN exclusive MENA until 2028
+// • Al Aoula / 2M    → NEVER broadcast league football, only Morocco NT matches
+// • TOD              → beIN's OTT app, always paired with beIN Sports
 
 const CHANNELS_BY_ID = {
-  // ── World Cup 2026 ──────────────────────────────────────
-  1:   ['beIN Sports', 'Arryadia', 'Al Aoula', 'TOD'],
+  // ── World Cup 2026 ───────────────────────────────────────
+  // beIN holds all 104 MENA rights; SNRT sub-licensed Morocco games only
+  1:   ['beIN Sports', 'Arryadia', 'TOD'],
 
-  // ── UEFA ────────────────────────────────────────────────
-  2:   ['beIN Sports', 'TOD'],            // Champions League
-  3:   ['beIN Sports', 'TOD'],            // Europa League
-  848: ['beIN Sports', 'TOD'],            // Conference League
+  // ── UEFA competitions ────────────────────────────────────
+  2:   ['beIN Sports', 'TOD'],   // Champions League
+  3:   ['beIN Sports', 'TOD'],   // Europa League
+  848: ['beIN Sports', 'TOD'],   // Conference League
 
-  // ── Top 5 Leagues ───────────────────────────────────────
-  39:  ['beIN Sports', 'TOD'],            // Premier League (England)
-  140: ['beIN Sports', 'TOD'],            // La Liga
-  135: ['beIN Sports', 'TOD'],            // Serie A
-  78:  ['beIN Sports', 'TOD'],            // Bundesliga
-  61:  ['beIN Sports', 'Canal+', 'TOD'], // Ligue 1
+  // ── Top 5 European Leagues ───────────────────────────────
+  39:  ['beIN Sports', 'TOD'],          // Premier League — beIN exclusive MENA to 2028
+  140: ['beIN Sports', 'TOD'],          // La Liga — beIN exclusive MENA
+  135: ['beIN Sports', 'TOD'],          // Serie A — beIN MENA
+  78:  ['beIN Sports', 'TOD'],          // Bundesliga — beIN MENA
+  61:  ['beIN Sports', 'Canal+', 'TOD'], // Ligue 1 — beIN MENA + Canal+ France
 
-  // ── Morocco ─────────────────────────────────────────────
-  200: ['beIN Sports', 'Arryadia', 'Al Aoula', '2M'],  // Botola Pro
-  201: ['Arryadia', 'Al Aoula'],                        // Botola 2
+  // ── Morocco ──────────────────────────────────────────────
+  200: ['Arryadia'],             // Botola Pro — Arryadia ONLY, beIN has NO rights
+  201: ['Arryadia'],             // Botola 2   — Arryadia ONLY
 
-  // ── Africa / AFCON ──────────────────────────────────────
-  6:   ['beIN Sports', 'Arryadia', 'Al Aoula', 'TOD'], // World Cup Qualifying (Africa)
-  7:   ['beIN Sports', 'Arryadia', 'Al Aoula'],         // AFCON
-  29:  ['beIN Sports', 'Arryadia', 'Al Aoula'],         // AFCON Qualification
+  // ── Africa / CAF / AFCON ─────────────────────────────────
+  6:   ['beIN Sports', 'Arryadia', 'TOD'], // WC Qualifying Africa (Morocco on Arryadia)
+  7:   ['beIN Sports', 'Arryadia', 'TOD'], // AFCON
+  29:  ['beIN Sports', 'Arryadia', 'TOD'], // AFCON Qualification
+  20:  ['beIN Sports', 'Arryadia', 'TOD'], // CAF Champions League
+  21:  ['beIN Sports', 'Arryadia', 'TOD'], // CAF Confederation Cup
 
-  // ── Arab Leagues ────────────────────────────────────────
-  // Saudi Pro League
-  307: ['SSC', 'beIN Sports', 'TOD'],
-  // Saudi Cup
-  682: ['SSC', 'beIN Sports', 'TOD'],
-  // Saudi First Division
-  348: ['SSC'],
-  // Egyptian Premier League
-  233: ['beIN Sports', 'On Sport', 'TOD'],
-  // UAE Pro League
-  435: ['beIN Sports', 'Abu Dhabi Sports', 'TOD'],
-  // Qatar Stars League
-  370: ['beIN Sports', 'Al Kass', 'TOD'],
-  // Tunisian Ligue 1
-  383: ['beIN Sports', 'Al Wataniya', 'TOD'],
-  // Algerian Ligue Professionnelle
-  197: ['beIN Sports', 'ENTV', 'TOD'],
-  // Jordanian Pro League
-  318: ['beIN Sports', 'TOD'],
-  // Iraqi Premier League
-  387: ['beIN Sports', 'TOD'],
-  // Libyan Premier League
-  396: ['beIN Sports', 'TOD'],
-  // Syrian Premier League
-  580: ['beIN Sports', 'TOD'],
-  // Lebanese Premier League
-  390: ['beIN Sports', 'TOD'],
-  // Bahrain Premier League
-  397: ['beIN Sports', 'TOD'],
-  // Kuwait Premier League
-  330: ['beIN Sports', 'Al Kass', 'TOD'],
-  // Oman Pro League
-  399: ['beIN Sports', 'TOD'],
+  // ── Saudi Arabia ─────────────────────────────────────────
+  // SSC closed Oct 2025. Rights now: Thmanyah (free satellite) + Shahid (streaming)
+  307: ['Thmanyah', 'Shahid'],   // Saudi Pro League (Roshn League)
+  682: ['Thmanyah', 'Shahid'],   // King's Cup
+  348: ['Thmanyah'],             // Saudi First Division (Yelo League)
 
-  // ── France ──────────────────────────────────────────────
-  // Coupe de France
-  66:  ['beIN Sports', 'France TV', 'TOD'],
-  // Ligue 2
-  62:  ['beIN Sports', 'Canal+', 'TOD'],
+  // ── Other Arab Leagues ───────────────────────────────────
+  233: ['beIN Sports', 'On Sport', 'TOD'],       // Egyptian Premier League
+  435: ['beIN Sports', 'Abu Dhabi Sports', 'TOD'], // UAE Pro League
+  370: ['beIN Sports', 'Al Kass', 'TOD'],        // Qatar Stars League
+  383: ['beIN Sports', 'TOD'],                   // Tunisian Ligue Pro
+  197: ['beIN Sports', 'TOD'],                   // Algerian Ligue Pro
+  318: ['beIN Sports', 'TOD'],                   // Jordanian Pro League
+  387: ['beIN Sports', 'TOD'],                   // Iraqi Premier League
+  390: ['beIN Sports', 'TOD'],                   // Lebanese Premier League
+  330: ['beIN Sports', 'Al Kass', 'TOD'],        // Kuwait Premier League
+  397: ['beIN Sports', 'TOD'],                   // Bahrain Premier League
+  399: ['beIN Sports', 'TOD'],                   // Oman Pro League
 
-  // ── International ───────────────────────────────────────
-  // Friendlies (Nations)
-  10:  ['beIN Sports', 'TOD'],
-  // UEFA Nations League
-  5:   ['beIN Sports', 'TOD'],
-  // FIFA Club World Cup
-  15:  ['beIN Sports', 'TOD'],
-  // Arab Cup
-  552: ['beIN Sports', 'Al Jazeera', 'TOD'],
-  // CAF Champions League
-  20:  ['beIN Sports', 'Arryadia', 'TOD'],
-  // CAF Confederation Cup
-  21:  ['beIN Sports', 'Arryadia', 'TOD'],
+  // ── International ────────────────────────────────────────
+  10:  ['beIN Sports', 'TOD'],                   // Friendlies (international)
+  5:   ['beIN Sports', 'TOD'],                   // UEFA Nations League
+  15:  ['beIN Sports', 'TOD'],                   // FIFA Club World Cup
+  552: ['beIN Sports', 'Al Jazeera', 'TOD'],     // Arab Cup
+
+  // ── France domestic ──────────────────────────────────────
+  66:  ['beIN Sports', 'France TV', 'TOD'],      // Coupe de France
+  62:  ['beIN Sports', 'Canal+', 'TOD'],         // Ligue 2
 };
 
-// ─── NAME-BASED FALLBACK (for IDs not in the map above) ──
-// Uses substring match on competition name.
+// ─── NAME-BASED FALLBACK ─────────────────────────────────
+// Only used when a competition ID is missing from the map above.
 const CHANNELS_BY_NAME = [
-  { match: 'world cup',        channels: ['beIN Sports', 'Arryadia', 'Al Aoula', 'TOD'] },
+  { match: 'world cup',        channels: ['beIN Sports', 'Arryadia', 'TOD'] },
   { match: 'champions league', channels: ['beIN Sports', 'TOD'] },
   { match: 'europa league',    channels: ['beIN Sports', 'TOD'] },
   { match: 'conference leag',  channels: ['beIN Sports', 'TOD'] },
@@ -105,10 +88,12 @@ const CHANNELS_BY_NAME = [
   { match: 'la liga',          channels: ['beIN Sports', 'TOD'] },
   { match: 'serie a',          channels: ['beIN Sports', 'TOD'] },
   { match: 'bundesliga',       channels: ['beIN Sports', 'TOD'] },
-  { match: 'botola',           channels: ['beIN Sports', 'Arryadia', 'Al Aoula', '2M'] },
-  { match: 'saudi',            channels: ['SSC', 'beIN Sports', 'TOD'] },
-  { match: 'afcon',            channels: ['beIN Sports', 'Arryadia', 'Al Aoula'] },
-  { match: 'africa cup',       channels: ['beIN Sports', 'Arryadia', 'Al Aoula'] },
+  { match: 'botola',           channels: ['Arryadia'] },   // Arryadia ONLY
+  { match: 'saudi pro',        channels: ['Thmanyah', 'Shahid'] },
+  { match: 'king cup',         channels: ['Thmanyah', 'Shahid'] },
+  { match: 'roshn',            channels: ['Thmanyah', 'Shahid'] },
+  { match: 'afcon',            channels: ['beIN Sports', 'Arryadia', 'TOD'] },
+  { match: 'africa cup',       channels: ['beIN Sports', 'Arryadia', 'TOD'] },
   { match: 'arab cup',         channels: ['beIN Sports', 'Al Jazeera', 'TOD'] },
   { match: 'caf ',             channels: ['beIN Sports', 'Arryadia', 'TOD'] },
   { match: 'nations league',   channels: ['beIN Sports', 'TOD'] },
