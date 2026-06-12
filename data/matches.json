@@ -1,7 +1,6 @@
 {
   "date": "2026-06-12",
-  "fetchedAt": "2026-06-12T07:57:44.234Z",
-  "channelsFetchedAt": "2026-06-12T01:41:23.790Z",
+  "fetchedAt": "2026-06-12T08:09:01.234Z",
   "total": 165,
   "matches": [
     {
@@ -82,7 +81,12 @@
       "statusLabel": "FT",
       "homeScore": 2,
       "awayScore": 1,
-      "channels": []
+      "channels": [
+        "beIN Sports",
+        "Arryadia",
+        "Al Aoula",
+        "TOD"
+      ]
     },
     {
       "id": 1532441,
@@ -158,10 +162,10 @@
       "homeLogo": "https://media.api-sports.io/football/teams/27804.png",
       "awayLogo": "https://media.api-sports.io/football/teams/27811.png",
       "utcDate": "2026-06-12T08:00:00+00:00",
-      "status": "scheduled",
-      "statusLabel": "08:00",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "live",
+      "statusLabel": "LIVE",
+      "homeScore": 0,
+      "awayScore": 0,
       "channels": []
     },
     {
@@ -816,7 +820,12 @@
       "statusLabel": "15:00",
       "homeScore": null,
       "awayScore": null,
-      "channels": []
+      "channels": [
+        "beIN Sports",
+        "Arryadia",
+        "Al Aoula",
+        "2M"
+      ]
     },
     {
       "id": 1550841,
@@ -832,7 +841,12 @@
       "statusLabel": "15:00",
       "homeScore": null,
       "awayScore": null,
-      "channels": []
+      "channels": [
+        "beIN Sports",
+        "Arryadia",
+        "Al Aoula",
+        "2M"
+      ]
     },
     {
       "id": 1457798,
@@ -1667,7 +1681,12 @@
       "statusLabel": "17:00",
       "homeScore": null,
       "awayScore": null,
-      "channels": []
+      "channels": [
+        "beIN Sports",
+        "Arryadia",
+        "Al Aoula",
+        "2M"
+      ]
     },
     {
       "id": 1550843,
@@ -1683,7 +1702,12 @@
       "statusLabel": "17:00",
       "homeScore": null,
       "awayScore": null,
-      "channels": []
+      "channels": [
+        "beIN Sports",
+        "Arryadia",
+        "Al Aoula",
+        "2M"
+      ]
     },
     {
       "id": 1398964,
@@ -1765,6 +1789,7 @@
       "awayScore": null,
       "channels": [
         "beIN Sports",
+        "Al Kass",
         "TOD"
       ]
     },
@@ -1784,6 +1809,7 @@
       "awayScore": null,
       "channels": [
         "beIN Sports",
+        "Al Kass",
         "TOD"
       ]
     },
@@ -2319,7 +2345,12 @@
       "statusLabel": "19:00",
       "homeScore": null,
       "awayScore": null,
-      "channels": []
+      "channels": [
+        "beIN Sports",
+        "Arryadia",
+        "Al Aoula",
+        "TOD"
+      ]
     },
     {
       "id": 1548203,
