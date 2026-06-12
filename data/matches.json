@@ -1,6 +1,6 @@
 {
   "date": "2026-06-12",
-  "fetchedAt": "2026-06-12T08:09:01.234Z",
+  "fetchedAt": "2026-06-12T08:16:38.910Z",
   "total": 165,
   "matches": [
     {
@@ -84,7 +84,6 @@
       "channels": [
         "beIN Sports",
         "Arryadia",
-        "Al Aoula",
         "TOD"
       ]
     },
@@ -821,10 +820,7 @@
       "homeScore": null,
       "awayScore": null,
       "channels": [
-        "beIN Sports",
-        "Arryadia",
-        "Al Aoula",
-        "2M"
+        "Arryadia"
       ]
     },
     {
@@ -842,10 +838,7 @@
       "homeScore": null,
       "awayScore": null,
       "channels": [
-        "beIN Sports",
-        "Arryadia",
-        "Al Aoula",
-        "2M"
+        "Arryadia"
       ]
     },
     {
@@ -1682,10 +1675,7 @@
       "homeScore": null,
       "awayScore": null,
       "channels": [
-        "beIN Sports",
-        "Arryadia",
-        "Al Aoula",
-        "2M"
+        "Arryadia"
       ]
     },
     {
@@ -1703,10 +1693,7 @@
       "homeScore": null,
       "awayScore": null,
       "channels": [
-        "beIN Sports",
-        "Arryadia",
-        "Al Aoula",
-        "2M"
+        "Arryadia"
       ]
     },
     {
@@ -2348,7 +2335,6 @@
       "channels": [
         "beIN Sports",
         "Arryadia",
-        "Al Aoula",
         "TOD"
       ]
     },
