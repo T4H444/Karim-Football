@@ -1,6 +1,6 @@
 {
   "date": "2026-06-12",
-  "fetchedAt": "2026-06-12T08:16:38.910Z",
+  "fetchedAt": "2026-06-12T08:24:15.849Z",
   "total": 165,
   "matches": [
     {
@@ -129,8 +129,8 @@
       "homeLogo": "https://media.api-sports.io/football/teams/27803.png",
       "awayLogo": "https://media.api-sports.io/football/teams/27813.png",
       "utcDate": "2026-06-12T07:30:00+00:00",
-      "status": "live",
-      "statusLabel": "LIVE",
+      "status": "halftime",
+      "statusLabel": "HT",
       "homeScore": 1,
       "awayScore": 1,
       "channels": []
@@ -164,7 +164,7 @@
       "status": "live",
       "statusLabel": "LIVE",
       "homeScore": 0,
-      "awayScore": 0,
+      "awayScore": 1,
       "channels": []
     },
     {
